@@ -1,0 +1,23 @@
+{
+  "name": "alicization",
+  "version": "0.0.0",
+  "packageManager": "pnpm@8.7.6",
+  "type": "module",
+  "private": true,
+  "dependencies": {
+    "@cdktf/provider-cloudflare": "9.0.2",
+    "cdktf": "^0.18.0",
+    "constructs": "^10.2.70"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.5",
+    "@types/node": "^20.6.3",
+    "cdktf-cli": "^0.18.0",
+    "prettier": "^3.0.3",
+    "typescript": "^5.2.2"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node --enable-source-maps ./dist/main.js"
+  }
+}

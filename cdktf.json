@@ -1,0 +1,9 @@
+{
+  "language": "typescript",
+  "app": "pnpm run build && pnpm run start",
+  "projectId": "d3982aef-4569-4742-945a-e45cf37015d8",
+  "sendCrashReports": "true",
+  "terraformProviders": [],
+  "terraformModules": [],
+  "context": {}
+}
