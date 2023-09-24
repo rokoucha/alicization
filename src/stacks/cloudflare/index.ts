@@ -8,6 +8,7 @@ import {
 import { Construct } from 'constructs'
 import { name } from '../../config.js'
 import { NoaPpUa } from './zones/NoaPpUa.js'
+import { _8c7042 } from './zones/_8c7042.js'
 
 export class CloudflareStack extends TerraformStack {
   constructor(scope: Construct, id: string) {
@@ -32,6 +33,10 @@ export class CloudflareStack extends TerraformStack {
 
     new CloudflareProvider(this, 'provider', {
       apiToken: apiToken.value,
+    })
+
+    new _8c7042(this, '_8c7042.org', {
+      accountId: accountId.value,
     })
 
     new NoaPpUa(this, 'noa.pp.ua', {
