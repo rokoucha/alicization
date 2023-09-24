@@ -2,12 +2,12 @@ import { Record } from '@cdktf/provider-cloudflare/lib/record/index.js'
 import { Zone } from '@cdktf/provider-cloudflare/lib/zone/index.js'
 import { Construct } from 'constructs'
 
-export type _8c7042StackConfig = Readonly<{
+export type _8c7042Config = Readonly<{
   accountId: string
 }>
 
 export class _8c7042 extends Construct {
-  constructor(scope: Construct, id: string, config: _8c7042StackConfig) {
+  constructor(scope: Construct, id: string, config: _8c7042Config) {
     super(scope, id)
 
     const zone = new Zone(this, 'zone', {

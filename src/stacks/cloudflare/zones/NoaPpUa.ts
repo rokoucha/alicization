@@ -2,12 +2,12 @@ import { Record } from '@cdktf/provider-cloudflare/lib/record/index.js'
 import { Zone } from '@cdktf/provider-cloudflare/lib/zone/index.js'
 import { Construct } from 'constructs'
 
-export type NoaPpUaStackConfig = Readonly<{
+export type NoaPpUaConfig = Readonly<{
   accountId: string
 }>
 
 export class NoaPpUa extends Construct {
-  constructor(scope: Construct, id: string, config: NoaPpUaStackConfig) {
+  constructor(scope: Construct, id: string, config: NoaPpUaConfig) {
     super(scope, id)
 
     const zone = new Zone(this, 'zone', {
