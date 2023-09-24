@@ -17,6 +17,7 @@ export class NoaPpUa extends Construct {
 
     new Record(this, 'dns-cname-noa.pp.ua', {
       name: 'noa.pp.ua',
+      proxied: false,
       type: 'CNAME',
       value: 'tomoko.dns.ggrel.net',
       zoneId: zone.id,
