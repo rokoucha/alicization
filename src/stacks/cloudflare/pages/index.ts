@@ -1,6 +1,7 @@
 import { Construct } from 'constructs'
 import { CloudflarePagesFunctionsNextJs } from './cloudflare-pages-function-next-js.js'
 import { Scienest } from './scienest.js'
+import { SuperSeisan } from './super-seisan.js'
 
 export type PagesConfig = Readonly<{
   accountId: string
@@ -19,6 +20,10 @@ export class Pages extends Construct {
     )
 
     new Scienest(this, 'scienest', {
+      accountId: config.accountId,
+    })
+
+    new SuperSeisan(this, 'super-seisan', {
       accountId: config.accountId,
     })
   }
