@@ -7,6 +7,7 @@ import {
 } from 'cdktf'
 import { Construct } from 'constructs'
 import { name } from '../../config.js'
+import { R2 } from './r2.js'
 import { GgrelNet } from './zones/GgrelNet.js'
 import { NoaPpUa } from './zones/NoaPpUa.js'
 import { RokouchaNet } from './zones/RokouchaNet.js'
@@ -55,6 +56,10 @@ export class CloudflareStack extends TerraformStack {
     })
 
     new SaynWittgensteIn(this, 'sayn-wittgenste.in', {
+      accountId: accountId.value,
+    })
+
+    new R2(this, 'r2', {
       accountId: accountId.value,
     })
   }
