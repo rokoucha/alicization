@@ -19,7 +19,8 @@
   "scripts": {
     "build": "tsc",
     "diff": "cdktf diff cloudflare",
-    "import": "cd ./cdktf.out/stacks/cloudflare && terraform import -var CLOUDFLARE_API_TOKEN=$CLOUDFLARE_API_TOKEN",
-    "start": "node --enable-source-maps ./dist/main.js"
+    "import": "pnpm run tf import -var CLOUDFLARE_API_TOKEN=$CLOUDFLARE_API_TOKEN",
+    "start": "node --enable-source-maps ./dist/main.js",
+    "tf": "cd ./cdktf.out/stacks/cloudflare && terraform"
   }
 }
