@@ -2,6 +2,7 @@ import { Construct } from 'constructs'
 import { _8c7042Org } from './_8c7042-org.js'
 import { CloudflarePagesFunctionsNextJs } from './cloudflare-pages-function-next-js.js'
 import { Cwskk } from './cwskk.js'
+import { PetaPeta } from './petapeta.js'
 import { Scienest } from './scienest.js'
 import { SuperSeisan } from './super-seisan.js'
 import { Tweet2Scrapbox } from './tweet2scrapbox.js'
@@ -27,6 +28,10 @@ export class Pages extends Construct {
     )
 
     new Cwskk(this, 'cwskk', {
+      accountId: config.accountId,
+    })
+
+    new PetaPeta(this, 'petapeta', {
       accountId: config.accountId,
     })
 
