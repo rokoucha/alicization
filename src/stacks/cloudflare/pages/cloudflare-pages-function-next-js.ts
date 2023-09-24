@@ -15,18 +15,18 @@ export class CloudflarePagesFunctionsNextJs extends Construct {
     super(scope, id)
 
     const authGitHubId = new TerraformVariable(this, 'AUTH_GITHUB_ID', {
-      description: 'Scienest AUTH_GITHUB_ID',
+      description: 'cloudflare-pages-function-next-js AUTH_GITHUB_ID',
       type: 'string',
     })
 
     const authGitHubSecret = new TerraformVariable(this, 'AUTH_GITHUB_SECRET', {
-      description: 'Scienest AUTH_GITHUB_SECRET',
+      description: 'cloudflare-pages-function-next-js AUTH_GITHUB_SECRET',
       sensitive: true,
       type: 'string',
     })
 
     const authSecret = new TerraformVariable(this, 'AUTH_SECRET', {
-      description: 'Scienest AUTH_SECRET',
+      description: 'cloudflare-pages-function-next-js AUTH_SECRET',
       sensitive: true,
       type: 'string',
     })
