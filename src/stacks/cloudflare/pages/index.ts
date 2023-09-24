@@ -3,6 +3,7 @@ import { _8c7042Org } from './_8c7042-org.js'
 import { CloudflarePagesFunctionsNextJs } from './cloudflare-pages-function-next-js.js'
 import { Scienest } from './scienest.js'
 import { SuperSeisan } from './super-seisan.js'
+import { Tweet2Scrapbox } from './tweet2scrapbox.js'
 
 export type PagesConfig = Readonly<{
   accountId: string
@@ -29,6 +30,10 @@ export class Pages extends Construct {
     })
 
     new SuperSeisan(this, 'super-seisan', {
+      accountId: config.accountId,
+    })
+
+    new Tweet2Scrapbox(this, 'tweet2scrapbox', {
       accountId: config.accountId,
     })
   }
