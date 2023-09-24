@@ -1,0 +1,3 @@
+[submodule "src/assets/workers/kuroneko-tracker-feed"]
+	path = src/assets/workers/kuroneko-tracker-feed
+	url = git@github.com:rokoucha/kuroneko-tracker-feed.git
