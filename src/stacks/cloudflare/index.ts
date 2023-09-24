@@ -7,6 +7,7 @@ import {
 } from 'cdktf'
 import { Construct } from 'constructs'
 import { name } from '../../config.js'
+import { Pages } from './pages/index.js'
 import { R2 } from './r2.js'
 import { Zones } from './zones/index.js'
 
@@ -33,6 +34,10 @@ export class CloudflareStack extends TerraformStack {
 
     new CloudflareProvider(this, 'provider', {
       apiToken: apiToken.value,
+    })
+
+    new Pages(this, 'pages', {
+      accountId: accountId.value,
     })
 
     new Zones(this, 'zones', {
