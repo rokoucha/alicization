@@ -15,7 +15,7 @@ export class NoaPpUa extends Construct {
       zone: 'noa.pp.ua',
     })
 
-    new Record(this, 'cname-noa.pp.ua', {
+    new Record(this, 'dns-cname-noa.pp.ua', {
       name: 'noa.pp.ua',
       type: 'CNAME',
       value: 'tomoko.dns.ggrel.net',
