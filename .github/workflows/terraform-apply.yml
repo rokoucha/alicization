@@ -35,16 +35,12 @@ jobs:
 
       - name: build ikapri
         run: |
-          pwd
-          ls -Fa
           pnpm install
           pnpm run build
         working-directory: ./src/assets/workers/ikapri
 
       - name: build kuroneko-tracker-feed
         run: |
-          pwd
-          ls -Fa
           pnpm install
           pnpm run build
         working-directory: ./src/assets/workers/kuroneko-tracker-feed
