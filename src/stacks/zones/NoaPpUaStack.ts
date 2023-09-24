@@ -8,7 +8,7 @@ import {
   TerraformVariable,
 } from 'cdktf'
 import { Construct } from 'constructs'
-import { name } from '../config.js'
+import { name } from '../../config.js'
 
 export class NoaPpUaStack extends TerraformStack {
   constructor(scope: Construct, id: string) {

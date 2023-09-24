@@ -1,5 +1,5 @@
 import { App } from 'cdktf'
-import { NoaPpUaStack } from './stacks/NoaPpUaStack.js'
+import { NoaPpUaStack } from './stacks/zones/NoaPpUaStack.js'
 
 const app = new App()
 
