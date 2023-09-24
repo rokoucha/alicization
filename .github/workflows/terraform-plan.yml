@@ -33,5 +33,5 @@ jobs:
         with:
           githubToken: ${{ secrets.GITHUB_TOKEN }}
           mode: plan-only
-          stackName: noa.pp.ua
+          stackName: cloudflare
           terraformCloudToken: ${{ secrets.TF_API_TOKEN }}

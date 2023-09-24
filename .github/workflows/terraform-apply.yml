@@ -36,5 +36,5 @@ jobs:
         with:
           githubToken: ${{ secrets.GITHUB_TOKEN }}
           mode: auto-approve-apply
-          stackName: noa.pp.ua
+          stackName: cloudflare
           terraformCloudToken: ${{ secrets.TF_API_TOKEN }}

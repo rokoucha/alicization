@@ -1,14 +1,17 @@
 import { Record } from '@cdktf/provider-cloudflare/lib/record/index.js'
 import { Zone } from '@cdktf/provider-cloudflare/lib/zone/index.js'
 import { Construct } from 'constructs'
-import { TFCloudflareStack } from '../../templates/TFCloudflareStack.js'
 
-export class NoaPpUaStack extends TFCloudflareStack {
-  constructor(scope: Construct, id: string) {
+export type NoaPpUaStackConfig = Readonly<{
+  accountId: string
+}>
+
+export class NoaPpUa extends Construct {
+  constructor(scope: Construct, id: string, config: NoaPpUaStackConfig) {
     super(scope, id)
 
     const zone = new Zone(this, 'zone', {
-      accountId: this.accountId.value,
+      accountId: config.accountId,
       zone: 'noa.pp.ua',
     })
 

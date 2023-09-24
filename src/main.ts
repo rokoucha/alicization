@@ -1,8 +1,8 @@
 import { App } from 'cdktf'
-import { NoaPpUaStack } from './stacks/zones/NoaPpUaStack.js'
+import { CloudflareStack } from './stacks/cloudflare/index.js'
 
 const app = new App()
 
-new NoaPpUaStack(app, 'noa.pp.ua')
+new CloudflareStack(app, 'cloudflare')
 
 app.synth()
