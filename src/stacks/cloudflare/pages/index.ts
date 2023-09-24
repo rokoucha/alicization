@@ -1,11 +1,11 @@
 import { Construct } from 'constructs'
-import { _8c7042Org } from './_8c7042-org.js'
-import { CloudflarePagesFunctionsNextJs } from './cloudflare-pages-function-next-js.js'
-import { Cwskk } from './cwskk.js'
-import { PetaPeta } from './petapeta.js'
-import { Scienest } from './scienest.js'
-import { SuperSeisan } from './super-seisan.js'
-import { Tweet2Scrapbox } from './tweet2scrapbox.js'
+import { CloudflarePagesFunctionsNextJs } from './CloudflarePagesFunctioNextJs.js'
+import { Cwskk } from './Cwskk.js'
+import { PetaPeta } from './PetaPeta.js'
+import { Scienest } from './Scienest.js'
+import { SuperSeisan } from './SuperSeisan.js'
+import { Tweet2Scrapbox } from './Tweet2Scrapbox.js'
+import { _8c7042Org } from './_8c7042Org.js'
 
 export type PagesConfig = Readonly<{
   accountId: string

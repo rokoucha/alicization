@@ -8,7 +8,7 @@ import {
 import { Construct } from 'constructs'
 import { name } from '../../config.js'
 import { Pages } from './pages/index.js'
-import { R2 } from './r2.js'
+import { R2 } from './r2/index.js'
 import { Workers } from './workers/index.js'
 import { Zones } from './zones/index.js'
 
@@ -41,15 +41,15 @@ export class CloudflareStack extends TerraformStack {
       accountId: accountId.value,
     })
 
+    new R2(this, 'r2', {
+      accountId: accountId.value,
+    })
+
     new Workers(this, 'workers', {
       accountId: accountId.value,
     })
 
     new Zones(this, 'zones', {
-      accountId: accountId.value,
-    })
-
-    new R2(this, 'r2', {
       accountId: accountId.value,
     })
   }
