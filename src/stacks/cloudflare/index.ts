@@ -7,7 +7,10 @@ import {
 } from 'cdktf'
 import { Construct } from 'constructs'
 import { name } from '../../config.js'
+import { GgrelNet } from './zones/GgrelNet.js'
 import { NoaPpUa } from './zones/NoaPpUa.js'
+import { RokouchaNet } from './zones/RokouchaNet.js'
+import { SaynWittgensteIn } from './zones/SaynWittgensteIn.js'
 import { _8c7042 } from './zones/_8c7042.js'
 
 export class CloudflareStack extends TerraformStack {
@@ -39,7 +42,19 @@ export class CloudflareStack extends TerraformStack {
       accountId: accountId.value,
     })
 
+    new GgrelNet(this, 'ggrel.net', {
+      accountId: accountId.value,
+    })
+
     new NoaPpUa(this, 'noa.pp.ua', {
+      accountId: accountId.value,
+    })
+
+    new RokouchaNet(this, 'rokoucha.net', {
+      accountId: accountId.value,
+    })
+
+    new SaynWittgensteIn(this, 'sayn-wittgenste.in', {
       accountId: accountId.value,
     })
   }
