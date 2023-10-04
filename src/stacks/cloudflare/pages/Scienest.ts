@@ -48,6 +48,7 @@ export class Scienest extends Construct {
             DB: db.value,
           },
           environmentVariables: {
+            APP_ENV: 'production',
             AUTH_GITHUB_ID: authGitHubId.value,
             AUTH_TRUST_HOST: 'scienest.pages.dev',
             BASE_URL: 'https://scienest.pages.dev',
