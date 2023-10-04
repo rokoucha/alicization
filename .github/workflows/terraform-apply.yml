@@ -36,7 +36,7 @@ jobs:
       - name: build ikapri
         run: |
           pnpm install
-          pnpm run build
+          ./node_modules/.bin/wrangler build
         working-directory: ./src/assets/workers/ikapri
 
       - name: build kuroneko-tracker-feed
