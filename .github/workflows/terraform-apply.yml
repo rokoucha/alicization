@@ -36,7 +36,8 @@ jobs:
       - name: build ikapri
         run: |
           pnpm install
-          ./node_modules/.bin/wrangler build
+          npm install -g @cloudflare/wrangler
+          wrangler build
         working-directory: ./src/assets/workers/ikapri
 
       - name: build kuroneko-tracker-feed
