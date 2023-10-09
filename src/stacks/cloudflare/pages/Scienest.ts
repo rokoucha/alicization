@@ -57,6 +57,7 @@ export class Scienest extends Construct {
             SITE_DESCRIPTION: 'Scientia est potentia',
             SITE_LANG: 'ja',
             SITE_NAME: 'Scienest',
+            SITE_TWITTER_CARD_SITE: '@rokoucha',
           },
           failOpen: true,
           secrets: {
