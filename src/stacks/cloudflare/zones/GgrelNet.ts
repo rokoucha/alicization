@@ -42,7 +42,7 @@ export class GgrelNet extends Construct {
       type: 'A',
       value: '60.117.38.230',
       zoneId: zone.id,
-    })
+    }).addOverride('lifecycle.ignore_changes', ['value'])
 
     new Record(this, 'dns-a-v4.tomoko.dns', {
       name: 'v4.tomoko.dns',
@@ -50,7 +50,7 @@ export class GgrelNet extends Construct {
       type: 'A',
       value: '60.117.38.230',
       zoneId: zone.id,
-    })
+    }).addOverride('lifecycle.ignore_changes', ['value'])
 
     new Record(this, 'dns-a-vesna.dns', {
       name: 'vesna.dns',
@@ -65,7 +65,7 @@ export class GgrelNet extends Construct {
       type: 'AAAA',
       value: '2400:2410:3800:2502:9296:f3ff:fe4a:42b2',
       zoneId: zone.id,
-    })
+    }).addOverride('lifecycle.ignore_changes', ['value'])
 
     new Record(this, 'dns-aaaa-haruka.dns', {
       name: 'haruka.dns',
@@ -73,7 +73,7 @@ export class GgrelNet extends Construct {
       type: 'AAAA',
       value: '2400:2410:3800:2502:1e69:7aff:fea4:f698',
       zoneId: zone.id,
-    })
+    }).addOverride('lifecycle.ignore_changes', ['value'])
 
     new Record(this, 'dns-aaaa-shizuka.dns', {
       name: 'shizuka.dns',
@@ -81,7 +81,7 @@ export class GgrelNet extends Construct {
       type: 'AAAA',
       value: '2400:2410:3800:2502:20c:29ff:fef2:ad28',
       zoneId: zone.id,
-    })
+    }).addOverride('lifecycle.ignore_changes', ['value'])
 
     new Record(this, 'dns-aaaa-tomoko.dns', {
       name: 'tomoko.dns',
@@ -89,7 +89,7 @@ export class GgrelNet extends Construct {
       type: 'AAAA',
       value: '2400:2410:3800:2502:20c:29ff:feb8:aa81',
       zoneId: zone.id,
-    })
+    }).addOverride('lifecycle.ignore_changes', ['value'])
 
     new Record(this, 'dns-aaaa-v6.haruka.dns', {
       name: 'v6.haruka.dns',
@@ -97,7 +97,7 @@ export class GgrelNet extends Construct {
       type: 'AAAA',
       value: '2400:2410:3800:2502:1e69:7aff:fea4:f698',
       zoneId: zone.id,
-    })
+    }).addOverride('lifecycle.ignore_changes', ['value'])
 
     new Record(this, 'dns-aaaa-v6.shizuka.dns', {
       name: 'v6.shizuka.dns',
@@ -105,7 +105,7 @@ export class GgrelNet extends Construct {
       type: 'AAAA',
       value: '2400:2410:3800:2502:20c:29ff:fef2:ad28',
       zoneId: zone.id,
-    })
+    }).addOverride('lifecycle.ignore_changes', ['value'])
 
     new Record(this, 'dns-aaaa-v6.tomoko.dns', {
       name: 'v6.tomoko.dns',
@@ -113,7 +113,7 @@ export class GgrelNet extends Construct {
       type: 'AAAA',
       value: '2400:2410:3800:2502:20c:29ff:feb8:aa81',
       zoneId: zone.id,
-    })
+    }).addOverride('lifecycle.ignore_changes', ['value'])
 
     new Record(this, 'dns-aaaa-vesna.dns', {
       name: 'vesna.dns',
@@ -121,7 +121,7 @@ export class GgrelNet extends Construct {
       type: 'AAAA',
       value: '2400:2410:3800:2502:20c:29ff:fe21:a0d9',
       zoneId: zone.id,
-    })
+    }).addOverride('lifecycle.ignore_changes', ['value'])
 
     new Record(this, 'dns-caa-issuewild-le-ggrel.net', {
       data: {
