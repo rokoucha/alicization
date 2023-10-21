@@ -1,10 +1,12 @@
 import { WorkerScript } from '@cdktf/provider-cloudflare/lib/worker-script/index.js'
 import { Construct } from 'constructs'
 import { readFile } from 'fs/promises'
+import { escapeWorkerScript } from '../../../utils/workers.js'
 
-const script = await readFile(
-  './src/assets/workers/kuroneko-tracker-feed/dist/index.mjs',
-  { encoding: 'utf-8' },
+const script = escapeWorkerScript(
+  await readFile('./src/assets/workers/kuroneko-tracker-feed/dist/index.mjs', {
+    encoding: 'utf-8',
+  }),
 )
 
 export type KuronekoTrackerFeedConfig = Readonly<{
@@ -17,7 +19,7 @@ export class KuronekoTrackerFeed extends Construct {
 
     new WorkerScript(this, 'kuroneko-tracker-feed', {
       accountId: config.accountId,
-      content: script.replaceAll('${', '$$${').replaceAll('%{', '%%{'),
+      content: script,
       module: true,
       name: 'kuroneko-tracker-feed',
       plainTextBinding: [
