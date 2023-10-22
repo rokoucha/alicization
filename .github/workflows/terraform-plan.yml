@@ -17,8 +17,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        with:
-          submodules: true
 
       - uses: pnpm/action-setup@v2
 
@@ -29,19 +27,6 @@ jobs:
 
       - name: Install dependencies
         run: pnpm install
-
-      - name: build ikapri
-        run: |
-          pnpm install
-          npm install -g @cloudflare/wrangler
-          wrangler build
-        working-directory: ./src/assets/workers/ikapri
-
-      - name: build kuroneko-tracker-feed
-        run: |
-          pnpm install
-          pnpm run build
-        working-directory: ./src/assets/workers/kuroneko-tracker-feed
 
       - name: Plan
         uses: hashicorp/terraform-cdk-action@v0.1

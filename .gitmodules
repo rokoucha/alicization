@@ -1,6 +1,0 @@
-[submodule "src/assets/workers/kuroneko-tracker-feed"]
-	path = src/assets/workers/kuroneko-tracker-feed
-	url = https://github.com/rokoucha/kuroneko-tracker-feed.git
-[submodule "src/assets/workers/ikapri"]
-	path = src/assets/workers/ikapri
-	url = https://github.com/rokoucha/ikapri.git
