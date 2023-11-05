@@ -6,7 +6,7 @@ import {
   TerraformVariable,
 } from 'cdktf'
 import { Construct } from 'constructs'
-import { name } from '../../config.js'
+import { TerraformCloudBackendProps } from '../../config.js'
 import { Pages } from './pages/index.js'
 import { R2 } from './r2/index.js'
 import { Workers } from './workers/index.js'
@@ -17,9 +17,8 @@ export class CloudflareStack extends TerraformStack {
     super(scope, id)
 
     new CloudBackend(this, {
-      hostname: 'app.terraform.io',
-      organization: 'rokoucha',
-      workspaces: new NamedCloudWorkspace(name),
+      ...TerraformCloudBackendProps,
+      workspaces: new NamedCloudWorkspace(id),
     })
 
     const accountId = new TerraformVariable(this, 'CLOUDFLARE_ACCOUNT_ID', {
