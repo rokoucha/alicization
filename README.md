@@ -9,8 +9,8 @@ master に push すると自動でデプロイされる
 手動でデプロイする場合は
 
 - `pnpm i`
-- `pnpm cdktf diff cloudflare`
-- `pnpm cdktf deploy cloudflare`
+- `pnpm run diff`
+- `pnpm run deploy`
 
 ## License
 
