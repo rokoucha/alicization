@@ -11,6 +11,9 @@ dependencies:
   '@cdktf/provider-cloudflare':
     specifier: 10.0.2
     version: 10.0.2(cdktf@0.19.0)(constructs@10.3.0)
+  '@cdktf/provider-tls':
+    specifier: ^9.0.0
+    version: 9.0.0(cdktf@0.19.0)(constructs@10.3.0)
   cdktf:
     specifier: ^0.19.0
     version: 0.19.0(constructs@10.3.0)
@@ -265,6 +268,17 @@ packages:
       - debug
       - supports-color
     dev: true
+
+  /@cdktf/provider-tls@9.0.0(cdktf@0.19.0)(constructs@10.3.0):
+    resolution: {integrity: sha512-n8l26xR+iskFyPAtuPbA6TTd6ryQiVxvQJByU9RTaJy+PWkgCEDLPl4uy47sGtXxcXo+BFXuLseWYbc9WN7qyw==}
+    engines: {node: '>= 18.12.0'}
+    peerDependencies:
+      cdktf: ^0.19.0
+      constructs: ^10.0.0
+    dependencies:
+      cdktf: 0.19.0(constructs@10.3.0)
+      constructs: 10.3.0
+    dev: false
 
   /@inquirer/checkbox@1.4.0:
     resolution: {integrity: sha512-7YcekwCvMTjrgjUursrH6AGZUSPw7gKPMvp0VhM3iq9mL46a7AeCfOTQTW0UPeiIfWmZK8wHyAD6wIhfDyLHpw==}
@@ -1273,7 +1287,7 @@ packages:
     dependencies:
       semver: 7.5.4
       shelljs: 0.8.5
-      typescript: 5.4.0-dev.20231104
+      typescript: 5.4.0-dev.20231105
     dev: true
 
   /eastasianwidth@0.2.0:
@@ -3120,8 +3134,8 @@ packages:
     hasBin: true
     dev: true
 
-  /typescript@5.4.0-dev.20231104:
-    resolution: {integrity: sha512-D+2hisYDB+vxSVJaZQYh+/jhBtJMsMbCPFshfsGbyp/OeHtkMyYtJ7+/EeclHcuUVui6IjRfKZ0lhvTEck278w==}
+  /typescript@5.4.0-dev.20231105:
+    resolution: {integrity: sha512-TN7QRSjarOvoxvHuZdVmofCnXJYklxsiZ1tyJKiKkghPWXwrkQ68R3NN3vhtS8B+jIeZoETKssmfbmhCl8rwxQ==}
     engines: {node: '>=14.17'}
     hasBin: true
     dev: true

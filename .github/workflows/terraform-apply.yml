@@ -31,8 +31,16 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      - name: Apply
-        uses: hashicorp/terraform-cdk-action@v0.1
+      - name: Apply AWS
+        uses: hashicorp/terraform-cdk-action@v0.2
+        with:
+          githubToken: ${{ secrets.GITHUB_TOKEN }}
+          mode: auto-approve-apply
+          stackName: aws
+          terraformCloudToken: ${{ secrets.TF_API_TOKEN }}
+
+      - name: Apply Cloudflare
+        uses: hashicorp/terraform-cdk-action@v0.2
         with:
           githubToken: ${{ secrets.GITHUB_TOKEN }}
           mode: auto-approve-apply

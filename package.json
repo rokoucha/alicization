@@ -1,12 +1,13 @@
 {
   "name": "alicization",
   "version": "0.0.0",
-  "packageManager": "pnpm@8.9.2",
+  "packageManager": "pnpm@8.10.2+sha256.487609e857f1c11780cc98dd0bfe4c8a8b11c7f23bc3a4493ac7d263d6fb6c8c",
   "type": "module",
   "private": true,
   "dependencies": {
     "@cdktf/provider-aws": "^18.0.4",
     "@cdktf/provider-cloudflare": "10.0.2",
+    "@cdktf/provider-tls": "^9.0.0",
     "cdktf": "^0.19.0",
     "constructs": "^10.3.0"
   },
@@ -19,12 +20,14 @@
   },
   "scripts": {
     "build": "tsc",
-    "deploy": "cdktf deploy cloudflare",
-    "diff": "cdktf diff cloudflare",
-    "import": "pnpm run tf import -var CLOUDFLARE_API_TOKEN=$CLOUDFLARE_API_TOKEN",
+    "deploy": "cdktf deploy aws cloudflare",
+    "diff": "cdktf diff aws cloudflare",
+    "import:aws": "pnpm run tf:aws import",
+    "import:cloudflare": "pnpm run tf:cloudflare import -var CLOUDFLARE_API_TOKEN=$CLOUDFLARE_API_TOKEN",
     "start": "node --enable-source-maps ./dist/main.js",
-    "synth": "cdktf synth cloudflare",
-    "tf": "cd ./cdktf.out/stacks/cloudflare && terraform",
+    "synth": "cdktf synth aws cloudflare",
+    "tf:aws": "cd ./cdktf.out/stacks/aws && terraform",
+    "tf:cloudflare": "cd ./cdktf.out/stacks/cloudflare && terraform",
     "type-check": "tsc --noEmit"
   }
 }

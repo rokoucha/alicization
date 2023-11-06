@@ -28,8 +28,16 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      - name: Plan
-        uses: hashicorp/terraform-cdk-action@v0.1
+      - name: Plan AWS
+        uses: hashicorp/terraform-cdk-action@v0.2
+        with:
+          githubToken: ${{ secrets.GITHUB_TOKEN }}
+          mode: plan-only
+          stackName: aws
+          terraformCloudToken: ${{ secrets.TF_API_TOKEN }}
+
+      - name: Plan Cloudflare
+        uses: hashicorp/terraform-cdk-action@v0.2
         with:
           githubToken: ${{ secrets.GITHUB_TOKEN }}
           mode: plan-only
