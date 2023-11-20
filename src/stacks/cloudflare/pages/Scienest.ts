@@ -1,3 +1,4 @@
+import { PagesDomain } from '@cdktf/provider-cloudflare/lib/pages-domain/index.js'
 import { PagesProject } from '@cdktf/provider-cloudflare/lib/pages-project/index.js'
 import { TerraformVariable } from 'cdktf'
 import { Construct } from 'constructs'
@@ -27,12 +28,7 @@ export class Scienest extends Construct {
       type: 'string',
     })
 
-    const db = new TerraformVariable(this, 'DB', {
-      description: 'Cloudflare D1 database for Scienest',
-      type: 'string',
-    })
-
-    new PagesProject(this, 'scienest', {
+    const pages = new PagesProject(this, 'scienest', {
       accountId: config.accountId,
       name: 'scienest',
       productionBranch: 'master',
@@ -45,18 +41,18 @@ export class Scienest extends Construct {
           compatibilityDate: '2023-03-14',
           compatibilityFlags: ['nodejs_compat'],
           d1Databases: {
-            DB: db.value,
+            DB: '5dd17953-e672-4f02-aff5-b390ac3ad233',
           },
           environmentVariables: {
             APP_ENV: 'production',
             AUTH_GITHUB_ID: authGitHubId.value,
-            AUTH_TRUST_HOST: 'scienest.pages.dev',
-            BASE_URL: 'https://scienest.pages.dev',
+            AUTH_TRUST_HOST: 'rokoucha.net',
+            BASE_URL: 'https://rokoucha.net',
             GITHUB_USER_ID: '6058487',
             NODE_VERSION: '20',
-            SITE_DESCRIPTION: 'Scientia est potentia',
+            SITE_DESCRIPTION: "The world isn't my oyster.",
             SITE_LANG: 'ja',
-            SITE_NAME: 'Scienest',
+            SITE_NAME: 'Rokoucha.net',
             SITE_TWITTER_CARD_SITE: '@rokoucha',
           },
           failOpen: true,
@@ -76,6 +72,12 @@ export class Scienest extends Construct {
           repoName: 'scienest',
         },
       },
+    })
+
+    new PagesDomain(this, 'rokoucha.net', {
+      accountId: config.accountId,
+      domain: 'rokoucha.net',
+      projectName: pages.name,
     })
   }
 }

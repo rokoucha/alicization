@@ -67,7 +67,7 @@ export class RokouchaNet extends Construct {
       name: 'rokoucha.net',
       proxied: false,
       type: 'CNAME',
-      value: 'tomoko.dns.ggrel.net',
+      value: 'scienest.pages.dev',
       zoneId: zone.id,
     })
 
