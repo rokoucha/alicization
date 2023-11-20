@@ -52,7 +52,7 @@ export class Scienest extends Construct {
             NODE_VERSION: '20',
             SITE_DESCRIPTION: "The world isn't my oyster.",
             SITE_LANG: 'ja',
-            SITE_NAME: 'Rokoucha.net',
+            SITE_NAME: 'Rokoucha',
             SITE_TWITTER_CARD_SITE: '@rokoucha',
           },
           failOpen: true,
