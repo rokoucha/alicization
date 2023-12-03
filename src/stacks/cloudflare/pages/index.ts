@@ -1,4 +1,5 @@
 import { Construct } from 'constructs'
+import { AuthJsCloudflarePagesFunctions } from './AuthJsCloudflarePagesFunctions.js'
 import { CloudflarePagesFunctionsNextJs } from './CloudflarePagesFunctioNextJs.js'
 import { Cwskk } from './Cwskk.js'
 import { PetaPeta } from './PetaPeta.js'
@@ -18,6 +19,14 @@ export class Pages extends Construct {
     new _8c7042Org(this, '_8c7042-org', {
       accountId: config.accountId,
     })
+
+    new AuthJsCloudflarePagesFunctions(
+      this,
+      'auth-js-cloudflare-pages-functions',
+      {
+        accountId: config.accountId,
+      },
+    )
 
     new CloudflarePagesFunctionsNextJs(
       this,
