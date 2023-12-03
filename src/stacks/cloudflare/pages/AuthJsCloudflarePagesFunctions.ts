@@ -60,7 +60,7 @@ export class AuthJsCloudflarePagesFunctions extends Construct {
           owner: 'rokoucha',
           previewBranchIncludes: ['*'],
           previewDeploymentSetting: 'none',
-          productionBranch: 'master',
+          productionBranch: 'main',
           repoName: 'authjs-cloudflare-pages-functions',
         },
       },
