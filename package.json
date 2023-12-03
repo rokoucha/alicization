@@ -5,18 +5,18 @@
   "type": "module",
   "private": true,
   "dependencies": {
-    "@cdktf/provider-aws": "^18.0.6",
-    "@cdktf/provider-cloudflare": "10.0.3",
-    "@cdktf/provider-tls": "^9.0.0",
-    "cdktf": "^0.19.1",
+    "@cdktf/provider-aws": "^18.0.9",
+    "@cdktf/provider-cloudflare": "10.0.4",
+    "@cdktf/provider-tls": "^9.0.1",
+    "cdktf": "^0.19.2",
     "constructs": "^10.3.0"
   },
   "devDependencies": {
-    "@types/jest": "^29.5.8",
-    "@types/node": "^20.9.2",
-    "cdktf-cli": "^0.19.1",
+    "@types/jest": "^29.5.10",
+    "@types/node": "^20.10.2",
+    "cdktf-cli": "^0.19.2",
     "prettier": "^3.1.0",
-    "typescript": "^5.2.2"
+    "typescript": "^5.3.2"
   },
   "scripts": {
     "build": "tsc",
