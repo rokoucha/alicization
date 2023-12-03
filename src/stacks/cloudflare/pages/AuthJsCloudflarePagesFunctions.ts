@@ -47,7 +47,7 @@ export class AuthJsCloudflarePagesFunctions extends Construct {
             AUTH_GITHUB_ID: authGitHubId.value,
             NODE_VERSION: '20',
           },
-          failOpen: true,
+          failOpen: false,
           secrets: {
             AUTH_GITHUB_SECRET: authGitHubSecret.value,
             AUTH_SECRET: authSecret.value,
