@@ -41,13 +41,13 @@ export class AuthJsCloudflarePagesFunctions extends Construct {
       },
       deploymentConfigs: {
         production: {
-          compatibilityDate: '2023-12-01',
+          compatibilityDate: '2023-12-03',
           compatibilityFlags: [],
           environmentVariables: {
             AUTH_GITHUB_ID: authGitHubId.value,
             NODE_VERSION: '20',
           },
-          failOpen: false,
+          failOpen: true,
           secrets: {
             AUTH_GITHUB_SECRET: authGitHubSecret.value,
             AUTH_SECRET: authSecret.value,
