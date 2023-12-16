@@ -71,19 +71,27 @@ export class RokouchaNet extends Construct {
       zoneId: zone.id,
     })
 
-    new Record(this, 'dns-mx-20-rokoucha.net', {
-      name: 'rokoucha.net',
-      priority: 20,
-      type: 'MX',
-      value: 'mail2.anonaddy.me',
+    new Record(this, 'dns-cname-sig1._domainkey', {
+      name: 'sig1._domainkey',
+      proxied: false,
+      type: 'CNAME',
+      value: 'sig1.dkim.rokoucha.net.at.icloudmailadmin.com',
       zoneId: zone.id,
     })
 
-    new Record(this, 'dns-mx-10-rokoucha.net', {
+    new Record(this, 'dns-mx-10-icloud-1-rokoucha.net', {
       name: 'rokoucha.net',
       priority: 10,
       type: 'MX',
-      value: 'mail.anonaddy.me',
+      value: 'mx01.mail.icloud.com',
+      zoneId: zone.id,
+    })
+
+    new Record(this, 'dns-mx-10-icloud-2-rokoucha.net', {
+      name: 'rokoucha.net',
+      priority: 10,
+      type: 'MX',
+      value: 'mx02.mail.icloud.com',
       zoneId: zone.id,
     })
 
@@ -91,6 +99,13 @@ export class RokouchaNet extends Construct {
       name: '_dmarc',
       type: 'TXT',
       value: 'v=DMARC1; p=quarantine; adkim=s',
+      zoneId: zone.id,
+    })
+
+    new Record(this, 'dns-txt-icloud-rokoucha.net', {
+      name: 'rokoucha.net',
+      type: 'TXT',
+      value: 'apple-domain=Pabb9Q5wD0ltdWbS',
       zoneId: zone.id,
     })
 
@@ -120,7 +135,7 @@ export class RokouchaNet extends Construct {
     new Record(this, 'dns-txt-spf-rokoucha.net', {
       name: 'rokoucha.net',
       type: 'TXT',
-      value: 'v=spf1 include:spf.anonaddy.me -all',
+      value: 'v=spf1 include:icloud.com ~all',
       zoneId: zone.id,
     })
 
