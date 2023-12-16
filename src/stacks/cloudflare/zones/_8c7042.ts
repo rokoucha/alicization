@@ -23,49 +23,41 @@ export class _8c7042 extends Construct {
       zoneId: zone.id,
     })
 
-    new Record(this, 'dns-cname-dk1._domainkey', {
-      name: 'dk1._domainkey',
+    new Record(this, 'dns-cname-sig1._domainkey', {
+      name: 'sig1._domainkey',
       proxied: false,
       type: 'CNAME',
-      value: 'dk1._domainkey.anonaddy.me',
+      value: 'sig1.dkim.8c7042.org.at.icloudmailadmin.com',
       zoneId: zone.id,
     })
 
-    new Record(this, 'dns-cname-dk2._domainkey', {
-      name: 'dk2._domainkey',
-      proxied: false,
-      type: 'CNAME',
-      value: 'dk2._domainkey.anonaddy.me',
-      zoneId: zone.id,
-    })
-
-    new Record(this, 'dns-mx-20-8c7042.org', {
-      name: '8c7042.org',
-      priority: 20,
-      type: 'MX',
-      value: 'mail2.anonaddy.me',
-      zoneId: zone.id,
-    })
-
-    new Record(this, 'dns-mx-10-8c7042.org', {
+    new Record(this, 'dns-mx-10-icloud-1-8c7042.org', {
       name: '8c7042.org',
       priority: 10,
       type: 'MX',
-      value: 'mail.anonaddy.me',
+      value: 'mx01.mail.icloud.com',
+      zoneId: zone.id,
+    })
+
+    new Record(this, 'dns-mx-10-icloud-2-8c7042.org', {
+      name: '8c7042.org',
+      priority: 10,
+      type: 'MX',
+      value: 'mx02.mail.icloud.com',
+      zoneId: zone.id,
+    })
+
+    new Record(this, 'dns-txt-icloud-rokoucha.net', {
+      name: 'rokoucha.net',
+      type: 'TXT',
+      value: 'apple-domain=RXW85mjzVL0dxHaU',
       zoneId: zone.id,
     })
 
     new Record(this, 'dns-txt-spf-8c7042.org', {
       name: '8c7042.org',
       type: 'TXT',
-      value: 'v=spf1 include:spf.anonaddy.me -all',
-      zoneId: zone.id,
-    })
-
-    new Record(this, 'dns-txt-aa-verify-8c7042.org', {
-      name: '8c7042.org',
-      type: 'TXT',
-      value: 'aa-verify=4c6efab1c327f5d70453a0afcb2598107e4319ef',
+      value: 'v=spf1 include:icloud.com ~all',
       zoneId: zone.id,
     })
 
