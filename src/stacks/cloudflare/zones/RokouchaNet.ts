@@ -23,22 +23,6 @@ export class RokouchaNet extends Construct {
       zoneId: zone.id,
     })
 
-    new Record(this, 'dns-cname-dk1._domainkey', {
-      name: 'dk1._domainkey',
-      proxied: false,
-      type: 'CNAME',
-      value: 'dk1._domainkey.anonaddy.me',
-      zoneId: zone.id,
-    })
-
-    new Record(this, 'dns-cname-dk2._domainkey', {
-      name: 'dk2._domainkey',
-      proxied: false,
-      type: 'CNAME',
-      value: 'dk2._domainkey.anonaddy.me',
-      zoneId: zone.id,
-    })
-
     new Record(this, 'dns-cname-dot', {
       name: 'dot',
       proxied: false,
@@ -136,13 +120,6 @@ export class RokouchaNet extends Construct {
       name: 'rokoucha.net',
       type: 'TXT',
       value: 'v=spf1 include:icloud.com ~all',
-      zoneId: zone.id,
-    })
-
-    new Record(this, 'dns-txt-aa-rokoucha.net', {
-      name: 'rokoucha.net',
-      type: 'TXT',
-      value: 'aa-verify=9eea9fe3ebc99e620864cabfd9e411873255ce1d',
       zoneId: zone.id,
     })
 
