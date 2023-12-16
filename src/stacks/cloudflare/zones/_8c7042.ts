@@ -50,7 +50,7 @@ export class _8c7042 extends Construct {
     new Record(this, 'dns-txt-icloud-rokoucha.net', {
       name: '8c7042.org',
       type: 'TXT',
-      value: 'apple-domain=RXW85mjzVL0dxHaU',
+      value: 'apple-domain=Es5ZQePw6ABEyeQu',
       zoneId: zone.id,
     })
 
