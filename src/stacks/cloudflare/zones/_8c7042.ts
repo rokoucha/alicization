@@ -54,6 +54,14 @@ export class _8c7042 extends Construct {
       zoneId: zone.id,
     })
 
+    new Record(this, 'dns-txt-postmaster-tools-rokoucha.net', {
+      name: '8c7042.org',
+      type: 'TXT',
+      value:
+        'google-site-verification=vwwbD5dCs65jkMqWLtx-UWwKxVXPyGQsMNFIvSix2RY',
+      zoneId: zone.id,
+    })
+
     new Record(this, 'dns-txt-spf-8c7042.org', {
       name: '8c7042.org',
       type: 'TXT',
