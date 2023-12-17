@@ -34,7 +34,7 @@ export class AuthJsCloudflarePagesFunctions extends Construct {
     new PagesProject(this, 'authjs-cloudflare-pages-functions', {
       accountId: props.accountId,
       name: 'authjs-cloudflare-pages-functions',
-      productionBranch: 'master',
+      productionBranch: 'main',
       buildConfig: {
         buildCommand: 'pnpm run build',
         destinationDir: './public',
