@@ -43,3 +43,11 @@ jobs:
           mode: plan-only
           stackName: cloudflare
           terraformCloudToken: ${{ secrets.TF_API_TOKEN }}
+
+      - name: Plan Mackerel
+        uses: hashicorp/terraform-cdk-action@v0.2
+        with:
+          githubToken: ${{ secrets.GITHUB_TOKEN }}
+          mode: plan-only
+          stackName: mackerel
+          terraformCloudToken: ${{ secrets.TF_API_TOKEN }}
