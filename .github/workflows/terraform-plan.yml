@@ -29,6 +29,8 @@ jobs:
         run: pnpm install
 
       - name: Generate providers
+        env:
+          MACKEREL_API_KEY: stub
         run: pnpm cdktf provider get
 
       - name: Plan AWS
