@@ -1,4 +1,4 @@
-import { OrganizationsAccount } from '@cdktf/provider-aws/lib/organizations-account/index.js'
+import { OrganizationsAccount } from '@cdktf/provider-aws/lib/organizations-account'
 import { Construct } from 'constructs'
 
 export type Accounts = {

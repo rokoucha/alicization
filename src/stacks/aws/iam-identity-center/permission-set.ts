@@ -1,5 +1,5 @@
-import { SsoadminManagedPolicyAttachment } from '@cdktf/provider-aws/lib/ssoadmin-managed-policy-attachment/index.js'
-import { SsoadminPermissionSet } from '@cdktf/provider-aws/lib/ssoadmin-permission-set/index.js'
+import { SsoadminManagedPolicyAttachment } from '@cdktf/provider-aws/lib/ssoadmin-managed-policy-attachment'
+import { SsoadminPermissionSet } from '@cdktf/provider-aws/lib/ssoadmin-permission-set'
 import { Construct } from 'constructs'
 
 export type PermissionSetProps = Readonly<{

@@ -1,8 +1,8 @@
-import { DataAwsIamPolicyDocument } from '@cdktf/provider-aws/lib/data-aws-iam-policy-document/index.js'
-import { IamOpenidConnectProvider } from '@cdktf/provider-aws/lib/iam-openid-connect-provider/index.js'
-import { IamRole } from '@cdktf/provider-aws/lib/iam-role/index.js'
-import { DataTlsCertificate } from '@cdktf/provider-tls/lib/data-tls-certificate/index.js'
-import { TlsProvider } from '@cdktf/provider-tls/lib/provider/index.js'
+import { DataAwsIamPolicyDocument } from '@cdktf/provider-aws/lib/data-aws-iam-policy-document'
+import { IamOpenidConnectProvider } from '@cdktf/provider-aws/lib/iam-openid-connect-provider'
+import { IamRole } from '@cdktf/provider-aws/lib/iam-role'
+import { DataTlsCertificate } from '@cdktf/provider-tls/lib/data-tls-certificate'
+import { TlsProvider } from '@cdktf/provider-tls/lib/provider'
 import { Construct } from 'constructs'
 
 export type TFCIAMOidcProviderProps = Readonly<{

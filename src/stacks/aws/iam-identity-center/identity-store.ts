@@ -1,4 +1,4 @@
-import { IdentitystoreGroup } from '@cdktf/provider-aws/lib/identitystore-group/index.js'
+import { IdentitystoreGroup } from '@cdktf/provider-aws/lib/identitystore-group'
 import { Construct } from 'constructs'
 
 export type Groups = {

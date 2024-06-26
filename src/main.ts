@@ -1,6 +1,6 @@
 import { App } from 'cdktf'
-import { AWSStack } from './stacks/aws/index.js'
-import { CloudflareStack } from './stacks/cloudflare/index.js'
+import { AWSStack } from './stacks/aws'
+import { CloudflareStack } from './stacks/cloudflare'
 
 const app = new App()
 

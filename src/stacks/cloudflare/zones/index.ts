@@ -1,8 +1,8 @@
 import { Construct } from 'constructs'
-import { GgrelNet } from './GgrelNet.js'
-import { RokouchaNet } from './RokouchaNet.js'
-import { SaynWittgensteIn } from './SaynWittgensteIn.js'
-import { _8c7042 } from './_8c7042.js'
+import { GgrelNet } from './GgrelNet'
+import { RokouchaNet } from './RokouchaNet'
+import { SaynWittgensteIn } from './SaynWittgensteIn'
+import { _8c7042 } from './_8c7042'
 
 export type ZonesConfig = Readonly<{
   accountId: string

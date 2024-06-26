@@ -1,5 +1,5 @@
-import { PagesDomain } from '@cdktf/provider-cloudflare/lib/pages-domain/index.js'
-import { PagesProject } from '@cdktf/provider-cloudflare/lib/pages-project/index.js'
+import { PagesDomain } from '@cdktf/provider-cloudflare/lib/pages-domain'
+import { PagesProject } from '@cdktf/provider-cloudflare/lib/pages-project'
 import { TerraformVariable } from 'cdktf'
 import { Construct } from 'constructs'
 

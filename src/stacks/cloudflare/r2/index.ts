@@ -1,4 +1,4 @@
-import { R2Bucket } from '@cdktf/provider-cloudflare/lib/r2-bucket/index.js'
+import { R2Bucket } from '@cdktf/provider-cloudflare/lib/r2-bucket'
 import { Construct } from 'constructs'
 
 export type R2Config = Readonly<{

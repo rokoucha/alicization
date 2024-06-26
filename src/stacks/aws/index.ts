@@ -1,9 +1,9 @@
-import { AwsProvider } from '@cdktf/provider-aws/lib/provider/index.js'
+import { AwsProvider } from '@cdktf/provider-aws/lib/provider'
 import { CloudBackend, NamedCloudWorkspace, TerraformStack } from 'cdktf'
 import { Construct } from 'constructs'
-import { IAMIdentityCenter } from './iam-identity-center/index.js'
-import { TFCIAMOidcProvider } from './iam-oidc-provider/index.js'
-import { Organizations } from './organizations/index.js'
+import { IAMIdentityCenter } from './iam-identity-center'
+import { TFCIAMOidcProvider } from './iam-oidc-provider'
+import { Organizations } from './organizations'
 
 export class AWSStack extends TerraformStack {
   constructor(scope: Construct, id: string) {

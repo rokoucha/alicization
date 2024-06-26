@@ -1,4 +1,4 @@
-import { CloudflareProvider } from '@cdktf/provider-cloudflare/lib/provider/index.js'
+import { CloudflareProvider } from '@cdktf/provider-cloudflare/lib/provider'
 import {
   CloudBackend,
   NamedCloudWorkspace,
@@ -6,11 +6,11 @@ import {
   TerraformVariable,
 } from 'cdktf'
 import { Construct } from 'constructs'
-import { TerraformCloudBackendProps } from '../../config.js'
-import { Pages } from './pages/index.js'
-import { R2 } from './r2/index.js'
-import { Workers } from './workers/index.js'
-import { Zones } from './zones/index.js'
+import { TerraformCloudBackendProps } from '../../config'
+import { Pages } from './pages'
+import { R2 } from './r2'
+import { Workers } from './workers'
+import { Zones } from './zones'
 
 export class CloudflareStack extends TerraformStack {
   constructor(scope: Construct, id: string) {

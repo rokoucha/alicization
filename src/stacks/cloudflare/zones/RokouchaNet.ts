@@ -1,5 +1,5 @@
-import { Record } from '@cdktf/provider-cloudflare/lib/record/index.js'
-import { Zone } from '@cdktf/provider-cloudflare/lib/zone/index.js'
+import { Record } from '@cdktf/provider-cloudflare/lib/record'
+import { Zone } from '@cdktf/provider-cloudflare/lib/zone'
 import { Construct } from 'constructs'
 
 export type RokouchaNetConfig = Readonly<{

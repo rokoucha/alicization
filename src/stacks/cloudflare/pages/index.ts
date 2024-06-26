@@ -1,13 +1,13 @@
 import { Construct } from 'constructs'
-import { AuthJsCloudflarePagesFunctions } from './AuthJsCloudflarePagesFunctions.js'
-import { CloudflarePagesFunctionsNextJs } from './CloudflarePagesFunctioNextJs.js'
-import { Cwskk } from './Cwskk.js'
-import { Gjx } from './Gjx.js'
-import { PetaPeta } from './PetaPeta.js'
-import { Scienest } from './Scienest.js'
-import { SuperSeisan } from './SuperSeisan.js'
-import { Tweet2Scrapbox } from './Tweet2Scrapbox.js'
-import { _8c7042Org } from './_8c7042Org.js'
+import { AuthJsCloudflarePagesFunctions } from './AuthJsCloudflarePagesFunctions'
+import { CloudflarePagesFunctionsNextJs } from './CloudflarePagesFunctioNextJs'
+import { Cwskk } from './Cwskk'
+import { Gjx } from './Gjx'
+import { PetaPeta } from './PetaPeta'
+import { Scienest } from './Scienest'
+import { SuperSeisan } from './SuperSeisan'
+import { Tweet2Scrapbox } from './Tweet2Scrapbox'
+import { _8c7042Org } from './_8c7042Org'
 
 export type PagesConfig = Readonly<{
   accountId: string

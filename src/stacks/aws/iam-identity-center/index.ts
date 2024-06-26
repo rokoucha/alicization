@@ -1,13 +1,13 @@
-import { DataAwsSsoadminInstances } from '@cdktf/provider-aws/lib/data-aws-ssoadmin-instances/index.js'
-import { IdentitystoreGroup } from '@cdktf/provider-aws/lib/identitystore-group/index.js'
-import { OrganizationsAccount } from '@cdktf/provider-aws/lib/organizations-account/index.js'
-import { SsoadminAccountAssignment } from '@cdktf/provider-aws/lib/ssoadmin-account-assignment/index.js'
-import { SsoadminPermissionSet } from '@cdktf/provider-aws/lib/ssoadmin-permission-set/index.js'
+import { DataAwsSsoadminInstances } from '@cdktf/provider-aws/lib/data-aws-ssoadmin-instances'
+import { IdentitystoreGroup } from '@cdktf/provider-aws/lib/identitystore-group'
+import { OrganizationsAccount } from '@cdktf/provider-aws/lib/organizations-account'
+import { SsoadminAccountAssignment } from '@cdktf/provider-aws/lib/ssoadmin-account-assignment'
+import { SsoadminPermissionSet } from '@cdktf/provider-aws/lib/ssoadmin-permission-set'
 import { Fn } from 'cdktf'
 import { Construct } from 'constructs'
-import { Accounts } from '../organizations/index.js'
-import { IdentityStore } from './identity-store.js'
-import { PermissionSet } from './permission-set.js'
+import { Accounts } from '../organizations'
+import { IdentityStore } from './identity-store'
+import { PermissionSet } from './permission-set'
 
 export type IAMIdentityCenterProps = Readonly<{
   accounts: Accounts

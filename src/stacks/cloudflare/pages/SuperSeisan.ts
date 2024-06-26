@@ -1,4 +1,4 @@
-import { PagesProject } from '@cdktf/provider-cloudflare/lib/pages-project/index.js'
+import { PagesProject } from '@cdktf/provider-cloudflare/lib/pages-project'
 import { Construct } from 'constructs'
 
 export type SuperSeisanConfig = Readonly<{

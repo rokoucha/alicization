@@ -1,6 +1,6 @@
 import { Construct } from 'constructs'
-import { IkaPri } from './IkaPri.js'
-import { KuronekoTrackerFeed } from './KuronekoTrackerFeed.js'
+import { IkaPri } from './IkaPri'
+import { KuronekoTrackerFeed } from './KuronekoTrackerFeed'
 
 export type WorkersConfig = Readonly<{
   accountId: string

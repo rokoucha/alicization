@@ -1,4 +1,4 @@
-import { WorkerScript } from '@cdktf/provider-cloudflare/lib/worker-script/index.js'
+import { WorkerScript } from '@cdktf/provider-cloudflare/lib/worker-script'
 import { Construct } from 'constructs'
 
 export type IkaPriConfig = Readonly<{
