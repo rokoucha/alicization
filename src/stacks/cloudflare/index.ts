@@ -26,15 +26,7 @@ export class CloudflareStack extends TerraformStack {
       type: 'string',
     })
 
-    const apiToken = new TerraformVariable(this, 'CLOUDFLARE_API_TOKEN', {
-      description: 'Cloudflare API token',
-      sensitive: true,
-      type: 'string',
-    })
-
-    new CloudflareProvider(this, 'provider', {
-      apiToken: apiToken.value,
-    })
+    new CloudflareProvider(this, 'provider')
 
     new Pages(this, 'pages', {
       accountId: accountId.value,
