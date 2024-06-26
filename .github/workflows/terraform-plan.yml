@@ -18,12 +18,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - uses: pnpm/action-setup@v2
+      - uses: pnpm/action-setup@v4
 
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@v4
         with:
-          cache: 'pnpm'
-          node-version: 20
+          cache: pnpm
+          node-version: latest
 
       - name: Install dependencies
         run: pnpm install
@@ -32,7 +32,7 @@ jobs:
         run: pnpm cdktf provider get
 
       - name: Plan AWS
-        uses: hashicorp/terraform-cdk-action@v0.2
+        uses: hashicorp/terraform-cdk-action@v4
         with:
           githubToken: ${{ secrets.GITHUB_TOKEN }}
           mode: plan-only
@@ -40,7 +40,7 @@ jobs:
           terraformCloudToken: ${{ secrets.TF_API_TOKEN }}
 
       - name: Plan Cloudflare
-        uses: hashicorp/terraform-cdk-action@v0.2
+        uses: hashicorp/terraform-cdk-action@v4
         with:
           githubToken: ${{ secrets.GITHUB_TOKEN }}
           mode: plan-only
@@ -48,7 +48,7 @@ jobs:
           terraformCloudToken: ${{ secrets.TF_API_TOKEN }}
 
       - name: Plan Mackerel
-        uses: hashicorp/terraform-cdk-action@v0.2
+        uses: hashicorp/terraform-cdk-action@v4
         with:
           githubToken: ${{ secrets.GITHUB_TOKEN }}
           mode: plan-only
