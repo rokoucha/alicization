@@ -9,6 +9,7 @@ master に push すると GitHub Actions によって自動でデプロイされ
 手動でデプロイする場合は
 
 - `pnpm i`
+- `pnpm cdktf provider get`
 - `pnpm cdktf diff`
 - `pnpm cdktf deploy`
 
@@ -19,6 +20,7 @@ Terraform Cloud で実行されるので手元にクレデンシャルは不要
 .env を埋める or AWS CLI でログインしておいて
 
 - `pnpm i`
+- `pnpm cdktf provider get`
 - `pnpm synth`
 - `terraform -chdir=cdktf.out/stacks/stack_name your_command_here`
 
