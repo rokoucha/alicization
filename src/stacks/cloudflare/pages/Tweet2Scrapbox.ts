@@ -37,6 +37,7 @@ export class Tweet2Scrapbox extends Construct {
           secrets: {
             TWITTER_BEARER_TOKEN: twtterBearerToken.value,
           },
+          usageModel: 'standard',
         },
       },
       source: {

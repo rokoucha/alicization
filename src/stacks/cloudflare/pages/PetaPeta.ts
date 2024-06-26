@@ -23,6 +23,7 @@ export class PetaPeta extends Construct {
             NODE_VERSION: '20',
           },
           failOpen: true,
+          usageModel: 'standard',
         },
       },
       source: {

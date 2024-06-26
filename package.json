@@ -20,14 +20,7 @@
   },
   "scripts": {
     "build": "tsc",
-    "deploy": "cdktf deploy aws cloudflare",
-    "diff": "cdktf diff aws cloudflare",
-    "import:aws": "pnpm run tf:aws import",
-    "import:cloudflare": "pnpm run tf:cloudflare import -var CLOUDFLARE_API_TOKEN=$CLOUDFLARE_API_TOKEN",
     "start": "node --enable-source-maps ./dist/main.js",
-    "synth": "cdktf synth aws cloudflare",
-    "tf:aws": "cd ./cdktf.out/stacks/aws && terraform",
-    "tf:cloudflare": "cd ./cdktf.out/stacks/cloudflare && terraform",
     "type-check": "tsc --noEmit"
   }
 }

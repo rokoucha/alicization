@@ -2,6 +2,7 @@ import { Construct } from 'constructs'
 import { AuthJsCloudflarePagesFunctions } from './AuthJsCloudflarePagesFunctions.js'
 import { CloudflarePagesFunctionsNextJs } from './CloudflarePagesFunctioNextJs.js'
 import { Cwskk } from './Cwskk.js'
+import { Gjx } from './Gjx.js'
 import { PetaPeta } from './PetaPeta.js'
 import { Scienest } from './Scienest.js'
 import { SuperSeisan } from './SuperSeisan.js'
@@ -37,6 +38,10 @@ export class Pages extends Construct {
     )
 
     new Cwskk(this, 'cwskk', {
+      accountId: config.accountId,
+    })
+
+    new Gjx(this, 'gjx', {
       accountId: config.accountId,
     })
 

@@ -1,28 +1,24 @@
 import { PagesProject } from '@cdktf/provider-cloudflare/lib/pages-project/index.js'
 import { Construct } from 'constructs'
 
-export type SuperSeisanConfig = Readonly<{
+export type GjxConfig = Readonly<{
   accountId: string
 }>
 
-export class SuperSeisan extends Construct {
-  constructor(scope: Construct, id: string, config: SuperSeisanConfig) {
+export class Gjx extends Construct {
+  constructor(scope: Construct, id: string, config: GjxConfig) {
     super(scope, id)
 
-    new PagesProject(this, 'super-seisan', {
+    new PagesProject(this, 'gjx', {
       accountId: config.accountId,
-      name: 'super-seisan',
+      name: 'gjx',
       productionBranch: 'master',
       buildConfig: {
         buildCommand: 'pnpm run build',
-        destinationDir: 'dist',
+        destinationDir: 'build',
       },
       deploymentConfigs: {
         production: {
-          compatibilityDate: '2023-01-14',
-          environmentVariables: {
-            NODE_VERSION: '20',
-          },
           failOpen: true,
           usageModel: 'standard',
         },
@@ -31,11 +27,10 @@ export class SuperSeisan extends Construct {
         type: 'github',
         config: {
           owner: 'rokoucha',
-          prCommentsEnabled: true,
           previewBranchIncludes: ['*'],
-          previewDeploymentSetting: 'all',
+          previewDeploymentSetting: 'none',
           productionBranch: 'master',
-          repoName: 'super-seisan',
+          repoName: 'gjx',
         },
       },
     })

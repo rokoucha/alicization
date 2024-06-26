@@ -33,6 +33,7 @@ export class Scienest extends Construct {
       name: 'scienest',
       productionBranch: 'master',
       buildConfig: {
+        buildCaching: true,
         buildCommand: 'pnpm run build:next',
         destinationDir: '.vercel/output/static',
       },
@@ -60,6 +61,7 @@ export class Scienest extends Construct {
             AUTH_GITHUB_SECRET: authGitHubSecret.value,
             AUTH_SECRET: authSecret.value,
           },
+          usageModel: 'standard',
         },
       },
       source: {

@@ -23,6 +23,7 @@ export class Cwskk extends Construct {
             NODE_VERSION: '20',
           },
           failOpen: true,
+          usageModel: 'standard',
         },
       },
       source: {

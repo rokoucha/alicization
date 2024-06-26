@@ -4,13 +4,23 @@
 
 ## How to deploy
 
-master に push すると自動でデプロイされる
+master に push すると GitHub Actions によって自動でデプロイされる
 
 手動でデプロイする場合は
 
 - `pnpm i`
-- `pnpm run diff`
-- `pnpm run deploy`
+- `pnpm cdktf diff`
+- `pnpm cdktf deploy`
+
+Terraform Cloud で実行されるので手元にクレデンシャルは不要
+
+## How to use terraform cli
+
+.env を埋める or AWS CLI でログインしておいて
+
+- `pnpm i`
+- `pnpm synth`
+- `terraform -chdir=cdktf.out/stacks/stack_name your_command_here`
 
 ## License
 

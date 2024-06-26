@@ -27,7 +27,7 @@ export class SaynWittgensteIn extends Construct {
       name: 'sayn-wittgenste.in',
       proxied: false,
       type: 'CNAME',
-      value: 'tomoko.dns.ggrel.net',
+      value: 'helium.dns.ggrel.net',
       zoneId: zone.id,
     })
 
@@ -100,14 +100,6 @@ export class SaynWittgensteIn extends Construct {
       name: 'sayn-wittgenste.in',
       type: 'TXT',
       value: 'v=spf1 include:_spf.google.com ~all',
-      zoneId: zone.id,
-    })
-
-    new Record(this, 'dns-txt-keybase-sayn-wittgenste.in', {
-      name: 'sayn-wittgenste.in',
-      type: 'TXT',
-      value:
-        'keybase-site-verification=u50udPoqhjtVQvqPMWh2RWOYGY264sfG2dM4jJu_5v4',
       zoneId: zone.id,
     })
   }

@@ -15,19 +15,11 @@ export class RokouchaNet extends Construct {
       zone: 'rokoucha.net',
     })
 
-    new Record(this, 'dns-cname-blog', {
-      name: 'blog',
-      proxied: false,
-      type: 'CNAME',
-      value: 'tomoko.dns.ggrel.net',
-      zoneId: zone.id,
-    })
-
     new Record(this, 'dns-cname-dot', {
       name: 'dot',
       proxied: false,
       type: 'CNAME',
-      value: 'tomoko.dns.ggrel.net',
+      value: 'helium.dns.ggrel.net',
       zoneId: zone.id,
     })
 
@@ -35,7 +27,7 @@ export class RokouchaNet extends Construct {
       name: 'ma',
       proxied: false,
       type: 'CNAME',
-      value: 'tomoko.dns.ggrel.net',
+      value: 'helium.dns.ggrel.net',
       zoneId: zone.id,
     })
 
@@ -43,7 +35,7 @@ export class RokouchaNet extends Construct {
       name: 'pl',
       proxied: false,
       type: 'CNAME',
-      value: 'tomoko.dns.ggrel.net',
+      value: 'helium.dns.ggrel.net',
       zoneId: zone.id,
     })
 
@@ -93,7 +85,7 @@ export class RokouchaNet extends Construct {
       zoneId: zone.id,
     })
 
-    new Record(this, 'dns-txt-keybase-1-rokoucha.net', {
+    new Record(this, 'dns-txt-keybase-rokoucha.net', {
       name: 'rokoucha.net',
       type: 'TXT',
       value:
@@ -120,14 +112,6 @@ export class RokouchaNet extends Construct {
       name: 'rokoucha.net',
       type: 'TXT',
       value: 'v=spf1 include:icloud.com ~all',
-      zoneId: zone.id,
-    })
-
-    new Record(this, 'dns-txt-keybase-2-rokoucha.net', {
-      name: 'rokoucha.net',
-      type: 'TXT',
-      value:
-        'keybase-site-verification=9_ss9mTHEErcN4--pZs4MXHDa5FzNvwtx_SEv5jhOmc',
       zoneId: zone.id,
     })
   }

@@ -53,6 +53,7 @@ export class CloudflarePagesFunctionsNextJs extends Construct {
             AUTH_GITHUB_SECRET: authGitHubSecret.value,
             AUTH_SECRET: authSecret.value,
           },
+          usageModel: 'standard',
         },
       },
       source: {

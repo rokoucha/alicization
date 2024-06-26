@@ -36,6 +36,7 @@ export class AuthJsCloudflarePagesFunctions extends Construct {
       name: 'authjs-cloudflare-pages-functions',
       productionBranch: 'main',
       buildConfig: {
+        buildCaching: true,
         buildCommand: 'pnpm run build',
         destinationDir: './public',
       },
@@ -52,6 +53,7 @@ export class AuthJsCloudflarePagesFunctions extends Construct {
             AUTH_GITHUB_SECRET: authGitHubSecret.value,
             AUTH_SECRET: authSecret.value,
           },
+          usageModel: 'standard',
         },
       },
       source: {

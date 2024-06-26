@@ -17,6 +17,7 @@ export class _8c7042Org extends Construct {
         production: {
           compatibilityDate: '2023-05-16',
           failOpen: true,
+          usageModel: 'standard',
         },
       },
       source: {

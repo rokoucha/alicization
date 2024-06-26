@@ -1,6 +1,5 @@
 import { Construct } from 'constructs'
 import { GgrelNet } from './GgrelNet.js'
-import { NoaPpUa } from './NoaPpUa.js'
 import { RokouchaNet } from './RokouchaNet.js'
 import { SaynWittgensteIn } from './SaynWittgensteIn.js'
 import { _8c7042 } from './_8c7042.js'
@@ -18,10 +17,6 @@ export class Zones extends Construct {
     })
 
     new GgrelNet(this, 'ggrel.net', {
-      accountId: config.accountId,
-    })
-
-    new NoaPpUa(this, 'noa.pp.ua', {
       accountId: config.accountId,
     })
 
