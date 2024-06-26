@@ -18,6 +18,6 @@ export class MackerelStack extends TerraformStack {
     new Monitor(this, 'connectivity', {
       name: 'connectivity',
       connectivity: {},
-    }).importFrom('4L9mKtpffPA')
+    })
   }
 }
