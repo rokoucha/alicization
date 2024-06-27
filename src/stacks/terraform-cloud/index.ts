@@ -1,5 +1,8 @@
 import { Organization } from '@cdktf/provider-tfe/lib/organization'
+import { Project } from '@cdktf/provider-tfe/lib/project'
 import { TfeProvider } from '@cdktf/provider-tfe/lib/provider'
+import { Variable } from '@cdktf/provider-tfe/lib/variable'
+import { Workspace } from '@cdktf/provider-tfe/lib/workspace'
 import {
   CloudBackend,
   NamedCloudWorkspace,
@@ -20,19 +23,98 @@ export class TerraformCloudStack extends TerraformStack {
 
     new TfeProvider(this, 'tfe')
 
-    const name = new TerraformVariable(this, 'TFC_ORGANIZATION_NAME', {
-      description: 'Terraform Cloud organization name',
-      type: 'string',
-    })
-
     const email = new TerraformVariable(this, 'TFC_ORGANIZATION_EMAIL', {
       description: 'Terraform Cloud organization email',
       type: 'string',
     })
 
-    new Organization(this, 'organization', {
-      name: name.value,
+    const organization = new Organization(this, 'organization', {
+      name: 'rokoucha',
       email: email.value,
+    })
+
+    const project = new Project(this, 'alicization', {
+      name: 'alicization',
+      organization: organization.name,
+    })
+    project.importFrom('prj-488VXbvWS4Qms8Fp')
+
+    const aws = new Workspace(this, 'aws', {
+      name: 'aws',
+      organization: organization.name,
+      projectId: project.id,
+      queueAllRuns: false,
+      terraformVersion: '~> 1.9.0',
+    })
+
+    new Variable(this, 'aws-TFC_AWS_PROVIDER_AUTH', {
+      key: 'TFC_AWS_PROVIDER_AUTH',
+      value: 'true',
+      category: 'env',
+      workspaceId: aws.id,
+    })
+
+    new Variable(this, 'aws-TFC_AWS_RUN_ROLE_ARN', {
+      key: 'TFC_AWS_RUN_ROLE_ARN',
+      category: 'env',
+      workspaceId: aws.id,
+    }).addOverride('lifecycle.ignore_changes', ['value'])
+
+    const cloudflare = new Workspace(this, 'cloudflare', {
+      name: 'cloudflare',
+      organization: organization.name,
+      projectId: project.id,
+      queueAllRuns: false,
+      terraformVersion: '~> 1.9.0',
+    })
+
+    new Variable(this, 'cloudflare-CLOUDFLARE_API_TOKEN', {
+      key: 'CLOUDFLARE_API_TOKEN',
+      category: 'env',
+      sensitive: true,
+      workspaceId: cloudflare.id,
+    })
+
+    const mackerel = new Workspace(this, 'mackerel', {
+      name: 'mackerel',
+      organization: organization.name,
+      projectId: project.id,
+      queueAllRuns: false,
+      terraformVersion: '~> 1.9.0',
+    })
+
+    new Variable(this, 'mackerel-WATCHDOGS_WEBHOOK_URL', {
+      key: 'WATCHDOGS_WEBHOOK_URL',
+      category: 'terraform',
+      workspaceId: mackerel.id,
+    }).addOverride('lifecycle.ignore_changes', ['value'])
+
+    new Variable(this, 'mackerel-MACKEREL_API_KEY', {
+      key: 'MACKEREL_API_KEY',
+      category: 'env',
+      sensitive: true,
+      workspaceId: mackerel.id,
+    })
+
+    const terraformCloud = new Workspace(this, 'terraform-cloud', {
+      name: 'terraform-cloud',
+      organization: organization.name,
+      projectId: project.id,
+      queueAllRuns: false,
+      terraformVersion: '~> 1.9.0',
+    })
+
+    new Variable(this, 'terraform-cloud-TFC_ORGANIZATION_EMAIL', {
+      key: 'TFC_ORGANIZATION_EMAIL',
+      category: 'terraform',
+      workspaceId: terraformCloud.id,
+    }).addOverride('lifecycle.ignore_changes', ['value'])
+
+    new Variable(this, 'terraform-cloud-TFE_TOKEN', {
+      key: 'TFE_TOKEN',
+      category: 'env',
+      sensitive: true,
+      workspaceId: terraformCloud.id,
     })
   }
 }
