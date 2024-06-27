@@ -1,10 +1,6 @@
+import { Account } from '@cdktf/provider-cloudflare/lib/account'
 import { CloudflareProvider } from '@cdktf/provider-cloudflare/lib/provider'
-import {
-  CloudBackend,
-  NamedCloudWorkspace,
-  TerraformStack,
-  TerraformVariable,
-} from 'cdktf'
+import { CloudBackend, NamedCloudWorkspace, TerraformStack } from 'cdktf'
 import { Construct } from 'constructs'
 import { TerraformCloudBackendProps } from '../../config'
 import { Pages } from './pages'
@@ -21,27 +17,26 @@ export class CloudflareStack extends TerraformStack {
       workspaces: new NamedCloudWorkspace(id),
     })
 
-    const accountId = new TerraformVariable(this, 'CLOUDFLARE_ACCOUNT_ID', {
-      description: 'Cloudflare account ID',
-      type: 'string',
-    })
-
     new CloudflareProvider(this, 'provider')
 
+    const account = new Account(this, 'account', {
+      name: 'rokoucha',
+    })
+
     new Pages(this, 'pages', {
-      accountId: accountId.value,
+      accountId: account.id,
     })
 
     new R2(this, 'r2', {
-      accountId: accountId.value,
+      accountId: account.id,
     })
 
     new Workers(this, 'workers', {
-      accountId: accountId.value,
+      accountId: account.id,
     })
 
     new Zones(this, 'zones', {
-      accountId: accountId.value,
+      accountId: account.id,
     })
   }
 }
