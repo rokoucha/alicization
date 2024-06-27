@@ -6,6 +6,7 @@
   "dependencies": {
     "@cdktf/provider-aws": "^19.23.0",
     "@cdktf/provider-cloudflare": "11.13.0",
+    "@cdktf/provider-tfe": "^11.5.0",
     "@cdktf/provider-tls": "^10.0.0",
     "cdktf": "^0.20.7",
     "constructs": "^10.3.0"

@@ -14,6 +14,9 @@ importers:
       '@cdktf/provider-cloudflare':
         specifier: 11.13.0
         version: 11.13.0(cdktf@0.20.7(constructs@10.3.0))(constructs@10.3.0)
+      '@cdktf/provider-tfe':
+        specifier: ^11.5.0
+        version: 11.5.0(cdktf@0.20.7(constructs@10.3.0))(constructs@10.3.0)
       '@cdktf/provider-tls':
         specifier: ^10.0.0
         version: 10.0.0(cdktf@0.20.7(constructs@10.3.0))(constructs@10.3.0)
@@ -112,6 +115,13 @@ packages:
 
   '@cdktf/provider-schema@0.20.7':
     resolution: {integrity: sha512-KVV5YMaMoXgrmT+AsU1y3vCLfyie5/XbSKVVrUnVp5sCrwhsFMl6U59HTDQ52QX3aHWxwTAqEZbljdg6ZUbk9A==}
+
+  '@cdktf/provider-tfe@11.5.0':
+    resolution: {integrity: sha512-QpLbz/AC5nw5Qukd4WhULeQUE+ApcgoMfxKO4tYGQ4fgTYP032QuMSrN0wybyj35IIJVe9yBUOnwLsPtyQGWHQ==}
+    engines: {node: '>= 18.12.0'}
+    peerDependencies:
+      cdktf: ^0.20.0
+      constructs: ^10.3.0
 
   '@cdktf/provider-tls@10.0.0':
     resolution: {integrity: sha512-iDrN4uMfm04elu8Ixb1fLTJmWJRh+IojMmKj8bUs00Ow/aYeqe97n6U4srMlO2/PfXzG5oonmJEOFreduI/1lg==}
@@ -1819,8 +1829,8 @@ packages:
     engines: {node: '>=14.17'}
     hasBin: true
 
-  typescript@5.6.0-dev.20240626:
-    resolution: {integrity: sha512-OUmoaUrtJEMGnxr8luc4sBdJFMFl1rZHdG0h7lOT1J62RBkYiD/LfQJKaH7GcywgMA+oaONUb75kIHi3s8czkg==}
+  typescript@5.6.0-dev.20240627:
+    resolution: {integrity: sha512-fP6zd/pZ8baYlr3jR1sdhUxcuRrbL4kAEpGD4sx9Gr/eBvxKbs5mQqWTKICgxwbtKOXJ4KdrEoJkbx8+3PaZpg==}
     engines: {node: '>=14.17'}
     hasBin: true
 
@@ -2159,6 +2169,11 @@ snapshots:
       - constructs
       - debug
       - supports-color
+
+  '@cdktf/provider-tfe@11.5.0(cdktf@0.20.7(constructs@10.3.0))(constructs@10.3.0)':
+    dependencies:
+      cdktf: 0.20.7(constructs@10.3.0)
+      constructs: 10.3.0
 
   '@cdktf/provider-tls@10.0.0(cdktf@0.20.7(constructs@10.3.0))(constructs@10.3.0)':
     dependencies:
@@ -2864,7 +2879,7 @@ snapshots:
     dependencies:
       semver: 7.6.2
       shelljs: 0.8.5
-      typescript: 5.6.0-dev.20240626
+      typescript: 5.6.0-dev.20240627
 
   eastasianwidth@0.2.0: {}
 
@@ -4151,7 +4166,7 @@ snapshots:
 
   typescript@5.5.2: {}
 
-  typescript@5.6.0-dev.20240626: {}
+  typescript@5.6.0-dev.20240627: {}
 
   unbox-primitive@1.0.2:
     dependencies:

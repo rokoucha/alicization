@@ -59,3 +59,11 @@ jobs:
           mode: auto-approve-apply
           stackName: mackerel
           terraformCloudToken: ${{ secrets.TF_API_TOKEN }}
+
+      - name: Apply Terraform Cloud
+        uses: hashicorp/terraform-cdk-action@v4
+        with:
+          githubToken: ${{ secrets.GITHUB_TOKEN }}
+          mode: auto-approve-apply
+          stackName: terrafrom-cloud
+          terraformCloudToken: ${{ secrets.TF_API_TOKEN }}
