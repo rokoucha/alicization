@@ -1,3 +1,4 @@
+import { NotificationConfiguration } from '@cdktf/provider-tfe/lib/notification-configuration'
 import { Organization } from '@cdktf/provider-tfe/lib/organization'
 import { Project } from '@cdktf/provider-tfe/lib/project'
 import { TfeProvider } from '@cdktf/provider-tfe/lib/provider'
@@ -28,6 +29,15 @@ export class TerraformCloudStack extends TerraformStack {
       type: 'string',
     })
 
+    const discordNotificationWebhookUrl = new TerraformVariable(
+      this,
+      'DISCORD_NOTIFICATION_WEBHOOK_URL',
+      {
+        description: 'Discord notification webhook URL for Terraform Cloud',
+        type: 'string',
+      },
+    )
+
     const organization = new Organization(this, 'organization', {
       name: 'rokoucha',
       email: email.value,
@@ -45,6 +55,14 @@ export class TerraformCloudStack extends TerraformStack {
       projectId: project.id,
       queueAllRuns: false,
       terraformVersion: '~> 1.9.0',
+    })
+
+    new NotificationConfiguration(this, 'aws-notification-discord', {
+      name: 'Discord',
+      destinationType: 'slack',
+      enabled: true,
+      url: discordNotificationWebhookUrl.value,
+      workspaceId: aws.id,
     })
 
     new Variable(this, 'aws-TFC_AWS_PROVIDER_AUTH', {
@@ -68,6 +86,14 @@ export class TerraformCloudStack extends TerraformStack {
       terraformVersion: '~> 1.9.0',
     })
 
+    new NotificationConfiguration(this, 'cloudflare-notification-discord', {
+      name: 'Discord',
+      destinationType: 'slack',
+      enabled: true,
+      url: discordNotificationWebhookUrl.value,
+      workspaceId: cloudflare.id,
+    })
+
     new Variable(this, 'cloudflare-CLOUDFLARE_API_TOKEN', {
       key: 'CLOUDFLARE_API_TOKEN',
       category: 'env',
@@ -81,6 +107,14 @@ export class TerraformCloudStack extends TerraformStack {
       projectId: project.id,
       queueAllRuns: false,
       terraformVersion: '~> 1.9.0',
+    })
+
+    new NotificationConfiguration(this, 'mackerel-notification-discord', {
+      name: 'Discord',
+      destinationType: 'slack',
+      enabled: true,
+      url: discordNotificationWebhookUrl.value,
+      workspaceId: mackerel.id,
     })
 
     new Variable(this, 'mackerel-WATCHDOGS_WEBHOOK_URL', {
@@ -104,6 +138,18 @@ export class TerraformCloudStack extends TerraformStack {
       terraformVersion: '~> 1.9.0',
     })
 
+    new NotificationConfiguration(
+      this,
+      'terraform-cloud-notification-discord',
+      {
+        name: 'Discord',
+        destinationType: 'slack',
+        enabled: true,
+        url: discordNotificationWebhookUrl.value,
+        workspaceId: terraformCloud.id,
+      },
+    )
+
     new Variable(this, 'terraform-cloud-TFC_ORGANIZATION_EMAIL', {
       key: 'TFC_ORGANIZATION_EMAIL',
       category: 'terraform',
@@ -113,6 +159,13 @@ export class TerraformCloudStack extends TerraformStack {
     new Variable(this, 'terraform-cloud-TFE_TOKEN', {
       key: 'TFE_TOKEN',
       category: 'env',
+      sensitive: true,
+      workspaceId: terraformCloud.id,
+    })
+
+    new Variable(this, 'terraform-cloud-DISCORD_NOTIFICATION_WEBHOOK_URL', {
+      key: 'DISCORD_NOTIFICATION_WEBHOOK_URL',
+      category: 'terraform',
       sensitive: true,
       workspaceId: terraformCloud.id,
     })
