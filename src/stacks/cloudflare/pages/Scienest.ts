@@ -39,10 +39,10 @@ export class Scienest extends Construct {
       },
       deploymentConfigs: {
         production: {
-          compatibilityDate: '2023-03-14',
+          compatibilityDate: '2024-06-03',
           compatibilityFlags: ['nodejs_compat'],
           d1Databases: {
-            DB: '5dd17953-e672-4f02-aff5-b390ac3ad233',
+            DB: '6932807b-60cc-425a-b309-eebcea6f13c4',
           },
           environmentVariables: {
             APP_ENV: 'production',

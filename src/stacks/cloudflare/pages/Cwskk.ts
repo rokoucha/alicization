@@ -14,13 +14,14 @@ export class Cwskk extends Construct {
       name: 'cwskk',
       productionBranch: 'master',
       buildConfig: {
-        buildCommand: 'yarn run build',
-        destinationDir: 'dist',
+        buildCaching: true,
+        buildCommand: 'pnpm run build:preview',
+        destinationDir: 'dist/preview',
       },
       deploymentConfigs: {
         production: {
           environmentVariables: {
-            NODE_VERSION: '20',
+            NODE_VERSION: '22',
           },
           failOpen: true,
           usageModel: 'standard',
