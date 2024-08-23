@@ -4,19 +4,19 @@
   "packageManager": "pnpm@9.8.0+sha512.8e4c3550fb500e808dbc30bb0ce4dd1eb614e30b1c55245f211591ec2cdf9c611cabd34e1364b42f564bd54b3945ed0f49d61d1bbf2ec9bd74b866fcdc723276",
   "private": true,
   "dependencies": {
-    "@cdktf/provider-aws": "^19.23.0",
-    "@cdktf/provider-cloudflare": "11.13.0",
-    "@cdktf/provider-tfe": "^11.5.0",
+    "@cdktf/provider-aws": "^19.32.0",
+    "@cdktf/provider-cloudflare": "11.18.0",
+    "@cdktf/provider-tfe": "^11.7.0",
     "@cdktf/provider-tls": "^10.0.0",
-    "cdktf": "^0.20.7",
+    "cdktf": "^0.20.8",
     "constructs": "^10.3.0"
   },
   "devDependencies": {
     "@types/jest": "^29.5.12",
-    "@types/node": "^20.14.9",
-    "cdktf-cli": "^0.20.7",
-    "prettier": "^3.3.2",
-    "typescript": "^5.5.2"
+    "@types/node": "^22.5.0",
+    "cdktf-cli": "^0.20.8",
+    "prettier": "^3.3.3",
+    "typescript": "^5.5.4"
   },
   "scripts": {
     "build": "tsc",
