@@ -50,6 +50,20 @@ export class GgrelNet extends Construct {
       zoneId: zone.id,
     }).addOverride('lifecycle.ignore_changes', ['value'])
 
+    new Record(this, 'dns-aaaa-boron.dns', {
+      name: 'boron.dns',
+      type: 'AAAA',
+      value: '::',
+      zoneId: zone.id,
+    }).addOverride('lifecycle.ignore_changes', ['value'])
+
+    new Record(this, 'dns-aaaa-carbon.dns', {
+      name: 'carbon.dns',
+      type: 'AAAA',
+      value: '::',
+      zoneId: zone.id,
+    }).addOverride('lifecycle.ignore_changes', ['value'])
+
     new Record(this, 'dns-aaaa-elma.dns', {
       name: 'elma.dns',
       type: 'AAAA',
