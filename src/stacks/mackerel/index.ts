@@ -10,6 +10,7 @@ import { Monitor } from '../../../.gen/providers/mackerel/monitor'
 import { NotificationGroup } from '../../../.gen/providers/mackerel/notification-group'
 import { MackerelProvider } from '../../../.gen/providers/mackerel/provider'
 import { TerraformCloudBackendProps } from '../../config'
+import { ElementsCluster } from './services/elements-cluster'
 import { Ggrel } from './services/ggrel'
 import { GgrelDTV } from './services/ggrel-dtv'
 
@@ -30,7 +31,7 @@ export class MackerelStack extends TerraformStack {
     })
 
     const watchdogs = new Channel(this, 'watchdogs', {
-      name: 'watchdogs',
+      name: '#watchdogs',
       slack: [
         {
           url: watchdogsUrl.value,
@@ -50,6 +51,7 @@ export class MackerelStack extends TerraformStack {
       connectivity: {},
     })
 
+    new ElementsCluster(this, 'elements-cluster')
     new GgrelDTV(this, 'ggrel-dtv')
     new Ggrel(this, 'ggrel')
   }
