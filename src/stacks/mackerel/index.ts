@@ -13,6 +13,9 @@ import { TerraformCloudBackendProps } from '../../config'
 import { ElementsCluster } from './services/elements-cluster'
 import { Ggrel } from './services/ggrel'
 import { GgrelDTV } from './services/ggrel-dtv'
+import { Hydrogen } from './services/hydrogen'
+import { Lithium } from './services/lithium'
+import { Machines } from './services/machines'
 
 export class MackerelStack extends TerraformStack {
   constructor(scope: Construct, id: string) {
@@ -54,5 +57,8 @@ export class MackerelStack extends TerraformStack {
     new ElementsCluster(this, 'elements-cluster')
     new GgrelDTV(this, 'ggrel-dtv')
     new Ggrel(this, 'ggrel')
+    new Hydrogen(this, 'hydrogen')
+    new Lithium(this, 'lithium')
+    new Machines(this, 'machines')
   }
 }
