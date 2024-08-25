@@ -36,13 +36,12 @@ export class GgrelNet extends Construct {
       zoneId: zone.id,
     })
 
-    const n4 = new Record(this, 'dns-a-nitrogen.dns', {
+    new Record(this, 'dns-a-nitrogen.dns', {
       name: 'nitrogen.dns',
       type: 'A',
       value: '172.16.2.14',
       zoneId: zone.id,
-    })
-    n4.importFrom(
+    }).importFrom(
       '8797b62049f417096e6bba991ebbbc6a/8cf15f775cae97bda43ef97f9c62eaf4',
     )
 
@@ -95,16 +94,12 @@ export class GgrelNet extends Construct {
       zoneId: zone.id,
     }).addOverride('lifecycle.ignore_changes', ['value'])
 
-    const n6 = new Record(this, 'dns-aaaa-nitrogen.dns', {
+    new Record(this, 'dns-aaaa-nitrogen.dns', {
       name: 'nitrogen.dns',
       type: 'AAAA',
       value: '::',
       zoneId: zone.id,
-    })
-    n6.importFrom(
-      '8797b62049f417096e6bba991ebbbc6a/736b61dc9e3119637b6dfd4890379ed8',
-    )
-    n6.addOverride('lifecycle.ignore_changes', ['value'])
+    }).addOverride('lifecycle.ignore_changes', ['value'])
 
     new Record(this, 'dns-aaaa-v6.haruka.dns', {
       name: 'v6.haruka.dns',
