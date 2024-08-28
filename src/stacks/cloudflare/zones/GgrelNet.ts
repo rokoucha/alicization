@@ -155,6 +155,22 @@ export class GgrelNet extends Construct {
       zoneId: zone.id,
     })
 
+    new Record(this, 'dns-cname-materia', {
+      name: 'materia',
+      proxied: false,
+      type: 'CNAME',
+      value: 'carbon.dns.ggrel.net',
+      zoneId: zone.id,
+    })
+
+    new Record(this, 'dns-cname-materia-cluster', {
+      name: 'materia-cluster',
+      proxied: false,
+      type: 'CNAME',
+      value: 'boron.dns.ggrel.net',
+      zoneId: zone.id,
+    })
+
     new Record(this, 'dns-cname-miniflux', {
       name: 'miniflux',
       proxied: false,
