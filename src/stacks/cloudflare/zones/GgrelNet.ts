@@ -163,6 +163,14 @@ export class GgrelNet extends Construct {
       zoneId: zone.id,
     })
 
+    new Record(this, 'dns-cname-hubble.materia', {
+      name: 'hubble.materia',
+      proxied: false,
+      type: 'CNAME',
+      content: 'materia.ggrel.net',
+      zoneId: zone.id,
+    })
+
     new Record(this, 'dns-cname-materia-cluster', {
       name: 'materia-cluster',
       proxied: false,
