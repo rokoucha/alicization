@@ -10,12 +10,12 @@ import { Monitor } from '../../../.gen/providers/mackerel/monitor'
 import { NotificationGroup } from '../../../.gen/providers/mackerel/notification-group'
 import { MackerelProvider } from '../../../.gen/providers/mackerel/provider'
 import { TerraformCloudBackendProps } from '../../config'
-import { ElementsCluster } from './services/elements-cluster'
 import { Ggrel } from './services/ggrel'
 import { GgrelDTV } from './services/ggrel-dtv'
 import { Hydrogen } from './services/hydrogen'
 import { Lithium } from './services/lithium'
 import { Machines } from './services/machines'
+import { MateriaCluster } from './services/materia-cluster'
 
 export class MackerelStack extends TerraformStack {
   constructor(scope: Construct, id: string) {
@@ -54,7 +54,7 @@ export class MackerelStack extends TerraformStack {
       connectivity: {},
     })
 
-    new ElementsCluster(this, 'elements-cluster')
+    new MateriaCluster(this, 'materia-cluster')
     new GgrelDTV(this, 'ggrel-dtv')
     new Ggrel(this, 'ggrel')
     new Hydrogen(this, 'hydrogen')

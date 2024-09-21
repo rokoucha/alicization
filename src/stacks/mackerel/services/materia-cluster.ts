@@ -2,12 +2,12 @@ import { Construct } from 'constructs'
 import { Role } from '../../../../.gen/providers/mackerel/role'
 import { Service } from '../../../../.gen/providers/mackerel/service'
 
-export class ElementsCluster extends Construct {
+export class MateriaCluster extends Construct {
   constructor(scope: Construct, id: string) {
     super(scope, id)
 
-    const service = new Service(this, 'elements-cluster', {
-      name: 'elements-cluster',
+    const service = new Service(this, 'materia-cluster', {
+      name: 'materia-cluster',
     })
 
     new Role(this, 'controller', {
