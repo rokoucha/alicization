@@ -191,7 +191,7 @@ export class GgrelNet extends Construct {
       name: 'miniflux',
       proxied: false,
       type: 'CNAME',
-      value: 'materia.ggrel.net',
+      content: 'materia.ggrel.net',
       zoneId: zone.id,
     })
 
