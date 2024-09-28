@@ -113,7 +113,7 @@ export class GgrelNet extends Construct {
       data: {
         flags: '0',
         tag: 'issuewild',
-        content: 'letsencrypt.org',
+        value: 'letsencrypt.org',
       },
       name: 'ggrel.net',
       type: 'CAA',
@@ -124,7 +124,7 @@ export class GgrelNet extends Construct {
       data: {
         flags: '0',
         tag: 'issue',
-        content: 'letsencrypt.org',
+        value: 'letsencrypt.org',
       },
       name: 'ggrel.net',
       type: 'CAA',
