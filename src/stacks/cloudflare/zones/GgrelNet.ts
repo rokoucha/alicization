@@ -22,6 +22,13 @@ export class GgrelNet extends Construct {
       zoneId: zone.id,
     })
 
+    new Record(this, 'dns-a-carbon.dns', {
+      name: 'carbon.dns',
+      type: 'A',
+      content: '0.0.0.0',
+      zoneId: zone.id,
+    }).addOverride('lifecycle.ignore_changes', ['content'])
+
     new Record(this, 'dns-a-helium.dns', {
       name: 'helium.dns',
       type: 'A',
