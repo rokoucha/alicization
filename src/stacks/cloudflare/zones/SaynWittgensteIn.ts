@@ -19,7 +19,7 @@ export class SaynWittgensteIn extends Construct {
       name: 'heinrike.prinzessin.zu',
       proxied: false,
       type: 'CNAME',
-      value: 'sayn-wittgenste.in',
+      content: 'sayn-wittgenste.in',
       zoneId: zone.id,
     })
 
@@ -27,7 +27,7 @@ export class SaynWittgensteIn extends Construct {
       name: 'sayn-wittgenste.in',
       proxied: false,
       type: 'CNAME',
-      value: 'helium.dns.ggrel.net',
+      content: 'helium.dns.ggrel.net',
       zoneId: zone.id,
     })
 
@@ -35,7 +35,7 @@ export class SaynWittgensteIn extends Construct {
       name: 'sayn-wittgenste.in',
       priority: 10,
       type: 'MX',
-      value:
+      content:
         'qopfxxhethpfg6oj5ubrjxup5aayjzhcjd2tu2ejl4myv2xfsl7q.mx-verification.google.com',
       zoneId: zone.id,
     })
@@ -44,7 +44,7 @@ export class SaynWittgensteIn extends Construct {
       name: 'sayn-wittgenste.in',
       priority: 10,
       type: 'MX',
-      value: 'alt4.aspmx.l.google.com',
+      content: 'alt4.aspmx.l.google.com',
       zoneId: zone.id,
     })
 
@@ -52,7 +52,7 @@ export class SaynWittgensteIn extends Construct {
       name: 'sayn-wittgenste.in',
       priority: 10,
       type: 'MX',
-      value: 'alt3.aspmx.l.google.com',
+      content: 'alt3.aspmx.l.google.com',
       zoneId: zone.id,
     })
 
@@ -60,7 +60,7 @@ export class SaynWittgensteIn extends Construct {
       name: 'sayn-wittgenste.in',
       priority: 5,
       type: 'MX',
-      value: 'alt2.aspmx.l.google.com',
+      content: 'alt2.aspmx.l.google.com',
       zoneId: zone.id,
     })
 
@@ -68,7 +68,7 @@ export class SaynWittgensteIn extends Construct {
       name: 'sayn-wittgenste.in',
       priority: 5,
       type: 'MX',
-      value: 'alt1.aspmx.l.google.com',
+      content: 'alt1.aspmx.l.google.com',
       zoneId: zone.id,
     })
 
@@ -76,14 +76,14 @@ export class SaynWittgensteIn extends Construct {
       name: 'sayn-wittgenste.in',
       priority: 1,
       type: 'MX',
-      value: 'aspmx.l.google.com',
+      content: 'aspmx.l.google.com',
       zoneId: zone.id,
     })
 
     new Record(this, 'dns-txt-_dmarc', {
       name: '_dmarc',
       type: 'TXT',
-      value:
+      content:
         'v=DMARC1; p=none; rua=mailto:heinrike.prinzessin.zu.sayn-wittgenste.in',
       zoneId: zone.id,
     })
@@ -91,7 +91,7 @@ export class SaynWittgensteIn extends Construct {
     new Record(this, 'dns-txt-google._domainkey', {
       name: 'google._domainkey',
       type: 'TXT',
-      value:
+      content:
         'v=DKIM1; k=rsa; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArVbmlsyvPbqNdN9FMO+7h0vR0cmY8xXZS6kOV2+FIggaQ5jcR8KNnLvmjS5BS0JUv+l+yFjNlPuS0S6uKzYXplvDhNcp/WbbETcMv2jkIBVRWGa6ExZQBmF2iZEql5IiDfSlvQOfgrEsEJjqy5qYtHM6pmamNzoqBERN+xLldTr/NEaUr1AexzxJ5/15bY89isOLUj92RXdR5j8lpHUzx1WbVDhIUUF4ZftzRVfvrG+TMsYj2W3WaaiN230wd6KB6duBEBqTY5fCBYQmI5WjgT53QG8UEhi1ANEWmzrL9qyAiSDFjNkBIgFGrf1e0hDiM3TBWQVynys4cx5XznUAQQIDAQAB',
       zoneId: zone.id,
     })
@@ -99,7 +99,7 @@ export class SaynWittgensteIn extends Construct {
     new Record(this, 'dns-txt-spf-sayn-wittgenste.in', {
       name: 'sayn-wittgenste.in',
       type: 'TXT',
-      value: 'v=spf1 include:_spf.google.com ~all',
+      content: 'v=spf1 include:_spf.google.com ~all',
       zoneId: zone.id,
     })
   }

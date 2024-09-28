@@ -19,7 +19,7 @@ export class _8c7042 extends Construct {
       name: '8c7042.org',
       proxied: true,
       type: 'CNAME',
-      value: '8c7042-org.pages.dev',
+      content: '8c7042-org.pages.dev',
       zoneId: zone.id,
     })
 
@@ -27,7 +27,7 @@ export class _8c7042 extends Construct {
       name: 'sig1._domainkey',
       proxied: false,
       type: 'CNAME',
-      value: 'sig1.dkim.8c7042.org.at.icloudmailadmin.com',
+      content: 'sig1.dkim.8c7042.org.at.icloudmailadmin.com',
       zoneId: zone.id,
     })
 
@@ -35,7 +35,7 @@ export class _8c7042 extends Construct {
       name: '8c7042.org',
       priority: 10,
       type: 'MX',
-      value: 'mx01.mail.icloud.com',
+      content: 'mx01.mail.icloud.com',
       zoneId: zone.id,
     })
 
@@ -43,21 +43,21 @@ export class _8c7042 extends Construct {
       name: '8c7042.org',
       priority: 10,
       type: 'MX',
-      value: 'mx02.mail.icloud.com',
+      content: 'mx02.mail.icloud.com',
       zoneId: zone.id,
     })
 
     new Record(this, 'dns-txt-icloud-rokoucha.net', {
       name: '8c7042.org',
       type: 'TXT',
-      value: 'apple-domain=Es5ZQePw6ABEyeQu',
+      content: 'apple-domain=Es5ZQePw6ABEyeQu',
       zoneId: zone.id,
     })
 
     new Record(this, 'dns-txt-postmaster-tools-rokoucha.net', {
       name: '8c7042.org',
       type: 'TXT',
-      value:
+      content:
         'google-site-verification=vwwbD5dCs65jkMqWLtx-UWwKxVXPyGQsMNFIvSix2RY',
       zoneId: zone.id,
     })
@@ -65,14 +65,14 @@ export class _8c7042 extends Construct {
     new Record(this, 'dns-txt-spf-8c7042.org', {
       name: '8c7042.org',
       type: 'TXT',
-      value: 'v=spf1 include:icloud.com ~all',
+      content: 'v=spf1 include:icloud.com ~all',
       zoneId: zone.id,
     })
 
     new Record(this, 'dns-txt-_dmarc', {
       name: '_dmarc',
       type: 'TXT',
-      value: 'v=DMARC1; p=quarantine; adkim=s',
+      content: 'v=DMARC1; p=quarantine; adkim=s',
       zoneId: zone.id,
     })
   }

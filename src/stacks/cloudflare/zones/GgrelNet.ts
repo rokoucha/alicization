@@ -18,28 +18,28 @@ export class GgrelNet extends Construct {
     new Record(this, 'dns-a-haruka.dns', {
       name: 'haruka.dns',
       type: 'A',
-      value: '172.16.2.21',
+      content: '172.16.2.21',
       zoneId: zone.id,
     })
 
     new Record(this, 'dns-a-helium.dns', {
       name: 'helium.dns',
       type: 'A',
-      value: '0.0.0.0',
+      content: '0.0.0.0',
       zoneId: zone.id,
     }).addOverride('lifecycle.ignore_changes', ['value'])
 
     new Record(this, 'dns-a-nginx_stats', {
       name: 'nginx_stats',
       type: 'A',
-      value: '172.16.2.16',
+      content: '172.16.2.16',
       zoneId: zone.id,
     })
 
     new Record(this, 'dns-a-nitrogen.dns', {
       name: 'nitrogen.dns',
       type: 'A',
-      value: '172.16.2.14',
+      content: '172.16.2.14',
       zoneId: zone.id,
     }).importFrom(
       '8797b62049f417096e6bba991ebbbc6a/8cf15f775cae97bda43ef97f9c62eaf4',
@@ -48,56 +48,56 @@ export class GgrelNet extends Construct {
     new Record(this, 'dns-aaaa-beryllium.dns', {
       name: 'beryllium.dns',
       type: 'AAAA',
-      value: '::',
+      content: '::',
       zoneId: zone.id,
     }).addOverride('lifecycle.ignore_changes', ['value'])
 
     new Record(this, 'dns-aaaa-boron.dns', {
       name: 'boron.dns',
       type: 'AAAA',
-      value: '::',
+      content: '::',
       zoneId: zone.id,
     }).addOverride('lifecycle.ignore_changes', ['value'])
 
     new Record(this, 'dns-aaaa-carbon.dns', {
       name: 'carbon.dns',
       type: 'AAAA',
-      value: '::',
+      content: '::',
       zoneId: zone.id,
     }).addOverride('lifecycle.ignore_changes', ['value'])
 
     new Record(this, 'dns-aaaa-haruka.dns', {
       name: 'haruka.dns',
       type: 'AAAA',
-      value: '::',
+      content: '::',
       zoneId: zone.id,
     }).addOverride('lifecycle.ignore_changes', ['value'])
 
     new Record(this, 'dns-aaaa-helium.dns', {
       name: 'helium.dns',
       type: 'AAAA',
-      value: '::',
+      content: '::',
       zoneId: zone.id,
     }).addOverride('lifecycle.ignore_changes', ['value'])
 
     new Record(this, 'dns-aaaa-hydrogen.dns', {
       name: 'hydrogen.dns',
       type: 'AAAA',
-      value: '::',
+      content: '::',
       zoneId: zone.id,
     }).addOverride('lifecycle.ignore_changes', ['value'])
 
     new Record(this, 'dns-aaaa-lithium.dns', {
       name: 'lithium.dns',
       type: 'AAAA',
-      value: '::',
+      content: '::',
       zoneId: zone.id,
     }).addOverride('lifecycle.ignore_changes', ['value'])
 
     new Record(this, 'dns-aaaa-nitrogen.dns', {
       name: 'nitrogen.dns',
       type: 'AAAA',
-      value: '::',
+      content: '::',
       zoneId: zone.id,
     }).addOverride('lifecycle.ignore_changes', ['value'])
 
@@ -105,7 +105,7 @@ export class GgrelNet extends Construct {
       name: 'v6.haruka.dns',
       proxied: false,
       type: 'AAAA',
-      value: '2400:2410:3800:2502:1e69:7aff:fea4:f698',
+      content: '2400:2410:3800:2502:1e69:7aff:fea4:f698',
       zoneId: zone.id,
     }).addOverride('lifecycle.ignore_changes', ['value'])
 
@@ -113,7 +113,7 @@ export class GgrelNet extends Construct {
       data: {
         flags: '0',
         tag: 'issuewild',
-        value: 'letsencrypt.org',
+        content: 'letsencrypt.org',
       },
       name: 'ggrel.net',
       type: 'CAA',
@@ -124,7 +124,7 @@ export class GgrelNet extends Construct {
       data: {
         flags: '0',
         tag: 'issue',
-        value: 'letsencrypt.org',
+        content: 'letsencrypt.org',
       },
       name: 'ggrel.net',
       type: 'CAA',
@@ -135,7 +135,7 @@ export class GgrelNet extends Construct {
       name: 'dtv',
       proxied: false,
       type: 'CNAME',
-      value: 'materia.ggrel.net',
+      content: 'materia.ggrel.net',
       zoneId: zone.id,
     })
 
@@ -143,7 +143,7 @@ export class GgrelNet extends Construct {
       name: 'ggrel.net',
       proxied: false,
       type: 'CNAME',
-      value: 'helium.dns.ggrel.net',
+      content: 'helium.dns.ggrel.net',
       zoneId: zone.id,
     })
 
@@ -151,7 +151,7 @@ export class GgrelNet extends Construct {
       name: 'ma.cdn',
       proxied: true,
       type: 'CNAME',
-      value: 'public.r2.dev',
+      content: 'public.r2.dev',
       zoneId: zone.id,
     })
 
@@ -159,7 +159,7 @@ export class GgrelNet extends Construct {
       name: 'materia',
       proxied: false,
       type: 'CNAME',
-      value: 'carbon.dns.ggrel.net',
+      content: 'carbon.dns.ggrel.net',
       zoneId: zone.id,
     })
 
@@ -183,7 +183,7 @@ export class GgrelNet extends Construct {
       name: 'materia-cluster',
       proxied: false,
       type: 'CNAME',
-      value: 'boron.dns.ggrel.net',
+      content: 'boron.dns.ggrel.net',
       zoneId: zone.id,
     })
 
@@ -199,7 +199,7 @@ export class GgrelNet extends Construct {
       name: 'monitor',
       proxied: false,
       type: 'CNAME',
-      value: 'helium.dns.ggrel.net',
+      content: 'helium.dns.ggrel.net',
       zoneId: zone.id,
     })
 
