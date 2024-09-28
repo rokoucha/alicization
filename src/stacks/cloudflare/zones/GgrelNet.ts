@@ -135,7 +135,7 @@ export class GgrelNet extends Construct {
       name: 'dtv',
       proxied: false,
       type: 'CNAME',
-      value: 'helium.dns.ggrel.net',
+      value: 'materia.ggrel.net',
       zoneId: zone.id,
     })
 
