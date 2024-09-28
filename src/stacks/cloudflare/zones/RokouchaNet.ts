@@ -19,7 +19,7 @@ export class RokouchaNet extends Construct {
       name: 'dot',
       proxied: false,
       type: 'CNAME',
-      value: 'helium.dns.ggrel.net',
+      content: 'materia.ggrel.net',
       zoneId: zone.id,
     })
 
