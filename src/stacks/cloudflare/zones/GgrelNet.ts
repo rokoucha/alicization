@@ -50,56 +50,56 @@ export class GgrelNet extends Construct {
       type: 'AAAA',
       content: '::',
       zoneId: zone.id,
-    }).addOverride('lifecycle.ignore_changes', ['value'])
+    }).addOverride('lifecycle.ignore_changes', ['content'])
 
     new Record(this, 'dns-aaaa-boron.dns', {
       name: 'boron.dns',
       type: 'AAAA',
       content: '::',
       zoneId: zone.id,
-    }).addOverride('lifecycle.ignore_changes', ['value'])
+    }).addOverride('lifecycle.ignore_changes', ['content'])
 
     new Record(this, 'dns-aaaa-carbon.dns', {
       name: 'carbon.dns',
       type: 'AAAA',
       content: '::',
       zoneId: zone.id,
-    }).addOverride('lifecycle.ignore_changes', ['value'])
+    }).addOverride('lifecycle.ignore_changes', ['content'])
 
     new Record(this, 'dns-aaaa-haruka.dns', {
       name: 'haruka.dns',
       type: 'AAAA',
       content: '::',
       zoneId: zone.id,
-    }).addOverride('lifecycle.ignore_changes', ['value'])
+    }).addOverride('lifecycle.ignore_changes', ['content'])
 
     new Record(this, 'dns-aaaa-helium.dns', {
       name: 'helium.dns',
       type: 'AAAA',
       content: '::',
       zoneId: zone.id,
-    }).addOverride('lifecycle.ignore_changes', ['value'])
+    }).addOverride('lifecycle.ignore_changes', ['content'])
 
     new Record(this, 'dns-aaaa-hydrogen.dns', {
       name: 'hydrogen.dns',
       type: 'AAAA',
       content: '::',
       zoneId: zone.id,
-    }).addOverride('lifecycle.ignore_changes', ['value'])
+    }).addOverride('lifecycle.ignore_changes', ['content'])
 
     new Record(this, 'dns-aaaa-lithium.dns', {
       name: 'lithium.dns',
       type: 'AAAA',
       content: '::',
       zoneId: zone.id,
-    }).addOverride('lifecycle.ignore_changes', ['value'])
+    }).addOverride('lifecycle.ignore_changes', ['content'])
 
     new Record(this, 'dns-aaaa-nitrogen.dns', {
       name: 'nitrogen.dns',
       type: 'AAAA',
       content: '::',
       zoneId: zone.id,
-    }).addOverride('lifecycle.ignore_changes', ['value'])
+    }).addOverride('lifecycle.ignore_changes', ['content'])
 
     new Record(this, 'dns-aaaa-v6.haruka.dns', {
       name: 'v6.haruka.dns',
@@ -107,7 +107,7 @@ export class GgrelNet extends Construct {
       type: 'AAAA',
       content: '2400:2410:3800:2502:1e69:7aff:fea4:f698',
       zoneId: zone.id,
-    }).addOverride('lifecycle.ignore_changes', ['value'])
+    }).addOverride('lifecycle.ignore_changes', ['content'])
 
     new Record(this, 'dns-caa-issuewild-le-ggrel.net', {
       data: {
