@@ -20,7 +20,7 @@ export class GgrelNet extends Construct {
       type: 'A',
       content: '172.16.2.21',
       zoneId: zone.id,
-    })
+    }).addOverride('lifecycle.ignore_changes', ['content'])
 
     new Record(this, 'dns-a-carbon.dns', {
       name: 'carbon.dns',
@@ -29,28 +29,12 @@ export class GgrelNet extends Construct {
       zoneId: zone.id,
     }).addOverride('lifecycle.ignore_changes', ['content'])
 
-    new Record(this, 'dns-a-helium.dns', {
-      name: 'helium.dns',
-      type: 'A',
-      content: '0.0.0.0',
-      zoneId: zone.id,
-    }).addOverride('lifecycle.ignore_changes', ['content'])
-
-    new Record(this, 'dns-a-nginx_stats', {
-      name: 'nginx_stats',
-      type: 'A',
-      content: '172.16.2.16',
-      zoneId: zone.id,
-    })
-
     new Record(this, 'dns-a-nitrogen.dns', {
       name: 'nitrogen.dns',
       type: 'A',
       content: '172.16.2.14',
       zoneId: zone.id,
-    }).importFrom(
-      '8797b62049f417096e6bba991ebbbc6a/8cf15f775cae97bda43ef97f9c62eaf4',
-    )
+    }).addOverride('lifecycle.ignore_changes', ['content'])
 
     new Record(this, 'dns-aaaa-beryllium.dns', {
       name: 'beryllium.dns',
