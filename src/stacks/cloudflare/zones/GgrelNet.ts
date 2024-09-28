@@ -27,7 +27,7 @@ export class GgrelNet extends Construct {
       type: 'A',
       content: '0.0.0.0',
       zoneId: zone.id,
-    }).addOverride('lifecycle.ignore_changes', ['value'])
+    }).addOverride('lifecycle.ignore_changes', ['content'])
 
     new Record(this, 'dns-a-nginx_stats', {
       name: 'nginx_stats',
