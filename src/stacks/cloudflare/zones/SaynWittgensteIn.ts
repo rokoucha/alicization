@@ -27,7 +27,7 @@ export class SaynWittgensteIn extends Construct {
       name: 'sayn-wittgenste.in',
       proxied: false,
       type: 'CNAME',
-      content: 'helium.dns.ggrel.net',
+      content: 'materia.ggrel.net',
       zoneId: zone.id,
     })
 
