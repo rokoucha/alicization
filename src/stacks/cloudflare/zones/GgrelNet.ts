@@ -154,6 +154,14 @@ export class GgrelNet extends Construct {
       zoneId: zone.id,
     })
 
+    new Record(this, 'dns-cname-argocd.materia', {
+      name: 'argocd.materia',
+      proxied: false,
+      type: 'CNAME',
+      content: 'materia.ggrel.net',
+      zoneId: zone.id,
+    })
+
     new Record(this, 'dns-cname-grafana.materia', {
       name: 'grafana.materia',
       proxied: false,
