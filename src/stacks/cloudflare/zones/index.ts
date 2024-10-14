@@ -1,8 +1,9 @@
 import { Construct } from 'constructs'
+import { _8c7042 } from './_8c7042'
 import { GgrelNet } from './GgrelNet'
+import { NoaPpUa } from './NoaPpUa'
 import { RokouchaNet } from './RokouchaNet'
 import { SaynWittgensteIn } from './SaynWittgensteIn'
-import { _8c7042 } from './_8c7042'
 
 export type ZonesConfig = Readonly<{
   accountId: string
@@ -17,6 +18,10 @@ export class Zones extends Construct {
     })
 
     new GgrelNet(this, 'ggrel.net', {
+      accountId: config.accountId,
+    })
+
+    new NoaPpUa(this, 'noa.pp.ua', {
       accountId: config.accountId,
     })
 
