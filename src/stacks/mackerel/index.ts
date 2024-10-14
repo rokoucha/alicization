@@ -28,25 +28,30 @@ export class MackerelStack extends TerraformStack {
 
     new MackerelProvider(this, 'provider')
 
-    const watchdogsUrl = new TerraformVariable(this, 'WATCHDOGS_WEBHOOK_URL', {
-      description: 'watchdogs webhook url',
-      type: 'string',
-    })
+    const discordWebhookUrl = new TerraformVariable(
+      this,
+      'WATCHDOGS_WEBHOOK_URL',
+      {
+        description: 'watchdogs webhook url',
+        type: 'string',
+      },
+    )
 
-    const watchdogs = new Channel(this, 'watchdogs', {
-      name: '#watchdogs',
+    const discord = new Channel(this, 'discord', {
+      name: 'Discord',
       slack: [
         {
-          url: watchdogsUrl.value,
+          url: discordWebhookUrl.value,
           enabledGraphImage: true,
           events: ['alert'],
+          mentions: {},
         },
       ],
     })
 
     new NotificationGroup(this, 'default', {
       name: 'Default',
-      childChannelIds: [watchdogs.id],
+      childChannelIds: [discord.id],
     })
 
     new Monitor(this, 'connectivity', {
