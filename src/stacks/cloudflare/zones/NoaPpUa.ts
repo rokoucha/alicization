@@ -14,7 +14,6 @@ export class NoaPpUa extends Construct {
       accountId: config.accountId,
       zone: 'noa.pp.ua',
     })
-    zone.importFrom('927ab1a27118ed30a120752399609a90')
 
     new Record(this, 'dns-cname-noa.pp.ua', {
       name: 'noa.pp.ua',

@@ -47,7 +47,6 @@ export class TerraformCloudStack extends TerraformStack {
       name: 'alicization',
       organization: organization.name,
     })
-    project.importFrom('prj-488VXbvWS4Qms8Fp')
 
     const aws = new Workspace(this, 'aws', {
       name: 'aws',
