@@ -22,5 +22,13 @@ export class NoaPpUa extends Construct {
       value: 'materia.ggrel.net',
       zoneId: zone.id,
     })
+
+    new Record(this, 'dns-cname-himesaka.noa.pp.ua', {
+      name: 'himesaka.noa.pp.ua',
+      proxied: false,
+      type: 'CNAME',
+      value: 'materia.ggrel.net',
+      zoneId: zone.id,
+    })
   }
 }
