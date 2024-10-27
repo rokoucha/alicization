@@ -122,6 +122,14 @@ export class GgrelNet extends Construct {
       zoneId: zone.id,
     })
 
+    new Record(this, 'dns-cname-auth', {
+      name: 'auth',
+      proxied: false,
+      type: 'CNAME',
+      content: 'materia.ggrel.net',
+      zoneId: zone.id,
+    })
+
     new Record(this, 'dns-cname-dtv', {
       name: 'dtv',
       proxied: false,
