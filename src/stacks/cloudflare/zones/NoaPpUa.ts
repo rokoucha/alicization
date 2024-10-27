@@ -19,7 +19,7 @@ export class NoaPpUa extends Construct {
       name: 'noa.pp.ua',
       proxied: false,
       type: 'CNAME',
-      value: 'materia.ggrel.net',
+      content: 'materia.ggrel.net',
       zoneId: zone.id,
     })
 
@@ -27,7 +27,7 @@ export class NoaPpUa extends Construct {
       name: 'himesaka.noa.pp.ua',
       proxied: false,
       type: 'CNAME',
-      value: 'materia.ggrel.net',
+      content: 'materia.ggrel.net',
       zoneId: zone.id,
     })
   }
