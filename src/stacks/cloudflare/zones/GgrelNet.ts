@@ -202,11 +202,66 @@ export class GgrelNet extends Construct {
       zoneId: zone.id,
     })
 
+    new Record(this, 'dns-cname-sig1._domainkey', {
+      name: 'sig1._domainkey',
+      proxied: false,
+      type: 'CNAME',
+      content: 'sig1.dkim.ggrel.net.at.icloudmailadmin.com',
+      zoneId: zone.id,
+    }).importFrom(
+      '8797b62049f417096e6bba991ebbbc6a/e37badbf4f3be26081159d2bdd273120',
+    )
+
     new Record(this, 'dns-cname-ts', {
       name: 'ts',
       proxied: false,
       type: 'CNAME',
       content: 'materia.ggrel.net',
+      zoneId: zone.id,
+    })
+
+    new Record(this, 'dns-mx-10-icloud-1', {
+      name: 'ggrel.net',
+      priority: 10,
+      type: 'MX',
+      content: 'mx01.mail.icloud.com',
+      zoneId: zone.id,
+    }).importFrom(
+      '8797b62049f417096e6bba991ebbbc6a/5fd92c0383da1791f707c9d9065fbbda',
+    )
+
+    new Record(this, 'dns-mx-10-icloud-2', {
+      name: 'ggrel.net',
+      priority: 10,
+      type: 'MX',
+      content: 'mx02.mail.icloud.com',
+      zoneId: zone.id,
+    }).importFrom(
+      '8797b62049f417096e6bba991ebbbc6a/ad8c5d36059369a6ca48428be255f715',
+    )
+
+    new Record(this, 'dns-txt-spf', {
+      name: 'ggrel.net',
+      type: 'TXT',
+      content: 'v=spf1 include:icloud.com ~all',
+      zoneId: zone.id,
+    }).importFrom(
+      '8797b62049f417096e6bba991ebbbc6a/38ad351d7e4124180c08cbe82366bab0',
+    )
+
+    new Record(this, 'dns-txt-icloud', {
+      name: 'ggrel.net',
+      type: 'TXT',
+      content: 'apple-domain=3J9bInEzoF3qYmdl',
+      zoneId: zone.id,
+    }).importFrom(
+      '8797b62049f417096e6bba991ebbbc6a/cf61568d37814ecffb04bcc2f2cb1368',
+    )
+
+    new Record(this, 'dns-txt-_dmarc', {
+      name: '_dmarc',
+      type: 'TXT',
+      content: 'v=DMARC1; p=quarantine; adkim=s',
       zoneId: zone.id,
     })
   }
