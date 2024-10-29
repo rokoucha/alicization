@@ -7,7 +7,6 @@ import { PetaPeta } from './PetaPeta'
 import { Scienest } from './Scienest'
 import { SuperSeisan } from './SuperSeisan'
 import { Tweet2Scrapbox } from './Tweet2Scrapbox'
-import { _8c7042Org } from './_8c7042Org'
 
 export type PagesConfig = Readonly<{
   accountId: string
@@ -16,10 +15,6 @@ export type PagesConfig = Readonly<{
 export class Pages extends Construct {
   constructor(scope: Construct, id: string, config: PagesConfig) {
     super(scope, id)
-
-    new _8c7042Org(this, '_8c7042-org', {
-      accountId: config.accountId,
-    })
 
     new AuthJsCloudflarePagesFunctions(
       this,

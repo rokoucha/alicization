@@ -1,5 +1,4 @@
 import { Construct } from 'constructs'
-import { _8c7042 } from './_8c7042'
 import { GgrelNet } from './GgrelNet'
 import { NoaPpUa } from './NoaPpUa'
 import { RokouchaNet } from './RokouchaNet'
@@ -12,10 +11,6 @@ export type ZonesConfig = Readonly<{
 export class Zones extends Construct {
   constructor(scope: Construct, id: string, config: ZonesConfig) {
     super(scope, id)
-
-    new _8c7042(this, '_8c7042.org', {
-      accountId: config.accountId,
-    })
 
     new GgrelNet(this, 'ggrel.net', {
       accountId: config.accountId,
