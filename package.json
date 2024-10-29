@@ -13,7 +13,7 @@
   },
   "devDependencies": {
     "@types/jest": "^29.5.14",
-    "@types/node": "^22.8.1",
+    "@types/node": "^22.8.2",
     "cdktf-cli": "^0.20.9",
     "prettier": "^3.3.3",
     "typescript": "^5.6.3"
