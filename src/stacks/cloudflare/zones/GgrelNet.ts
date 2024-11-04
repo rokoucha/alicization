@@ -85,6 +85,13 @@ export class GgrelNet extends Construct {
       zoneId: zone.id,
     }).addOverride('lifecycle.ignore_changes', ['content'])
 
+    new Record(this, 'dns-aaaa-neon.dns', {
+      name: 'neon.dns',
+      type: 'AAAA',
+      content: '::',
+      zoneId: zone.id,
+    }).addOverride('lifecycle.ignore_changes', ['content'])
+
     new Record(this, 'dns-aaaa-nitrogen.dns', {
       name: 'nitrogen.dns',
       type: 'AAAA',
