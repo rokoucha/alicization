@@ -20,7 +20,14 @@ export class GgrelNet extends Construct {
       type: 'A',
       content: '172.16.2.21',
       zoneId: zone.id,
-    }).addOverride('lifecycle.ignore_changes', ['content'])
+    })
+
+    new Record(this, 'dns-a-boron.dns', {
+      name: 'boron.dns',
+      type: 'A',
+      content: '172.16.2.31',
+      zoneId: zone.id,
+    })
 
     new Record(this, 'dns-a-carbon.dns', {
       name: 'carbon.dns',
