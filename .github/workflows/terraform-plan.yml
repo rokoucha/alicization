@@ -37,7 +37,7 @@ jobs:
         run: pnpm cdktf provider get
 
       - name: Plan AWS
-        uses: hashicorp/terraform-cdk-action@v4
+        uses: hashicorp/terraform-cdk-action@v7
         with:
           githubToken: ${{ secrets.GITHUB_TOKEN }}
           mode: plan-only
@@ -45,7 +45,7 @@ jobs:
           terraformCloudToken: ${{ secrets.TF_API_TOKEN }}
 
       - name: Plan Cloudflare
-        uses: hashicorp/terraform-cdk-action@v4
+        uses: hashicorp/terraform-cdk-action@v7
         with:
           githubToken: ${{ secrets.GITHUB_TOKEN }}
           mode: plan-only
@@ -53,7 +53,7 @@ jobs:
           terraformCloudToken: ${{ secrets.TF_API_TOKEN }}
 
       - name: Plan Mackerel
-        uses: hashicorp/terraform-cdk-action@v4
+        uses: hashicorp/terraform-cdk-action@v7
         with:
           githubToken: ${{ secrets.GITHUB_TOKEN }}
           mode: plan-only
@@ -61,7 +61,7 @@ jobs:
           terraformCloudToken: ${{ secrets.TF_API_TOKEN }}
 
       - name: Plan Terraform Cloud
-        uses: hashicorp/terraform-cdk-action@v4
+        uses: hashicorp/terraform-cdk-action@v7
         with:
           githubToken: ${{ secrets.GITHUB_TOKEN }}
           mode: plan-only

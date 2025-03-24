@@ -40,7 +40,7 @@ jobs:
         run: pnpm cdktf provider get
 
       - name: Apply AWS
-        uses: hashicorp/terraform-cdk-action@v4
+        uses: hashicorp/terraform-cdk-action@v7
         with:
           githubToken: ${{ secrets.GITHUB_TOKEN }}
           mode: auto-approve-apply
@@ -48,7 +48,7 @@ jobs:
           terraformCloudToken: ${{ secrets.TF_API_TOKEN }}
 
       - name: Apply Cloudflare
-        uses: hashicorp/terraform-cdk-action@v4
+        uses: hashicorp/terraform-cdk-action@v7
         with:
           githubToken: ${{ secrets.GITHUB_TOKEN }}
           mode: auto-approve-apply
@@ -56,7 +56,7 @@ jobs:
           terraformCloudToken: ${{ secrets.TF_API_TOKEN }}
 
       - name: Apply Mackerel
-        uses: hashicorp/terraform-cdk-action@v4
+        uses: hashicorp/terraform-cdk-action@v7
         with:
           githubToken: ${{ secrets.GITHUB_TOKEN }}
           mode: auto-approve-apply
@@ -64,7 +64,7 @@ jobs:
           terraformCloudToken: ${{ secrets.TF_API_TOKEN }}
 
       - name: Apply Terraform Cloud
-        uses: hashicorp/terraform-cdk-action@v4
+        uses: hashicorp/terraform-cdk-action@v7
         with:
           githubToken: ${{ secrets.GITHUB_TOKEN }}
           mode: auto-approve-apply
