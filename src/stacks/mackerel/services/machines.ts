@@ -24,11 +24,11 @@ export class Machines extends Construct {
     new Monitor(this, 'anomaly-detection', {
       name: '異状検知',
       anomalyDetection: {
-        scopes: [physical.id, virtual.id],
-        warningSensitivity: 'sensitive',
-        criticalSensitivity: 'normal',
-        maxCheckAttempts: 3,
+        scopes: [physical.id],
+        warningSensitivity: 'normal',
+        criticalSensitivity: 'insensitive',
+        maxCheckAttempts: 5,
       },
-    }).importFrom('5gLvgj1uaAG')
+    })
   }
 }

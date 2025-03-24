@@ -12,8 +12,6 @@ import { MackerelProvider } from '../../../.gen/providers/mackerel/provider'
 import { TerraformCloudBackendProps } from '../../config'
 import { Ggrel } from './services/ggrel'
 import { GgrelDTV } from './services/ggrel-dtv'
-import { Hydrogen } from './services/hydrogen'
-import { Lithium } from './services/lithium'
 import { Machines } from './services/machines'
 import { MateriaCluster } from './services/materia-cluster'
 
@@ -62,8 +60,6 @@ export class MackerelStack extends TerraformStack {
     new MateriaCluster(this, 'materia-cluster')
     new GgrelDTV(this, 'ggrel-dtv')
     new Ggrel(this, 'ggrel')
-    new Hydrogen(this, 'hydrogen')
-    new Lithium(this, 'lithium')
     new Machines(this, 'machines')
   }
 }
