@@ -26,7 +26,10 @@ jobs:
           node-version: '22'
 
       - name: Install dependencies
-        run: pnpm --allow-build=@cdktf/node-pty-prebuilt-multiarch install
+        run: pnpm install
+
+      - name: Approve builds
+        run: pnpm approve-builds
 
       - name: Generate providers
         env:
