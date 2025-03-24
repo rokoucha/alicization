@@ -30,6 +30,8 @@ jobs:
 
       - name: Setup Terraform for generate providers
         uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: '~1.11.0'
 
       - name: Generate providers
         env:
