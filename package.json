@@ -22,5 +22,10 @@
     "build": "tsc",
     "start": "node --enable-source-maps ./dist/src/main.js",
     "type-check": "tsc --noEmit"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "@cdktf/node-pty-prebuilt-multiarch"
+    ]
   }
 }

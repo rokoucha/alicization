@@ -28,9 +28,6 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      - name: Approve builds
-        run: pnpm approve-builds
-
       - name: Generate providers
         env:
           MACKEREL_API_KEY: stub
