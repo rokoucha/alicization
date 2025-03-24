@@ -41,9 +41,9 @@ export class RokouchaNet extends Construct {
 
     new Record(this, 'dns-cname-rokoucha.net', {
       name: 'rokoucha.net',
-      proxied: false,
+      proxied: true,
       type: 'CNAME',
-      content: 'scienest.pages.dev',
+      content: 'maillard.pages.dev',
       zoneId: zone.id,
     })
 

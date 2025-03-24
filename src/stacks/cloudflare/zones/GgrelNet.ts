@@ -15,98 +15,6 @@ export class GgrelNet extends Construct {
       zone: 'ggrel.net',
     })
 
-    new Record(this, 'dns-a-haruka.dns', {
-      name: 'haruka.dns',
-      type: 'A',
-      content: '172.16.2.21',
-      zoneId: zone.id,
-    })
-
-    new Record(this, 'dns-a-carbon.dns', {
-      name: 'carbon.dns',
-      type: 'A',
-      content: '0.0.0.0',
-      zoneId: zone.id,
-    }).addOverride('lifecycle.ignore_changes', ['content'])
-
-    new Record(this, 'dns-a-nitrogen.dns', {
-      name: 'nitrogen.dns',
-      type: 'A',
-      content: '172.16.2.14',
-      zoneId: zone.id,
-    }).addOverride('lifecycle.ignore_changes', ['content'])
-
-    new Record(this, 'dns-aaaa-beryllium.dns', {
-      name: 'beryllium.dns',
-      type: 'AAAA',
-      content: '::',
-      zoneId: zone.id,
-    }).addOverride('lifecycle.ignore_changes', ['content'])
-
-    new Record(this, 'dns-aaaa-boron.dns', {
-      name: 'boron.dns',
-      type: 'AAAA',
-      content: '::',
-      zoneId: zone.id,
-    }).addOverride('lifecycle.ignore_changes', ['content'])
-
-    new Record(this, 'dns-aaaa-carbon.dns', {
-      name: 'carbon.dns',
-      type: 'AAAA',
-      content: '::',
-      zoneId: zone.id,
-    }).addOverride('lifecycle.ignore_changes', ['content'])
-
-    new Record(this, 'dns-aaaa-haruka.dns', {
-      name: 'haruka.dns',
-      type: 'AAAA',
-      content: '::',
-      zoneId: zone.id,
-    }).addOverride('lifecycle.ignore_changes', ['content'])
-
-    new Record(this, 'dns-aaaa-helium.dns', {
-      name: 'helium.dns',
-      type: 'AAAA',
-      content: '::',
-      zoneId: zone.id,
-    }).addOverride('lifecycle.ignore_changes', ['content'])
-
-    new Record(this, 'dns-aaaa-hydrogen.dns', {
-      name: 'hydrogen.dns',
-      type: 'AAAA',
-      content: '::',
-      zoneId: zone.id,
-    }).addOverride('lifecycle.ignore_changes', ['content'])
-
-    new Record(this, 'dns-aaaa-lithium.dns', {
-      name: 'lithium.dns',
-      type: 'AAAA',
-      content: '::',
-      zoneId: zone.id,
-    }).addOverride('lifecycle.ignore_changes', ['content'])
-
-    new Record(this, 'dns-aaaa-neon.dns', {
-      name: 'neon.dns',
-      type: 'AAAA',
-      content: '::',
-      zoneId: zone.id,
-    }).addOverride('lifecycle.ignore_changes', ['content'])
-
-    new Record(this, 'dns-aaaa-nitrogen.dns', {
-      name: 'nitrogen.dns',
-      type: 'AAAA',
-      content: '::',
-      zoneId: zone.id,
-    }).addOverride('lifecycle.ignore_changes', ['content'])
-
-    new Record(this, 'dns-aaaa-v6.haruka.dns', {
-      name: 'v6.haruka.dns',
-      proxied: false,
-      type: 'AAAA',
-      content: '2400:2410:3800:2502:1e69:7aff:fea4:f698',
-      zoneId: zone.id,
-    }).addOverride('lifecycle.ignore_changes', ['content'])
-
     new Record(this, 'dns-caa-issuewild-le-ggrel.net', {
       data: {
         flags: '0',
@@ -165,7 +73,7 @@ export class GgrelNet extends Construct {
       name: 'materia',
       proxied: false,
       type: 'CNAME',
-      content: 'carbon.dns.ggrel.net',
+      content: 'lithium.dns.ggrel.net',
       zoneId: zone.id,
     })
 
@@ -189,7 +97,7 @@ export class GgrelNet extends Construct {
       name: 'materia-cluster',
       proxied: false,
       type: 'CNAME',
-      content: 'boron.dns.ggrel.net',
+      content: 'lithium.dns.ggrel.net',
       zoneId: zone.id,
     })
 
@@ -215,9 +123,7 @@ export class GgrelNet extends Construct {
       type: 'CNAME',
       content: 'sig1.dkim.ggrel.net.at.icloudmailadmin.com',
       zoneId: zone.id,
-    }).importFrom(
-      '8797b62049f417096e6bba991ebbbc6a/e37badbf4f3be26081159d2bdd273120',
-    )
+    })
 
     new Record(this, 'dns-cname-ts', {
       name: 'ts',
@@ -233,9 +139,7 @@ export class GgrelNet extends Construct {
       type: 'MX',
       content: 'mx01.mail.icloud.com',
       zoneId: zone.id,
-    }).importFrom(
-      '8797b62049f417096e6bba991ebbbc6a/5fd92c0383da1791f707c9d9065fbbda',
-    )
+    })
 
     new Record(this, 'dns-mx-10-icloud-2', {
       name: 'ggrel.net',
@@ -243,27 +147,20 @@ export class GgrelNet extends Construct {
       type: 'MX',
       content: 'mx02.mail.icloud.com',
       zoneId: zone.id,
-    }).importFrom(
-      '8797b62049f417096e6bba991ebbbc6a/ad8c5d36059369a6ca48428be255f715',
-    )
+    })
 
     new Record(this, 'dns-txt-spf', {
       name: 'ggrel.net',
       type: 'TXT',
       content: 'v=spf1 include:icloud.com ~all',
       zoneId: zone.id,
-    }).importFrom(
-      '8797b62049f417096e6bba991ebbbc6a/38ad351d7e4124180c08cbe82366bab0',
-    )
-
+    })
     new Record(this, 'dns-txt-icloud', {
       name: 'ggrel.net',
       type: 'TXT',
       content: 'apple-domain=3J9bInEzoF3qYmdl',
       zoneId: zone.id,
-    }).importFrom(
-      '8797b62049f417096e6bba991ebbbc6a/cf61568d37814ecffb04bcc2f2cb1368',
-    )
+    })
 
     new Record(this, 'dns-txt-_dmarc', {
       name: '_dmarc',

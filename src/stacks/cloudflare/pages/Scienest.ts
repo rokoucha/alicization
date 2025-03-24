@@ -1,4 +1,3 @@
-import { PagesDomain } from '@cdktf/provider-cloudflare/lib/pages-domain'
 import { PagesProject } from '@cdktf/provider-cloudflare/lib/pages-project'
 import { TerraformVariable } from 'cdktf'
 import { Construct } from 'constructs'
@@ -28,7 +27,7 @@ export class Scienest extends Construct {
       type: 'string',
     })
 
-    const pages = new PagesProject(this, 'scienest', {
+    new PagesProject(this, 'scienest', {
       accountId: config.accountId,
       name: 'scienest',
       productionBranch: 'master',
@@ -74,12 +73,6 @@ export class Scienest extends Construct {
           repoName: 'scienest',
         },
       },
-    })
-
-    new PagesDomain(this, 'rokoucha.net', {
-      accountId: config.accountId,
-      domain: 'rokoucha.net',
-      projectName: pages.name,
     })
   }
 }
