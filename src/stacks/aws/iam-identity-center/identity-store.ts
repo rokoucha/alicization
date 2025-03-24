@@ -3,7 +3,6 @@ import { Construct } from 'constructs'
 
 export type Groups = {
   admin: IdentitystoreGroup
-  isucon13: IdentitystoreGroup
 }
 
 export type IdentityStoreProps = Readonly<{
@@ -21,11 +20,6 @@ export class IdentityStore extends Construct {
       identityStoreId: props.identityStoreId,
     })
 
-    const isucon13 = new IdentitystoreGroup(this, 'isucon13', {
-      displayName: 'isucon13',
-      identityStoreId: props.identityStoreId,
-    })
-
-    this.groups = { admin, isucon13 }
+    this.groups = { admin }
   }
 }

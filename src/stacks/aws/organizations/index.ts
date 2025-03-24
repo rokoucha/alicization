@@ -3,7 +3,6 @@ import { Construct } from 'constructs'
 
 export type Accounts = {
   rokoucha: OrganizationsAccount
-  isucon13: OrganizationsAccount
 }
 
 export class Organizations extends Construct {
@@ -17,14 +16,8 @@ export class Organizations extends Construct {
       email: 'esazeumo@8c7042.org',
     })
 
-    const isucon13 = new OrganizationsAccount(this, 'isucon13', {
-      name: 'isucon13',
-      email: 'yzwrnns1@8c7042.org',
-    })
-
     this.accounts = {
       rokoucha,
-      isucon13,
     }
   }
 }

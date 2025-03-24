@@ -46,26 +46,6 @@ export class IAMIdentityCenter extends Construct {
           ],
         ],
       ],
-      [
-        props.accounts.isucon13,
-        [
-          [
-            identityStore.groups.admin,
-            [
-              permissionSet.permissions.administratorAccess,
-              permissionSet.permissions.powerUserAccess,
-              permissionSet.permissions.viewOnlyAccess,
-            ],
-          ],
-          [
-            identityStore.groups.isucon13,
-            [
-              permissionSet.permissions.powerUserAccess,
-              permissionSet.permissions.viewOnlyAccess,
-            ],
-          ],
-        ],
-      ],
     ]
 
     for (const [account, assignments] of accountAsignments) {
