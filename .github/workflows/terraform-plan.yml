@@ -45,7 +45,7 @@ jobs:
           mode: plan-only
           stackName: aws
           terraformCloudToken: ${{ secrets.TF_API_TOKEN }}
-          terraformVersion: '~1.11.0'
+          terraformVersion: '1.11.2'
 
       - name: Plan Cloudflare
         uses: hashicorp/terraform-cdk-action@v7
@@ -54,7 +54,7 @@ jobs:
           mode: plan-only
           stackName: cloudflare
           terraformCloudToken: ${{ secrets.TF_API_TOKEN }}
-          terraformVersion: '~1.11.0'
+          terraformVersion: '1.11.2'
 
       - name: Plan Mackerel
         uses: hashicorp/terraform-cdk-action@v7
@@ -63,7 +63,7 @@ jobs:
           mode: plan-only
           stackName: mackerel
           terraformCloudToken: ${{ secrets.TF_API_TOKEN }}
-          terraformVersion: '~1.11.0'
+          terraformVersion: '1.11.2'
 
       - name: Plan Terraform Cloud
         uses: hashicorp/terraform-cdk-action@v7
@@ -72,4 +72,4 @@ jobs:
           mode: plan-only
           stackName: terraform-cloud
           terraformCloudToken: ${{ secrets.TF_API_TOKEN }}
-          terraformVersion: '~1.11.0'
+          terraformVersion: '1.11.2'
