@@ -41,6 +41,7 @@ export class TerraformCloudStack extends TerraformStack {
     const organization = new Organization(this, 'organization', {
       name: 'rokoucha',
       email: email.value,
+      speculativePlanManagementEnabled: false,
     })
 
     const project = new Project(this, 'alicization', {
