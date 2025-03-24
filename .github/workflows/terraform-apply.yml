@@ -48,6 +48,7 @@ jobs:
           mode: auto-approve-apply
           stackName: aws
           terraformCloudToken: ${{ secrets.TF_API_TOKEN }}
+          terraformVersion: '~1.11.0'
 
       - name: Apply Cloudflare
         uses: hashicorp/terraform-cdk-action@v7
@@ -56,6 +57,7 @@ jobs:
           mode: auto-approve-apply
           stackName: cloudflare
           terraformCloudToken: ${{ secrets.TF_API_TOKEN }}
+          terraformVersion: '~1.11.0'
 
       - name: Apply Mackerel
         uses: hashicorp/terraform-cdk-action@v7
@@ -64,6 +66,7 @@ jobs:
           mode: auto-approve-apply
           stackName: mackerel
           terraformCloudToken: ${{ secrets.TF_API_TOKEN }}
+          terraformVersion: '~1.11.0'
 
       - name: Apply Terraform Cloud
         uses: hashicorp/terraform-cdk-action@v7
@@ -72,3 +75,4 @@ jobs:
           mode: auto-approve-apply
           stackName: terraform-cloud
           terraformCloudToken: ${{ secrets.TF_API_TOKEN }}
+          terraformVersion: '~1.11.0'
