@@ -53,7 +53,7 @@ export class TerraformCloudStack extends TerraformStack {
       organization: organization.name,
       projectId: project.id,
       queueAllRuns: false,
-      terraformVersion: '~> 1.9.0',
+      terraformVersion: '~> 1.11.0',
     })
 
     new NotificationConfiguration(this, 'aws-notification-discord', {
@@ -90,7 +90,7 @@ export class TerraformCloudStack extends TerraformStack {
       organization: organization.name,
       projectId: project.id,
       queueAllRuns: false,
-      terraformVersion: '~> 1.9.0',
+      terraformVersion: '~> 1.11.0',
     })
 
     new NotificationConfiguration(this, 'cloudflare-notification-discord', {
@@ -121,7 +121,7 @@ export class TerraformCloudStack extends TerraformStack {
       organization: organization.name,
       projectId: project.id,
       queueAllRuns: false,
-      terraformVersion: '~> 1.9.0',
+      terraformVersion: '~> 1.11.0',
     })
 
     new NotificationConfiguration(this, 'mackerel-notification-discord', {
@@ -158,7 +158,7 @@ export class TerraformCloudStack extends TerraformStack {
       organization: organization.name,
       projectId: project.id,
       queueAllRuns: false,
-      terraformVersion: '~> 1.9.0',
+      terraformVersion: '~> 1.11.0',
     })
 
     new NotificationConfiguration(
