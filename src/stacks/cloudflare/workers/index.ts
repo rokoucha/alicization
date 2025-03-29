@@ -1,6 +1,7 @@
 import { Construct } from 'constructs'
 import { IkaPri } from './IkaPri'
 import { KuronekoTrackerFeed } from './KuronekoTrackerFeed'
+import { OhBig7 } from './OhBig7'
 
 export type WorkersConfig = Readonly<{
   accountId: string
@@ -15,6 +16,10 @@ export class Workers extends Construct {
     })
 
     new KuronekoTrackerFeed(this, 'kuroneko-tracker-feed', {
+      accountId: config.accountId,
+    })
+
+    new OhBig7(this, 'oh-big-7', {
       accountId: config.accountId,
     })
   }
