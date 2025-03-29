@@ -31,7 +31,7 @@ jobs:
       - name: Setup Terraform for generate providers
         uses: hashicorp/setup-terraform@v3
         with:
-          terraform_version: '~1.11.0'
+          terraform_version: '1.11.3'
 
       - name: Generate providers
         env:
@@ -45,7 +45,7 @@ jobs:
           mode: plan-only
           stackName: aws
           terraformCloudToken: ${{ secrets.TF_API_TOKEN }}
-          terraformVersion: '1.11.2'
+          terraformVersion: '1.11.3'
 
       - name: Plan Cloudflare
         uses: hashicorp/terraform-cdk-action@v8
@@ -54,7 +54,7 @@ jobs:
           mode: plan-only
           stackName: cloudflare
           terraformCloudToken: ${{ secrets.TF_API_TOKEN }}
-          terraformVersion: '1.11.2'
+          terraformVersion: '1.11.3'
 
       - name: Plan Mackerel
         uses: hashicorp/terraform-cdk-action@v8
@@ -63,7 +63,7 @@ jobs:
           mode: plan-only
           stackName: mackerel
           terraformCloudToken: ${{ secrets.TF_API_TOKEN }}
-          terraformVersion: '1.11.2'
+          terraformVersion: '1.11.3'
 
       - name: Plan Terraform Cloud
         uses: hashicorp/terraform-cdk-action@v8
@@ -72,4 +72,4 @@ jobs:
           mode: plan-only
           stackName: terraform-cloud
           terraformCloudToken: ${{ secrets.TF_API_TOKEN }}
-          terraformVersion: '1.11.2'
+          terraformVersion: '1.11.3'
