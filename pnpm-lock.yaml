@@ -61,8 +61,8 @@ packages:
     resolution: {integrity: sha512-Ed61U6XJc3CVRfkERJWDz4dJwKe7iLmmJsbOGu9wSloNSFttHV0I8g6UAgb7qnK5ly5bGLPd4oXZlxCdANBOWQ==}
     engines: {node: '>=6.9.0'}
 
-  '@babel/parser@7.26.10':
-    resolution: {integrity: sha512-6aQR2zGE/QFi8JpDLjUZEPYOs7+mhKXm86VaKFiLP35JQwQb6bwUE+XbvkH0EptsYhbNBSUGaUBLKqxH1xSgsA==}
+  '@babel/parser@7.27.0':
+    resolution: {integrity: sha512-iaepho73/2Pz7w2eMS0Q5f83+0RKI7i4xmiYeBmDzfRVbQtTOG7Ts0S4HzJVsTMGI9keU8rNfuZr8DKfSt7Yyg==}
     engines: {node: '>=6.0.0'}
     hasBin: true
 
@@ -70,12 +70,12 @@ packages:
     resolution: {integrity: sha512-9DGttpmPvIxBb/2uwpVo3dqJ+O6RooAFOS+lB+xDqoE2PVCE8nfoHMdZLpfCQRLwvohzXISPZcgxt80xLfsuwg==}
     engines: {node: '>=6.9.0'}
 
-  '@babel/types@7.26.10':
-    resolution: {integrity: sha512-emqcG3vHrpxUKTrxcblR36dcrcoRDvKmnL/dCL6ZsHaShW80qxCAcNhzQZrpeM765VzEos+xOi4s+r4IXzTwdQ==}
-    engines: {node: '>=6.9.0'}
-
   '@babel/types@7.26.3':
     resolution: {integrity: sha512-vN5p+1kl59GVKMvTHt55NzzmYVxprfJD+ql7U9NFIfKCBkYE55LYtS+WtPlaYOyzydrKI8Nezd+aZextrd+FMA==}
+    engines: {node: '>=6.9.0'}
+
+  '@babel/types@7.27.0':
+    resolution: {integrity: sha512-H45s8fVLYjbhFH62dIJ3WtmJ6RSPt/3DRO0ZcT2SUiYiQyz3BLVb9ADEnLl91m74aQPS3AzzeajZHYOalWe3bg==}
     engines: {node: '>=6.9.0'}
 
   '@cdktf/cli-core@0.20.11':
@@ -1665,8 +1665,8 @@ packages:
     engines: {node: '>=14.17'}
     hasBin: true
 
-  typescript@5.9.0-dev.20250328:
-    resolution: {integrity: sha512-m38Gb1vTDu8LugpOKL4cw7FbjQhZDYf7X2oumF4GvAs7T9O3q0Apv26ckQKuSXTQJAUUCiRfST+QHWXvssdCpQ==}
+  typescript@5.9.0-dev.20250329:
+    resolution: {integrity: sha512-l/lWiKqKbdKJqlfXmSnDRp37JvuNlgRIO5vHvp4e26OIx3Dk4rfgylozvQ0+n0PxLwgIR+Z71j971gO1IkQulA==}
     engines: {node: '>=14.17'}
     hasBin: true
 
@@ -1814,7 +1814,7 @@ snapshots:
 
   '@babel/generator@7.26.3':
     dependencies:
-      '@babel/parser': 7.26.10
+      '@babel/parser': 7.27.0
       '@babel/types': 7.26.3
       '@jridgewell/gen-mapping': 0.3.8
       '@jridgewell/trace-mapping': 0.3.25
@@ -1824,22 +1824,22 @@ snapshots:
 
   '@babel/helper-validator-identifier@7.25.9': {}
 
-  '@babel/parser@7.26.10':
+  '@babel/parser@7.27.0':
     dependencies:
-      '@babel/types': 7.26.10
+      '@babel/types': 7.27.0
 
   '@babel/template@7.25.9':
     dependencies:
       '@babel/code-frame': 7.26.2
-      '@babel/parser': 7.26.10
+      '@babel/parser': 7.27.0
       '@babel/types': 7.26.3
 
-  '@babel/types@7.26.10':
+  '@babel/types@7.26.3':
     dependencies:
       '@babel/helper-string-parser': 7.25.9
       '@babel/helper-validator-identifier': 7.25.9
 
-  '@babel/types@7.26.3':
+  '@babel/types@7.27.0':
     dependencies:
       '@babel/helper-string-parser': 7.25.9
       '@babel/helper-validator-identifier': 7.25.9
@@ -2636,7 +2636,7 @@ snapshots:
     dependencies:
       semver: 7.7.1
       shelljs: 0.8.5
-      typescript: 5.9.0-dev.20250328
+      typescript: 5.9.0-dev.20250329
 
   dunder-proto@1.0.1:
     dependencies:
@@ -3728,7 +3728,7 @@ snapshots:
 
   typescript@5.8.2: {}
 
-  typescript@5.9.0-dev.20250328: {}
+  typescript@5.9.0-dev.20250329: {}
 
   undici-types@5.26.5: {}
 
