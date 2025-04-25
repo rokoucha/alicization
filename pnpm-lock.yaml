@@ -19,7 +19,7 @@ importers:
         version: 11.13.2(cdktf@0.20.12(constructs@10.4.2))(constructs@10.4.2)
       '@cdktf/provider-tls':
         specifier: ^10.0.1
-        version: 10.0.1(cdktf@0.20.12(constructs@10.4.2))(constructs@10.4.2)
+        version: 10.1.0(cdktf@0.20.12(constructs@10.4.2))(constructs@10.4.2)
       cdktf:
         specifier: ^0.20.11
         version: 0.20.12(constructs@10.4.2)
@@ -123,8 +123,8 @@ packages:
       cdktf: ^0.20.0
       constructs: ^10.3.0
 
-  '@cdktf/provider-tls@10.0.1':
-    resolution: {integrity: sha512-/DT6EfGbyUauDttM+z+KFeTs7frwF8JGCotxgdCA0V3gqyGrgll8DGvpmHlKGQaQ5bRTYZOmqHx0ULbB/s5yBQ==}
+  '@cdktf/provider-tls@10.1.0':
+    resolution: {integrity: sha512-XEC//FRnktwTpz0pdmSJrNfvxxFLYu03jWbgSfgG9mgJla/s9cQbJAq1VkPLbcE/vSWoKCfIYMqNDnPfUCN/yg==}
     engines: {node: '>= 18.12.0'}
     peerDependencies:
       cdktf: ^0.20.0
@@ -2048,7 +2048,7 @@ snapshots:
       cdktf: 0.20.12(constructs@10.4.2)
       constructs: 10.4.2
 
-  '@cdktf/provider-tls@10.0.1(cdktf@0.20.12(constructs@10.4.2))(constructs@10.4.2)':
+  '@cdktf/provider-tls@10.1.0(cdktf@0.20.12(constructs@10.4.2))(constructs@10.4.2)':
     dependencies:
       cdktf: 0.20.12(constructs@10.4.2)
       constructs: 10.4.2
