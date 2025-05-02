@@ -10,7 +10,7 @@ importers:
     dependencies:
       '@cdktf/provider-aws':
         specifier: ^19.58.0
-        version: 19.62.0(cdktf@0.20.12(constructs@10.4.2))(constructs@10.4.2)
+        version: 19.63.0(cdktf@0.20.12(constructs@10.4.2))(constructs@10.4.2)
       '@cdktf/provider-cloudflare':
         specifier: 11.30.0
         version: 11.30.0(cdktf@0.20.12(constructs@10.4.2))(constructs@10.4.2)
@@ -96,8 +96,8 @@ packages:
   '@cdktf/node-pty-prebuilt-multiarch@0.10.2':
     resolution: {integrity: sha512-Bpb0v9bzejJUAGmn8HfDFH6pYxFVHokiWV4mHvTao2XoYcEvETFVrniYIXlIg0e4yLlKB/U/z5WsC5PBsi3xEQ==}
 
-  '@cdktf/provider-aws@19.62.0':
-    resolution: {integrity: sha512-3kpIRj4/7d+Aj/KefKL++LeERT41CrJJd+jTJ76Y/uedkTrVwaPpk7f+V/kwh0zT+Hrmp6ycQN6UHLHI/CIytg==}
+  '@cdktf/provider-aws@19.63.0':
+    resolution: {integrity: sha512-Q5feWWSbIjX3WqzgBykrS4hkRP3yeolnH//C6Rjq5BjkrF1p3YA2HaTi3IVOxWg8I/xp4ypzwfFJXwVoT838ow==}
     engines: {node: '>= 18.12.0'}
     peerDependencies:
       cdktf: ^0.20.0
@@ -1714,8 +1714,8 @@ packages:
     engines: {node: '>=14.17'}
     hasBin: true
 
-  typescript@5.9.0-dev.20250430:
-    resolution: {integrity: sha512-XCv8HsA7GgiWPibRv/7GtB9R4MNmR0kgQpWp1B+NtvVd1iCHCu7xsAnI0jSuiX5mzRDV5k04G4j8fZJmlrfyFw==}
+  typescript@5.9.0-dev.20250502:
+    resolution: {integrity: sha512-85cXZtCvlmVRrmINLBg29KOEDw+tAd7GSWCTjv4K5he+XboQFzj05Lb7+4Qdml5Ox/nIxm6/0hFLV1XsUDB2hQ==}
     engines: {node: '>=14.17'}
     hasBin: true
 
@@ -2009,7 +2009,7 @@ snapshots:
       nan: 2.22.2
       prebuild-install: 7.1.3
 
-  '@cdktf/provider-aws@19.62.0(cdktf@0.20.12(constructs@10.4.2))(constructs@10.4.2)':
+  '@cdktf/provider-aws@19.63.0(cdktf@0.20.12(constructs@10.4.2))(constructs@10.4.2)':
     dependencies:
       cdktf: 0.20.12(constructs@10.4.2)
       constructs: 10.4.2
@@ -2701,7 +2701,7 @@ snapshots:
     dependencies:
       semver: 7.7.1
       shelljs: 0.8.5
-      typescript: 5.9.0-dev.20250430
+      typescript: 5.9.0-dev.20250502
 
   dunder-proto@1.0.1:
     dependencies:
@@ -3851,7 +3851,7 @@ snapshots:
 
   typescript@5.8.3: {}
 
-  typescript@5.9.0-dev.20250430: {}
+  typescript@5.9.0-dev.20250502: {}
 
   undici-types@5.26.5: {}
 
