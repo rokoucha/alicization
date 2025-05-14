@@ -32,7 +32,7 @@ importers:
         version: 29.5.14
       '@types/node':
         specifier: ^22.13.13
-        version: 22.15.14
+        version: 22.15.18
       cdktf-cli:
         specifier: ^0.20.11
         version: 0.20.12(ink@3.2.0(react@17.0.2))(react@17.0.2)
@@ -292,11 +292,11 @@ packages:
   '@types/node@18.19.71':
     resolution: {integrity: sha512-evXpcgtZm8FY4jqBSN8+DmOTcVkkvTmAayeo4Wf3m1xAruyVGzGuDh/Fb/WWX2yLItUiho42ozyJjB0dw//Tkw==}
 
-  '@types/node@20.17.43':
-    resolution: {integrity: sha512-DnDEcDUnVAUYSa7U03QvrXbj1MZj00xoyi/a3lRGkR/c7BFUnqv+OY9EUphMqXUKdZJEOmuzu2mm+LmCisnPow==}
+  '@types/node@20.17.47':
+    resolution: {integrity: sha512-3dLX0Upo1v7RvUimvxLeXqwrfyKxUINk0EAM83swP2mlSUcwV73sZy8XhNz8bcZ3VbsfQyC/y6jRdL5tgCNpDQ==}
 
-  '@types/node@22.15.14':
-    resolution: {integrity: sha512-BL1eyu/XWsFGTtDWOYULQEs4KR0qdtYfCxYAUYRoB7JP7h9ETYLgQTww6kH8Sj2C0pFGgrpM0XKv6/kbIzYJ1g==}
+  '@types/node@22.15.18':
+    resolution: {integrity: sha512-v1DKRfUdyW+jJhZNEI1PYy29S2YRxMV5AOO/x/SjKmW0acCIOqmbj6Haf9eHAhsPmrhlHSxEhv/1WszcLWV4cg==}
 
   '@types/stack-utils@2.0.3':
     resolution: {integrity: sha512-9aEbYZ3TbYMznPdcdr3SmIrLXwC/AKZXQeCf9Pgao5CKb8CyHuEX5jzWPTkvregvhRJHcpRO6BFoGW9ycaOkYw==}
@@ -1714,8 +1714,8 @@ packages:
     engines: {node: '>=14.17'}
     hasBin: true
 
-  typescript@5.9.0-dev.20250506:
-    resolution: {integrity: sha512-2wpjav7G3l6HcoMPoA7qI7pehXc0KURvGsvSzjjIuGaJZljFwX302AQbXNiXD360tlWJtjPb0/rBT8KZTUYcFg==}
+  typescript@5.9.0-dev.20250513:
+    resolution: {integrity: sha512-lN10znS++T4imSlgVxdj3dUEHyX8MgK4pBUrvWgW04mLQK+QubpW2fcibnBeVOKCBdQUeEuyB8gGrLgyXgz7fA==}
     engines: {node: '>=14.17'}
     hasBin: true
 
@@ -2071,7 +2071,7 @@ snapshots:
     dependencies:
       '@inquirer/type': 1.5.5
       '@types/mute-stream': 0.0.1
-      '@types/node': 20.17.43
+      '@types/node': 20.17.47
       '@types/wrap-ansi': 3.0.0
       ansi-escapes: 4.3.2
       chalk: 4.1.2
@@ -2088,7 +2088,7 @@ snapshots:
     dependencies:
       '@inquirer/type': 1.5.5
       '@types/mute-stream': 0.0.4
-      '@types/node': 20.17.43
+      '@types/node': 20.17.47
       '@types/wrap-ansi': 3.0.0
       ansi-escapes: 4.3.2
       chalk: 4.1.2
@@ -2180,7 +2180,7 @@ snapshots:
       '@jest/schemas': 29.6.3
       '@types/istanbul-lib-coverage': 2.0.6
       '@types/istanbul-reports': 3.0.4
-      '@types/node': 22.15.14
+      '@types/node': 22.15.18
       '@types/yargs': 17.0.33
       chalk: 4.1.2
 
@@ -2286,21 +2286,21 @@ snapshots:
 
   '@types/mute-stream@0.0.1':
     dependencies:
-      '@types/node': 22.15.14
+      '@types/node': 22.15.18
 
   '@types/mute-stream@0.0.4':
     dependencies:
-      '@types/node': 22.15.14
+      '@types/node': 22.15.18
 
   '@types/node@18.19.71':
     dependencies:
       undici-types: 5.26.5
 
-  '@types/node@20.17.43':
+  '@types/node@20.17.47':
     dependencies:
       undici-types: 6.19.8
 
-  '@types/node@22.15.14':
+  '@types/node@22.15.18':
     dependencies:
       undici-types: 6.21.0
 
@@ -2316,7 +2316,7 @@ snapshots:
 
   '@types/yauzl@2.10.3':
     dependencies:
-      '@types/node': 22.15.14
+      '@types/node': 22.15.18
     optional: true
 
   '@types/yoga-layout@1.9.2': {}
@@ -2701,7 +2701,7 @@ snapshots:
     dependencies:
       semver: 7.7.1
       shelljs: 0.8.5
-      typescript: 5.9.0-dev.20250506
+      typescript: 5.9.0-dev.20250513
 
   dunder-proto@1.0.1:
     dependencies:
@@ -3178,7 +3178,7 @@ snapshots:
   jest-util@29.7.0:
     dependencies:
       '@jest/types': 29.6.3
-      '@types/node': 22.15.14
+      '@types/node': 22.15.18
       chalk: 4.1.2
       ci-info: 3.9.0
       graceful-fs: 4.2.11
@@ -3851,7 +3851,7 @@ snapshots:
 
   typescript@5.8.3: {}
 
-  typescript@5.9.0-dev.20250506: {}
+  typescript@5.9.0-dev.20250513: {}
 
   undici-types@5.26.5: {}
 
