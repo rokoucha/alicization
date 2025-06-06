@@ -18,8 +18,8 @@ importers:
         specifier: ^11.12.0
         version: 11.14.0(cdktf@0.20.12(constructs@10.4.2))(constructs@10.4.2)
       '@cdktf/provider-tls':
-        specifier: ^10.0.1
-        version: 10.1.0(cdktf@0.20.12(constructs@10.4.2))(constructs@10.4.2)
+        specifier: ^11.0.0
+        version: 11.0.0(cdktf@0.20.12(constructs@10.4.2))(constructs@10.4.2)
       cdktf:
         specifier: ^0.20.11
         version: 0.20.12(constructs@10.4.2)
@@ -123,12 +123,12 @@ packages:
       cdktf: ^0.20.0
       constructs: ^10.3.0
 
-  '@cdktf/provider-tls@10.1.0':
-    resolution: {integrity: sha512-XEC//FRnktwTpz0pdmSJrNfvxxFLYu03jWbgSfgG9mgJla/s9cQbJAq1VkPLbcE/vSWoKCfIYMqNDnPfUCN/yg==}
-    engines: {node: '>= 18.12.0'}
+  '@cdktf/provider-tls@11.0.0':
+    resolution: {integrity: sha512-iClyPr2f06GpjPzhWt+b4LZGSVzO99Q+RkEbYUYx1a1+t3JadImg/rN1J+3akgEEkut5rH26wNG+4nW1uhBIgg==}
+    engines: {node: '>= 20.9.0'}
     peerDependencies:
-      cdktf: ^0.20.0
-      constructs: ^10.3.0
+      cdktf: ^0.21.0
+      constructs: ^10.4.2
 
   '@inquirer/checkbox@1.5.2':
     resolution: {integrity: sha512-CifrkgQjDkUkWexmgYYNyB5603HhTHI91vLFeQXh6qrTKiCMVASol01Rs1cv6LP/A2WccZSRlJKZhbaBIs/9ZA==}
@@ -2045,7 +2045,7 @@ snapshots:
       cdktf: 0.20.12(constructs@10.4.2)
       constructs: 10.4.2
 
-  '@cdktf/provider-tls@10.1.0(cdktf@0.20.12(constructs@10.4.2))(constructs@10.4.2)':
+  '@cdktf/provider-tls@11.0.0(cdktf@0.20.12(constructs@10.4.2))(constructs@10.4.2)':
     dependencies:
       cdktf: 0.20.12(constructs@10.4.2)
       constructs: 10.4.2
