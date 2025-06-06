@@ -7,7 +7,7 @@
     "@cdktf/provider-aws": "^19.58.0",
     "@cdktf/provider-cloudflare": "11.30.0",
     "@cdktf/provider-tfe": "^11.12.0",
-    "@cdktf/provider-tls": "^10.0.1",
+    "@cdktf/provider-tls": "^11.0.0",
     "cdktf": "^0.20.11",
     "constructs": "^10.4.2"
   },
