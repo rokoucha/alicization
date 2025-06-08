@@ -15,8 +15,8 @@ importers:
         specifier: 11.30.0
         version: 11.30.0(cdktf@0.20.12(constructs@10.4.2))(constructs@10.4.2)
       '@cdktf/provider-tfe':
-        specifier: ^11.12.0
-        version: 11.14.0(cdktf@0.20.12(constructs@10.4.2))(constructs@10.4.2)
+        specifier: ^12.0.0
+        version: 12.0.0(cdktf@0.20.12(constructs@10.4.2))(constructs@10.4.2)
       '@cdktf/provider-tls':
         specifier: ^11.0.0
         version: 11.0.0(cdktf@0.20.12(constructs@10.4.2))(constructs@10.4.2)
@@ -116,12 +116,12 @@ packages:
   '@cdktf/provider-schema@0.20.12':
     resolution: {integrity: sha512-R1xmjcZ42zYyCaRnZMH9gfMUSN6a5wLZ+yXjtcgJakVB1FTqh/NscKCT2cFy/BYC6t54LklrX1yOmAmUP9NEUw==}
 
-  '@cdktf/provider-tfe@11.14.0':
-    resolution: {integrity: sha512-xTco+RXwo1p8iHLjeBcz9lEEt4q2LaJsqfEIVKzhIxIL6bVZvaBHgE2vxuEW8SHwWAMG2t3XGVfoPfBWv66JBA==}
-    engines: {node: '>= 18.12.0'}
+  '@cdktf/provider-tfe@12.0.0':
+    resolution: {integrity: sha512-WJT+QquEgkAOGKfXt8WXmZo1xfY4VgRe787fpvaixOALzdt2zwUI2+QkFQGh5bVY0vek/A/F8ANd32MFEP2AYg==}
+    engines: {node: '>= 20.9.0'}
     peerDependencies:
-      cdktf: ^0.20.0
-      constructs: ^10.3.0
+      cdktf: ^0.21.0
+      constructs: ^10.4.2
 
   '@cdktf/provider-tls@11.0.0':
     resolution: {integrity: sha512-iClyPr2f06GpjPzhWt+b4LZGSVzO99Q+RkEbYUYx1a1+t3JadImg/rN1J+3akgEEkut5rH26wNG+4nW1uhBIgg==}
@@ -1714,8 +1714,8 @@ packages:
     engines: {node: '>=14.17'}
     hasBin: true
 
-  typescript@5.9.0-dev.20250605:
-    resolution: {integrity: sha512-a/s8nsknZ9NxxmcE94ohzaJ/tIrAJ8wAGVZ+LoH+5oPEbCKnQKI74AQM6710wSebu0MvbT57uKWnM1vdmEG3Nw==}
+  typescript@5.9.0-dev.20250608:
+    resolution: {integrity: sha512-bHhoHdKqMJ84XQiG+qLt1zhQHVGjtonvT+xQjE2ItGF53gPn+Gu+oJNPIkcs722DrIgOmiOoe1HpQ2SsuwyXPQ==}
     engines: {node: '>=14.17'}
     hasBin: true
 
@@ -2040,7 +2040,7 @@ snapshots:
       - debug
       - supports-color
 
-  '@cdktf/provider-tfe@11.14.0(cdktf@0.20.12(constructs@10.4.2))(constructs@10.4.2)':
+  '@cdktf/provider-tfe@12.0.0(cdktf@0.20.12(constructs@10.4.2))(constructs@10.4.2)':
     dependencies:
       cdktf: 0.20.12(constructs@10.4.2)
       constructs: 10.4.2
@@ -2698,7 +2698,7 @@ snapshots:
     dependencies:
       semver: 7.7.2
       shelljs: 0.8.5
-      typescript: 5.9.0-dev.20250605
+      typescript: 5.9.0-dev.20250608
 
   dunder-proto@1.0.1:
     dependencies:
@@ -3848,7 +3848,7 @@ snapshots:
 
   typescript@5.8.3: {}
 
-  typescript@5.9.0-dev.20250605: {}
+  typescript@5.9.0-dev.20250608: {}
 
   undici-types@5.26.5: {}
 
