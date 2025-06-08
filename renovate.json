@@ -3,5 +3,11 @@
   "extends": ["config:recommended", ":dependencyDashboard"],
   "lockFileMaintenance": {
     "enabled": true
-  }
+  },
+  "packageRules": [
+    {
+      "matchPackageNames": ["cdktf", "cdktf-cli"],
+      "groupName": "cdktf"
+    }
+  ]
 }
