@@ -8,13 +8,13 @@
     "@cdktf/provider-cloudflare": "11.30.0",
     "@cdktf/provider-tfe": "^12.0.0",
     "@cdktf/provider-tls": "^11.0.0",
-    "cdktf": "^0.20.11",
+    "cdktf": "^0.21.0",
     "constructs": "^10.4.2"
   },
   "devDependencies": {
     "@types/jest": "^29.5.14",
     "@types/node": "^22.13.13",
-    "cdktf-cli": "^0.20.11",
+    "cdktf-cli": "^0.21.0",
     "prettier": "^3.5.3",
     "typescript": "^5.8.2"
   },
