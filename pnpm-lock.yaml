@@ -12,8 +12,8 @@ importers:
         specifier: ^20.0.0
         version: 20.1.0(cdktf@0.21.0(constructs@10.4.2))(constructs@10.4.2)
       '@cdktf/provider-cloudflare':
-        specifier: 11.30.0
-        version: 11.30.0(cdktf@0.21.0(constructs@10.4.2))(constructs@10.4.2)
+        specifier: 13.1.0
+        version: 13.1.0(cdktf@0.21.0(constructs@10.4.2))(constructs@10.4.2)
       '@cdktf/provider-tfe':
         specifier: ^12.0.0
         version: 12.0.0(cdktf@0.21.0(constructs@10.4.2))(constructs@10.4.2)
@@ -103,12 +103,12 @@ packages:
       cdktf: ^0.21.0
       constructs: ^10.4.2
 
-  '@cdktf/provider-cloudflare@11.30.0':
-    resolution: {integrity: sha512-5i3LSaHROsBZsHL5KkfzZ0aM6e8gB6ZNN5eTD4V7OdPNYZEXpz+Bvm2NrC7uz/SQ4yJuz4TCdtc0VHLiQSZ6UQ==}
-    engines: {node: '>= 18.12.0'}
+  '@cdktf/provider-cloudflare@13.1.0':
+    resolution: {integrity: sha512-xRVyA3AUW6CbFwMsLusD0WI5im3Rmmkwn9a29Us7j59JW4LjGSb0/07ZW5ddknjWVXkBMp1jVYWtprP7vOF2Jw==}
+    engines: {node: '>= 20.9.0'}
     peerDependencies:
-      cdktf: ^0.20.0
-      constructs: ^10.3.0
+      cdktf: ^0.21.0
+      constructs: ^10.4.2
 
   '@cdktf/provider-generator@0.21.0':
     resolution: {integrity: sha512-N/IehJ6lZlVaNxP/0sxg0AeLJIhgcW3+Bk6m71UzoDAZFPBzW00k6nmSAlQiE0c5L92hHgLksfEL8VNbiPKmSw==}
@@ -1921,7 +1921,7 @@ snapshots:
       cdktf: 0.21.0(constructs@10.4.2)
       constructs: 10.4.2
 
-  '@cdktf/provider-cloudflare@11.30.0(cdktf@0.21.0(constructs@10.4.2))(constructs@10.4.2)':
+  '@cdktf/provider-cloudflare@13.1.0(cdktf@0.21.0(constructs@10.4.2))(constructs@10.4.2)':
     dependencies:
       cdktf: 0.21.0(constructs@10.4.2)
       constructs: 10.4.2

@@ -5,7 +5,7 @@
   "private": true,
   "dependencies": {
     "@cdktf/provider-aws": "^20.0.0",
-    "@cdktf/provider-cloudflare": "11.30.0",
+    "@cdktf/provider-cloudflare": "13.1.0",
     "@cdktf/provider-tfe": "^12.0.0",
     "@cdktf/provider-tls": "^11.0.0",
     "cdktf": "^0.21.0",
