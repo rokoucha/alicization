@@ -32,7 +32,7 @@ importers:
         version: 30.0.0
       '@types/node':
         specifier: ^22.13.13
-        version: 22.15.32
+        version: 22.15.33
       cdktf-cli:
         specifier: ^0.21.0
         version: 0.21.0(ink@3.2.0(react@17.0.2))(react@17.0.2)
@@ -299,8 +299,8 @@ packages:
   '@types/node@20.19.1':
     resolution: {integrity: sha512-jJD50LtlD2dodAEO653i3YF04NWak6jN3ky+Ri3Em3mGR39/glWiboM/IePaRbgwSfqM1TpGXfAg8ohn/4dTgA==}
 
-  '@types/node@22.15.32':
-    resolution: {integrity: sha512-3jigKqgSjsH6gYZv2nEsqdXfZqIFGAV36XYYjf9KGZ3PSG+IhLecqPnI310RvjutyMwifE2hhhNEklOUrvx/wA==}
+  '@types/node@22.15.33':
+    resolution: {integrity: sha512-wzoocdnnpSxZ+6CjW4ADCK1jVmd1S/J3ArNWfn8FDDQtRm8dkDg7TA+mvek2wNrfCgwuZxqEOiB9B1XCJ6+dbw==}
 
   '@types/stack-utils@2.0.3':
     resolution: {integrity: sha512-9aEbYZ3TbYMznPdcdr3SmIrLXwC/AKZXQeCf9Pgao5CKb8CyHuEX5jzWPTkvregvhRJHcpRO6BFoGW9ycaOkYw==}
@@ -2084,7 +2084,7 @@ snapshots:
 
   '@jest/pattern@30.0.0':
     dependencies:
-      '@types/node': 22.15.32
+      '@types/node': 22.15.33
       jest-regex-util: 30.0.0
 
   '@jest/schemas@30.0.0':
@@ -2097,7 +2097,7 @@ snapshots:
       '@jest/schemas': 30.0.0
       '@types/istanbul-lib-coverage': 2.0.6
       '@types/istanbul-reports': 3.0.4
-      '@types/node': 22.15.32
+      '@types/node': 22.15.33
       '@types/yargs': 17.0.33
       chalk: 4.1.2
 
@@ -2193,11 +2193,11 @@ snapshots:
 
   '@types/mute-stream@0.0.1':
     dependencies:
-      '@types/node': 22.15.32
+      '@types/node': 22.15.33
 
   '@types/mute-stream@0.0.4':
     dependencies:
-      '@types/node': 22.15.32
+      '@types/node': 22.15.33
 
   '@types/node@18.19.101':
     dependencies:
@@ -2207,7 +2207,7 @@ snapshots:
     dependencies:
       undici-types: 6.21.0
 
-  '@types/node@22.15.32':
+  '@types/node@22.15.33':
     dependencies:
       undici-types: 6.21.0
 
@@ -2223,7 +2223,7 @@ snapshots:
 
   '@types/yauzl@2.10.3':
     dependencies:
-      '@types/node': 22.15.32
+      '@types/node': 22.15.33
     optional: true
 
   '@types/yoga-layout@1.9.2': {}
@@ -3034,7 +3034,7 @@ snapshots:
   jest-mock@30.0.0:
     dependencies:
       '@jest/types': 30.0.0
-      '@types/node': 22.15.32
+      '@types/node': 22.15.33
       jest-util: 30.0.0
 
   jest-regex-util@30.0.0: {}
@@ -3042,7 +3042,7 @@ snapshots:
   jest-util@30.0.0:
     dependencies:
       '@jest/types': 30.0.0
-      '@types/node': 22.15.32
+      '@types/node': 22.15.33
       chalk: 4.1.2
       ci-info: 4.2.0
       graceful-fs: 4.2.11
