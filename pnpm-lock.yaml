@@ -16,7 +16,7 @@ importers:
         version: 11.30.0(cdktf@0.21.0(constructs@10.4.2))(constructs@10.4.2)
       '@cdktf/provider-tfe':
         specifier: ^12.0.0
-        version: 12.1.1(cdktf@0.21.0(constructs@10.4.2))(constructs@10.4.2)
+        version: 12.2.0(cdktf@0.21.0(constructs@10.4.2))(constructs@10.4.2)
       '@cdktf/provider-tls':
         specifier: ^11.0.0
         version: 11.0.0(cdktf@0.21.0(constructs@10.4.2))(constructs@10.4.2)
@@ -116,8 +116,8 @@ packages:
   '@cdktf/provider-schema@0.21.0':
     resolution: {integrity: sha512-zVJmuE3wj4n48voZL9OMRyNe6rh4ST5qoXk96zTr+3WW8At29Y9WblrZI88R/dpk7l9VLvnraxxnP6JWoLhxWw==}
 
-  '@cdktf/provider-tfe@12.1.1':
-    resolution: {integrity: sha512-hPGWUgmlAHwR5xakmGlvmf2e4BDx880lEcDu0H0+ldhX8nqDm4CVOGozfSy5+BJ8Pm627Z6pDDM0G5YcoyOKxg==}
+  '@cdktf/provider-tfe@12.2.0':
+    resolution: {integrity: sha512-ekhJt0uIndfN2U5JTVDyMYgtKt1t8yneo+bq0jkOL8m6R6ho6QygS5O83oIYF8u39O1bAOONG7Rji0lyNmvz0A==}
     engines: {node: '>= 20.9.0'}
     peerDependencies:
       cdktf: ^0.21.0
@@ -1945,7 +1945,7 @@ snapshots:
       - debug
       - supports-color
 
-  '@cdktf/provider-tfe@12.1.1(cdktf@0.21.0(constructs@10.4.2))(constructs@10.4.2)':
+  '@cdktf/provider-tfe@12.2.0(cdktf@0.21.0(constructs@10.4.2))(constructs@10.4.2)':
     dependencies:
       cdktf: 0.21.0(constructs@10.4.2)
       constructs: 10.4.2
