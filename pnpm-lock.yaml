@@ -32,7 +32,7 @@ importers:
         version: 30.0.0
       '@types/node':
         specifier: ^22.13.13
-        version: 22.17.1
+        version: 22.17.2
       cdktf-cli:
         specifier: ^0.21.0
         version: 0.21.0(ink@3.2.0(react@17.0.2))(react@17.0.2)
@@ -295,11 +295,11 @@ packages:
   '@types/node@18.19.101':
     resolution: {integrity: sha512-Ykg7fcE3+cOQlLUv2Ds3zil6DVjriGQaSN/kEpl5HQ3DIGM6W0F2n9+GkWV4bRt7KjLymgzNdTnSKCbFUUJ7Kw==}
 
-  '@types/node@20.19.10':
-    resolution: {integrity: sha512-iAFpG6DokED3roLSP0K+ybeDdIX6Bc0Vd3mLW5uDqThPWtNos3E+EqOM11mPQHKzfWHqEBuLjIlsBQQ8CsISmQ==}
+  '@types/node@20.19.11':
+    resolution: {integrity: sha512-uug3FEEGv0r+jrecvUUpbY8lLisvIjg6AAic6a2bSP5OEOLeJsDSnvhCDov7ipFFMXS3orMpzlmi0ZcuGkBbow==}
 
-  '@types/node@22.17.1':
-    resolution: {integrity: sha512-y3tBaz+rjspDTylNjAX37jEC3TETEFGNJL6uQDxwF9/8GLLIjW1rvVHlynyuUKMnMr1Roq8jOv3vkopBjC4/VA==}
+  '@types/node@22.17.2':
+    resolution: {integrity: sha512-gL6z5N9Jm9mhY+U2KXZpteb+09zyffliRkZyZOHODGATyC5B1Jt/7TzuuiLkFsSUMLbS1OLmlj/E+/3KF4Q/4w==}
 
   '@types/stack-utils@2.0.3':
     resolution: {integrity: sha512-9aEbYZ3TbYMznPdcdr3SmIrLXwC/AKZXQeCf9Pgao5CKb8CyHuEX5jzWPTkvregvhRJHcpRO6BFoGW9ycaOkYw==}
@@ -1986,7 +1986,7 @@ snapshots:
     dependencies:
       '@inquirer/type': 1.5.5
       '@types/mute-stream': 0.0.1
-      '@types/node': 20.19.10
+      '@types/node': 20.19.11
       '@types/wrap-ansi': 3.0.0
       ansi-escapes: 4.3.2
       chalk: 4.1.2
@@ -2003,7 +2003,7 @@ snapshots:
     dependencies:
       '@inquirer/type': 1.5.5
       '@types/mute-stream': 0.0.4
-      '@types/node': 20.19.10
+      '@types/node': 20.19.11
       '@types/wrap-ansi': 3.0.0
       ansi-escapes: 4.3.2
       chalk: 4.1.2
@@ -2092,7 +2092,7 @@ snapshots:
 
   '@jest/pattern@30.0.1':
     dependencies:
-      '@types/node': 22.17.1
+      '@types/node': 22.17.2
       jest-regex-util: 30.0.1
 
   '@jest/schemas@30.0.5':
@@ -2105,7 +2105,7 @@ snapshots:
       '@jest/schemas': 30.0.5
       '@types/istanbul-lib-coverage': 2.0.6
       '@types/istanbul-reports': 3.0.4
-      '@types/node': 22.17.1
+      '@types/node': 22.17.2
       '@types/yargs': 17.0.33
       chalk: 4.1.2
 
@@ -2203,21 +2203,21 @@ snapshots:
 
   '@types/mute-stream@0.0.1':
     dependencies:
-      '@types/node': 22.17.1
+      '@types/node': 22.17.2
 
   '@types/mute-stream@0.0.4':
     dependencies:
-      '@types/node': 22.17.1
+      '@types/node': 22.17.2
 
   '@types/node@18.19.101':
     dependencies:
       undici-types: 5.26.5
 
-  '@types/node@20.19.10':
+  '@types/node@20.19.11':
     dependencies:
       undici-types: 6.21.0
 
-  '@types/node@22.17.1':
+  '@types/node@22.17.2':
     dependencies:
       undici-types: 6.21.0
 
@@ -2233,7 +2233,7 @@ snapshots:
 
   '@types/yauzl@2.10.3':
     dependencies:
-      '@types/node': 22.17.1
+      '@types/node': 22.17.2
     optional: true
 
   '@types/yoga-layout@1.9.2': {}
@@ -3050,7 +3050,7 @@ snapshots:
   jest-mock@30.0.5:
     dependencies:
       '@jest/types': 30.0.5
-      '@types/node': 22.17.1
+      '@types/node': 22.17.2
       jest-util: 30.0.5
 
   jest-regex-util@30.0.1: {}
@@ -3058,7 +3058,7 @@ snapshots:
   jest-util@30.0.5:
     dependencies:
       '@jest/types': 30.0.5
-      '@types/node': 22.17.1
+      '@types/node': 22.17.2
       chalk: 4.1.2
       ci-info: 4.3.0
       graceful-fs: 4.2.11
