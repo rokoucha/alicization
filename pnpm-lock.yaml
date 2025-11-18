@@ -16,7 +16,7 @@ importers:
         version: 11.30.0(cdktf@0.21.0(constructs@10.4.3))(constructs@10.4.3)
       '@cdktf/provider-tfe':
         specifier: ^12.0.0
-        version: 12.4.0(cdktf@0.21.0(constructs@10.4.3))(constructs@10.4.3)
+        version: 12.5.0(cdktf@0.21.0(constructs@10.4.3))(constructs@10.4.3)
       '@cdktf/provider-tls':
         specifier: ^11.0.0
         version: 11.0.0(cdktf@0.21.0(constructs@10.4.3))(constructs@10.4.3)
@@ -116,8 +116,8 @@ packages:
   '@cdktf/provider-schema@0.21.0':
     resolution: {integrity: sha512-zVJmuE3wj4n48voZL9OMRyNe6rh4ST5qoXk96zTr+3WW8At29Y9WblrZI88R/dpk7l9VLvnraxxnP6JWoLhxWw==}
 
-  '@cdktf/provider-tfe@12.4.0':
-    resolution: {integrity: sha512-tnDFtF5VHXtGfORHJN4/xNsCEoL7LO2g3YOqTjl7vKo9bkYtuhRybLuIK2m5ELr/QeNcNEM4sYx9ka3LKj1WtA==}
+  '@cdktf/provider-tfe@12.5.0':
+    resolution: {integrity: sha512-QOcBszUMB1r8/4U+Pd6MlbrJaNDt3+0/fg/jcoFeN1sQg/JL+WkqJsmRo2047gYApxAeLq1Mtj3V5Dw52s4IZg==}
     engines: {node: '>= 20.9.0'}
     peerDependencies:
       cdktf: ^0.21.0
@@ -310,8 +310,8 @@ packages:
   '@types/yargs-parser@21.0.3':
     resolution: {integrity: sha512-I4q9QU9MQv4oEOz4tAHJtNz1cwuLxn2F3xcc2iV5WdqLPpUnj30aUuxt1mAxYTG+oe8CZMV/+6rU4S4gRDzqtQ==}
 
-  '@types/yargs@17.0.34':
-    resolution: {integrity: sha512-KExbHVa92aJpw9WDQvzBaGVE2/Pz+pLZQloT2hjL8IqsZnV62rlPOYvNnLmf/L2dyllfVUOVBj64M0z/46eR2A==}
+  '@types/yargs@17.0.35':
+    resolution: {integrity: sha512-qUHkeCyQFxMXg79wQfTtfndEC+N9ZZg76HJftDJp+qH2tV7Gj4OJi7l+PiWwJ+pWtW8GwSmqsDj/oymhrTWXjg==}
 
   '@types/yauzl@2.10.3':
     resolution: {integrity: sha512-oJoftv0LSuaDZE3Le4DbKX+KS9G36NzOeSap90UIK0yMA/NhKJhqlSGtNDORNRaIbQfzjXDrQa0ytJ6mNRGz/Q==}
@@ -838,6 +838,10 @@ packages:
 
   glob@10.4.5:
     resolution: {integrity: sha512-7Bv8RF0k6xjo7d4A/PxYLbUCfb6c+Vpd2/mB2yRDlew7Jb5hEXiCD9ibfO7wpk8i4sevK6DFny9h7EYbM3/sHg==}
+    hasBin: true
+
+  glob@10.5.0:
+    resolution: {integrity: sha512-DfXN8DfhJ7NH3Oe7cFmu3NCu1wKbkReJ8TorzSAFbSKrlNaQSKfIzqYqVY8zlbs2NLBbWpRiU52GX2PbaBVNkg==}
     hasBin: true
 
   gopd@1.2.0:
@@ -1984,7 +1988,7 @@ snapshots:
       - debug
       - supports-color
 
-  '@cdktf/provider-tfe@12.4.0(cdktf@0.21.0(constructs@10.4.3))(constructs@10.4.3)':
+  '@cdktf/provider-tfe@12.5.0(cdktf@0.21.0(constructs@10.4.3))(constructs@10.4.3)':
     dependencies:
       cdktf: 0.21.0(constructs@10.4.3)
       constructs: 10.4.3
@@ -2132,7 +2136,7 @@ snapshots:
       '@types/istanbul-lib-coverage': 2.0.6
       '@types/istanbul-reports': 3.0.4
       '@types/node': 24.10.1
-      '@types/yargs': 17.0.34
+      '@types/yargs': 17.0.35
       chalk: 4.1.2
 
   '@jridgewell/gen-mapping@0.3.13':
@@ -2253,7 +2257,7 @@ snapshots:
 
   '@types/yargs-parser@21.0.3': {}
 
-  '@types/yargs@17.0.34':
+  '@types/yargs@17.0.35':
     dependencies:
       '@types/yargs-parser': 21.0.3
 
@@ -2308,7 +2312,7 @@ snapshots:
 
   archiver-utils@5.0.2:
     dependencies:
-      glob: 10.4.5
+      glob: 10.5.0
       graceful-fs: 4.2.11
       is-stream: 2.0.1
       lazystream: 1.0.1
@@ -2837,6 +2841,15 @@ snapshots:
       is-glob: 4.0.3
 
   glob@10.4.5:
+    dependencies:
+      foreground-child: 3.3.1
+      jackspeak: 3.4.3
+      minimatch: 9.0.5
+      minipass: 7.1.2
+      package-json-from-dist: 1.0.1
+      path-scurry: 1.11.1
+
+  glob@10.5.0:
     dependencies:
       foreground-child: 3.3.1
       jackspeak: 3.4.3
