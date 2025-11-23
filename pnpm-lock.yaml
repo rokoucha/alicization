@@ -10,7 +10,7 @@ importers:
     dependencies:
       '@cdktf/provider-aws':
         specifier: ^21.0.0
-        version: 21.18.0(cdktf@0.21.0(constructs@10.4.3))(constructs@10.4.3)
+        version: 21.19.0(cdktf@0.21.0(constructs@10.4.3))(constructs@10.4.3)
       '@cdktf/provider-cloudflare':
         specifier: 11.30.0
         version: 11.30.0(cdktf@0.21.0(constructs@10.4.3))(constructs@10.4.3)
@@ -96,8 +96,8 @@ packages:
   '@cdktf/node-pty-prebuilt-multiarch@0.10.2':
     resolution: {integrity: sha512-Bpb0v9bzejJUAGmn8HfDFH6pYxFVHokiWV4mHvTao2XoYcEvETFVrniYIXlIg0e4yLlKB/U/z5WsC5PBsi3xEQ==}
 
-  '@cdktf/provider-aws@21.18.0':
-    resolution: {integrity: sha512-I74rBo5La+Nc46zUxIBQtPfeD4jRnjSqInyqIDpjdqnWM2MeDvx8d9uGAUSSUOUEyTHeQcE49W26rKrYNB+iqg==}
+  '@cdktf/provider-aws@21.19.0':
+    resolution: {integrity: sha512-SuIKkLofkyCmXsl3fKvod2A7WUSn9S4eR9v7WBfRDYlbbzvslCnsMuRoiYUNYYdB6mCe5g7gFdchtru5IX9k0w==}
     engines: {node: '>= 20.9.0'}
     peerDependencies:
       cdktf: ^0.21.0
@@ -1954,7 +1954,7 @@ snapshots:
       nan: 2.23.1
       prebuild-install: 7.1.3
 
-  '@cdktf/provider-aws@21.18.0(cdktf@0.21.0(constructs@10.4.3))(constructs@10.4.3)':
+  '@cdktf/provider-aws@21.19.0(cdktf@0.21.0(constructs@10.4.3))(constructs@10.4.3)':
     dependencies:
       cdktf: 0.21.0(constructs@10.4.3)
       constructs: 10.4.3
