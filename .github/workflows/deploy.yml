@@ -24,7 +24,7 @@ jobs:
         run: pnpm i
 
       - name: Setup Terraform for generate providers
-        uses: hashicorp/setup-terraform@v3
+        uses: hashicorp/setup-terraform@b9cd54a3c349d3f38e8881555d616ced269862dd # v3
         with:
           terraform_version: "1.11.3"
 
@@ -34,7 +34,7 @@ jobs:
         run: pnpm cdktf provider get
 
       - name: Apply AWS
-        uses: hashicorp/terraform-cdk-action@v11
+        uses: hashicorp/terraform-cdk-action@ec317e0c5cebab5b15bd676bbcc8e0afdbc96142 # v11
         with:
           githubToken: ${{ secrets.GITHUB_TOKEN }}
           mode: auto-approve-apply
@@ -43,7 +43,7 @@ jobs:
           terraformVersion: "1.11.3"
 
       - name: Apply Cloudflare
-        uses: hashicorp/terraform-cdk-action@v11
+        uses: hashicorp/terraform-cdk-action@ec317e0c5cebab5b15bd676bbcc8e0afdbc96142 # v11
         with:
           githubToken: ${{ secrets.GITHUB_TOKEN }}
           mode: auto-approve-apply
@@ -52,7 +52,7 @@ jobs:
           terraformVersion: "1.11.3"
 
       - name: Apply Mackerel
-        uses: hashicorp/terraform-cdk-action@v11
+        uses: hashicorp/terraform-cdk-action@ec317e0c5cebab5b15bd676bbcc8e0afdbc96142 # v11
         with:
           githubToken: ${{ secrets.GITHUB_TOKEN }}
           mode: auto-approve-apply
@@ -61,7 +61,7 @@ jobs:
           terraformVersion: "1.11.3"
 
       - name: Apply Terraform Cloud
-        uses: hashicorp/terraform-cdk-action@v11
+        uses: hashicorp/terraform-cdk-action@ec317e0c5cebab5b15bd676bbcc8e0afdbc96142 # v11
         with:
           githubToken: ${{ secrets.GITHUB_TOKEN }}
           mode: auto-approve-apply
