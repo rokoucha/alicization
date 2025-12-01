@@ -12,20 +12,23 @@
     "constructs": "^10.4.2"
   },
   "devDependencies": {
-    "@types/jest": "^30.0.0",
     "@types/node": "^24.0.0",
     "cdktf-cli": "^0.21.0",
     "prettier": "^3.5.3",
-    "typescript": "^5.8.2"
+    "typescript": "^5.8.2",
+    "vitest": "^4.0.14"
   },
   "scripts": {
     "build": "tsc",
+    "generate": "pnpm cdktf provider get",
     "start": "node --enable-source-maps ./dist/src/main.js",
+    "test": "vitest",
     "type-check": "tsc --noEmit"
   },
   "pnpm": {
     "onlyBuiltDependencies": [
-      "@cdktf/node-pty-prebuilt-multiarch"
+      "@cdktf/node-pty-prebuilt-multiarch",
+      "esbuild"
     ]
   }
 }

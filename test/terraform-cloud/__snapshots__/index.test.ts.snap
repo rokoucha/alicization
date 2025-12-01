@@ -1,0 +1,206 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`TerraformCloud > snapshot 1`] = `
+"{
+  "provider": {
+    "tfe": [
+      {
+      }
+    ]
+  },
+  "resource": {
+    "tfe_notification_configuration": {
+      "aws-notification-discord": {
+        "destination_type": "slack",
+        "enabled": true,
+        "name": "Discord",
+        "triggers": [
+          "run:applying",
+          "run:completed",
+          "run:created",
+          "run:errored",
+          "run:needs_attention",
+          "run:planning"
+        ],
+        "url": "\${var.DISCORD_NOTIFICATION_WEBHOOK_URL}",
+        "workspace_id": "\${tfe_workspace.aws.id}"
+      },
+      "cloudflare-notification-discord": {
+        "destination_type": "slack",
+        "enabled": true,
+        "name": "Discord",
+        "triggers": [
+          "run:applying",
+          "run:completed",
+          "run:created",
+          "run:errored",
+          "run:needs_attention",
+          "run:planning"
+        ],
+        "url": "\${var.DISCORD_NOTIFICATION_WEBHOOK_URL}",
+        "workspace_id": "\${tfe_workspace.cloudflare.id}"
+      },
+      "mackerel-notification-discord": {
+        "destination_type": "slack",
+        "enabled": true,
+        "name": "Discord",
+        "triggers": [
+          "run:applying",
+          "run:completed",
+          "run:created",
+          "run:errored",
+          "run:needs_attention",
+          "run:planning"
+        ],
+        "url": "\${var.DISCORD_NOTIFICATION_WEBHOOK_URL}",
+        "workspace_id": "\${tfe_workspace.mackerel.id}"
+      },
+      "terraform-cloud-notification-discord": {
+        "destination_type": "slack",
+        "enabled": true,
+        "name": "Discord",
+        "triggers": [
+          "run:applying",
+          "run:completed",
+          "run:created",
+          "run:errored",
+          "run:needs_attention",
+          "run:planning"
+        ],
+        "url": "\${var.DISCORD_NOTIFICATION_WEBHOOK_URL}",
+        "workspace_id": "\${tfe_workspace.terraform-cloud.id}"
+      }
+    },
+    "tfe_organization": {
+      "organization": {
+        "email": "\${var.TFC_ORGANIZATION_EMAIL}",
+        "name": "rokoucha",
+        "speculative_plan_management_enabled": false
+      }
+    },
+    "tfe_project": {
+      "alicization": {
+        "name": "alicization",
+        "organization": "\${tfe_organization.organization.name}"
+      }
+    },
+    "tfe_variable": {
+      "aws-TFC_AWS_PROVIDER_AUTH": {
+        "category": "env",
+        "key": "TFC_AWS_PROVIDER_AUTH",
+        "value": "true",
+        "workspace_id": "\${tfe_workspace.aws.id}"
+      },
+      "aws-TFC_AWS_RUN_ROLE_ARN": {
+        "category": "env",
+        "key": "TFC_AWS_RUN_ROLE_ARN",
+        "lifecycle": {
+          "ignore_changes": [
+            "value"
+          ]
+        },
+        "workspace_id": "\${tfe_workspace.aws.id}"
+      },
+      "cloudflare-CLOUDFLARE_API_TOKEN": {
+        "category": "env",
+        "key": "CLOUDFLARE_API_TOKEN",
+        "sensitive": true,
+        "workspace_id": "\${tfe_workspace.cloudflare.id}"
+      },
+      "mackerel-MACKEREL_API_KEY": {
+        "category": "env",
+        "key": "MACKEREL_API_KEY",
+        "sensitive": true,
+        "workspace_id": "\${tfe_workspace.mackerel.id}"
+      },
+      "mackerel-WATCHDOGS_WEBHOOK_URL": {
+        "category": "terraform",
+        "key": "WATCHDOGS_WEBHOOK_URL",
+        "lifecycle": {
+          "ignore_changes": [
+            "value"
+          ]
+        },
+        "workspace_id": "\${tfe_workspace.mackerel.id}"
+      },
+      "terraform-cloud-DISCORD_NOTIFICATION_WEBHOOK_URL": {
+        "category": "terraform",
+        "key": "DISCORD_NOTIFICATION_WEBHOOK_URL",
+        "sensitive": true,
+        "workspace_id": "\${tfe_workspace.terraform-cloud.id}"
+      },
+      "terraform-cloud-TFC_ORGANIZATION_EMAIL": {
+        "category": "terraform",
+        "key": "TFC_ORGANIZATION_EMAIL",
+        "lifecycle": {
+          "ignore_changes": [
+            "value"
+          ]
+        },
+        "workspace_id": "\${tfe_workspace.terraform-cloud.id}"
+      },
+      "terraform-cloud-TFE_TOKEN": {
+        "category": "env",
+        "key": "TFE_TOKEN",
+        "sensitive": true,
+        "workspace_id": "\${tfe_workspace.terraform-cloud.id}"
+      }
+    },
+    "tfe_workspace": {
+      "aws": {
+        "name": "aws",
+        "organization": "\${tfe_organization.organization.name}",
+        "project_id": "\${tfe_project.alicization.id}",
+        "queue_all_runs": false,
+        "terraform_version": "~> 1.11.0"
+      },
+      "cloudflare": {
+        "name": "cloudflare",
+        "organization": "\${tfe_organization.organization.name}",
+        "project_id": "\${tfe_project.alicization.id}",
+        "queue_all_runs": false,
+        "terraform_version": "~> 1.11.0"
+      },
+      "mackerel": {
+        "name": "mackerel",
+        "organization": "\${tfe_organization.organization.name}",
+        "project_id": "\${tfe_project.alicization.id}",
+        "queue_all_runs": false,
+        "terraform_version": "~> 1.11.0"
+      },
+      "terraform-cloud": {
+        "name": "terraform-cloud",
+        "organization": "\${tfe_organization.organization.name}",
+        "project_id": "\${tfe_project.alicization.id}",
+        "queue_all_runs": false,
+        "terraform_version": "~> 1.11.0"
+      }
+    }
+  },
+  "terraform": {
+    "cloud": {
+      "hostname": "app.terraform.io",
+      "organization": "rokoucha",
+      "workspaces": {
+        "name": "terraform-cloud"
+      }
+    },
+    "required_providers": {
+      "tfe": {
+        "source": "hashicorp/tfe",
+        "version": "0.71.0"
+      }
+    }
+  },
+  "variable": {
+    "DISCORD_NOTIFICATION_WEBHOOK_URL": {
+      "description": "Discord notification webhook URL for Terraform Cloud",
+      "type": "string"
+    },
+    "TFC_ORGANIZATION_EMAIL": {
+      "description": "Terraform Cloud organization email",
+      "type": "string"
+    }
+  }
+}"
+`;
