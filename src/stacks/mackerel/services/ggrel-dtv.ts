@@ -19,36 +19,40 @@ export class GgrelDTV extends Construct {
 
     new Monitor(this, 'epgstation', {
       name: 'EPGStation',
-      external: {
-        method: 'GET',
-        url: 'https://dtv.ggrel.net',
-        service: service.name,
-        responseTimeWarning: 5000,
-        responseTimeCritical: 10000,
-        responseTimeDuration: 3,
-        headers: {
-          'Cache-Control': 'no-cache',
+      external: [
+        {
+          method: 'GET',
+          url: 'https://dtv.ggrel.net',
+          service: service.name,
+          responseTimeWarning: 5000,
+          responseTimeCritical: 10000,
+          responseTimeDuration: 3,
+          headers: {
+            'Cache-Control': 'no-cache',
+          },
+          maxCheckAttempts: 3,
+          followRedirect: true,
         },
-        maxCheckAttempts: 3,
-        followRedirect: true,
-      },
+      ],
     })
 
     new Monitor(this, 'mirakurun', {
       name: 'Mirakurun',
-      external: {
-        method: 'GET',
-        url: 'https://dtv.ggrel.net/mirakurun',
-        service: service.name,
-        responseTimeWarning: 5000,
-        responseTimeCritical: 10000,
-        responseTimeDuration: 3,
-        headers: {
-          'Cache-Control': 'no-cache',
+      external: [
+        {
+          method: 'GET',
+          url: 'https://dtv.ggrel.net/mirakurun',
+          service: service.name,
+          responseTimeWarning: 5000,
+          responseTimeCritical: 10000,
+          responseTimeDuration: 3,
+          headers: {
+            'Cache-Control': 'no-cache',
+          },
+          maxCheckAttempts: 3,
+          followRedirect: true,
         },
-        maxCheckAttempts: 3,
-        followRedirect: true,
-      },
+      ],
     })
   }
 }

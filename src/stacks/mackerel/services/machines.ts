@@ -23,12 +23,14 @@ export class Machines extends Construct {
 
     new Monitor(this, 'anomaly-detection', {
       name: '異状検知',
-      anomalyDetection: {
-        scopes: [physical.id],
-        warningSensitivity: 'normal',
-        criticalSensitivity: 'insensitive',
-        maxCheckAttempts: 5,
-      },
+      anomalyDetection: [
+        {
+          scopes: [physical.id],
+          warningSensitivity: 'normal',
+          criticalSensitivity: 'insensitive',
+          maxCheckAttempts: 5,
+        },
+      ],
     })
   }
 }

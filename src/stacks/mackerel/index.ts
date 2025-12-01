@@ -42,7 +42,6 @@ export class MackerelStack extends TerraformStack {
           url: discordWebhookUrl.value,
           enabledGraphImage: true,
           events: ['alert'],
-          mentions: {},
         },
       ],
     })
@@ -54,7 +53,7 @@ export class MackerelStack extends TerraformStack {
 
     new Monitor(this, 'connectivity', {
       name: 'connectivity',
-      connectivity: {},
+      connectivity: [{}],
     })
 
     new MateriaCluster(this, 'materia-cluster')
