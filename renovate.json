@@ -1,6 +1,10 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["config:recommended", ":dependencyDashboard"],
+  "extends": [
+    ":dependencyDashboard",
+    "config:recommended",
+    "helpers:pinGitHubActionDigests"
+  ],
   "lockFileMaintenance": {
     "enabled": true
   },
@@ -9,5 +13,7 @@
       "matchPackageNames": ["cdktf", "cdktf-cli"],
       "groupName": "cdktf"
     }
-  ]
+  ],
+  "automerge": true,
+  "automergeType": "branch"
 }
