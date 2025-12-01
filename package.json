@@ -21,7 +21,7 @@
   "scripts": {
     "build": "tsc",
     "fix": "prettier --write .",
-    "generate": "pnpm cdktf provider get",
+    "generate": "MACKEREL_API_KEY=stub pnpm cdktf provider get",
     "lint": "prettier --check .",
     "start": "node --enable-source-maps ./dist/src/main.js",
     "test": "vitest",

@@ -27,9 +27,7 @@ jobs:
           terraform_version: "1.11.3"
 
       - name: Generate providers
-        env:
-          MACKEREL_API_KEY: stub
-        run: pnpm cdktf provider get
+        run: pnpm run generate
 
       - name: Check formatting
         run: pnpm run lint

@@ -32,9 +32,7 @@ jobs:
           terraform_version: "1.11.3"
 
       - name: Generate providers
-        env:
-          MACKEREL_API_KEY: stub
-        run: pnpm cdktf provider get
+        run: pnpm run generate
 
       - name: Apply AWS
         uses: hashicorp/terraform-cdk-action@ec317e0c5cebab5b15bd676bbcc8e0afdbc96142 # v11
