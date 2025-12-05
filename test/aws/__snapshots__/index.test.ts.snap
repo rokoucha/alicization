@@ -162,8 +162,7 @@ exports[`AWS > snapshot 1`] = `
     },
     "required_providers": {
       "aws": {
-        "source": "aws",
-        "version": "6.24.0"
+        "source": "aws"
       },
       "tls": {
         "source": "hashicorp/tls",

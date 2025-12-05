@@ -187,8 +187,7 @@ exports[`TerraformCloud > snapshot 1`] = `
     },
     "required_providers": {
       "tfe": {
-        "source": "hashicorp/tfe",
-        "version": "0.71.0"
+        "source": "hashicorp/tfe"
       }
     }
   },
