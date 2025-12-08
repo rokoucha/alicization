@@ -19,10 +19,8 @@ export class SuperSeisan extends Construct {
       },
       deploymentConfigs: {
         production: {
-          compatibilityDate: '2023-01-14',
-          environmentVariables: {
-            NODE_VERSION: '20',
-          },
+          compatibilityDate: '2025-11-17',
+          environmentVariables: {},
           failOpen: true,
           usageModel: 'standard',
         },
