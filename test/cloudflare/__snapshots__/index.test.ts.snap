@@ -249,7 +249,7 @@ exports[`Cloudflare > snapshot 1`] = `
           }
         },
         "name": "super-seisan",
-        "production_branch": "master",
+        "production_branch": "main",
         "source": {
           "config": {
             "owner": "rokoucha",
@@ -258,7 +258,7 @@ exports[`Cloudflare > snapshot 1`] = `
               "*"
             ],
             "preview_deployment_setting": "all",
-            "production_branch": "master",
+            "production_branch": "main",
             "repo_name": "super-seisan"
           },
           "type": "github"

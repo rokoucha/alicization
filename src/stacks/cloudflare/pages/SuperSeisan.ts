@@ -12,7 +12,7 @@ export class SuperSeisan extends Construct {
     new PagesProject(this, 'super-seisan', {
       accountId: config.accountId,
       name: 'super-seisan',
-      productionBranch: 'master',
+      productionBranch: 'main',
       buildConfig: {
         buildCommand: 'pnpm run build',
         destinationDir: 'dist',
@@ -32,7 +32,7 @@ export class SuperSeisan extends Construct {
           prCommentsEnabled: true,
           previewBranchIncludes: ['*'],
           previewDeploymentSetting: 'all',
-          productionBranch: 'master',
+          productionBranch: 'main',
           repoName: 'super-seisan',
         },
       },
