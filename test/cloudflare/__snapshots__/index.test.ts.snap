@@ -241,9 +241,8 @@ exports[`Cloudflare > snapshot 1`] = `
         },
         "deployment_configs": {
           "production": {
-            "compatibility_date": "2023-01-14",
+            "compatibility_date": "2025-11-17",
             "environment_variables": {
-              "NODE_VERSION": "20"
             },
             "fail_open": true,
             "usage_model": "standard"
