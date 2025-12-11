@@ -19,7 +19,7 @@ importers:
         version: 12.5.1(cdktf@0.21.0(constructs@10.4.3))(constructs@10.4.3)
       '@cdktf/provider-tls':
         specifier: ^11.0.0
-        version: 11.0.0(cdktf@0.21.0(constructs@10.4.3))(constructs@10.4.3)
+        version: 11.0.1(cdktf@0.21.0(constructs@10.4.3))(constructs@10.4.3)
       cdktf:
         specifier: ^0.21.0
         version: 0.21.0(constructs@10.4.3)
@@ -126,8 +126,8 @@ packages:
       cdktf: ^0.21.0
       constructs: ^10.4.2
 
-  '@cdktf/provider-tls@11.0.0':
-    resolution: {integrity: sha512-iClyPr2f06GpjPzhWt+b4LZGSVzO99Q+RkEbYUYx1a1+t3JadImg/rN1J+3akgEEkut5rH26wNG+4nW1uhBIgg==}
+  '@cdktf/provider-tls@11.0.1':
+    resolution: {integrity: sha512-8b7nKJUzLDxGEHOuXo5WcpFGg7g4rQqol6f1YjCJoQD5o3AA68hjMpfWJ6yy85DJekyjA0/idYbeINlOmrd4EQ==}
     engines: {node: '>= 20.9.0'}
     deprecated: See https://cdk.tf/imports for details on how to continue to use the tls provider in your CDK for Terraform (CDKTF) projects by generating the bindings locally.
     peerDependencies:
@@ -2371,7 +2371,7 @@ snapshots:
       cdktf: 0.21.0(constructs@10.4.3)
       constructs: 10.4.3
 
-  '@cdktf/provider-tls@11.0.0(cdktf@0.21.0(constructs@10.4.3))(constructs@10.4.3)':
+  '@cdktf/provider-tls@11.0.1(cdktf@0.21.0(constructs@10.4.3))(constructs@10.4.3)':
     dependencies:
       cdktf: 0.21.0(constructs@10.4.3)
       constructs: 10.4.3
