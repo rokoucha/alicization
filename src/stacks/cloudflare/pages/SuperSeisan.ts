@@ -16,6 +16,7 @@ export class SuperSeisan extends Construct {
       buildConfig: {
         buildCommand: 'pnpm run build',
         destinationDir: 'dist',
+        rootDir: './legacy',
       },
       deploymentConfigs: {
         production: {
