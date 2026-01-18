@@ -8,12 +8,6 @@
   "lockFileMaintenance": {
     "enabled": true
   },
-  "packageRules": [
-    {
-      "matchPackageNames": ["cdktf", "cdktf-cli"],
-      "groupName": "cdktf"
-    }
-  ],
-  "automerge": true,
+  "automerge": false,
   "automergeType": "branch"
 }

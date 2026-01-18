@@ -2,6 +2,8 @@
 
 シンセサイズの秘技 «Synthesis Ritual»
 
+The CDKTF is dead, long live the OpenTofu.
+
 ## How to deploy
 
 master に push すると GitHub Actions によって自動でデプロイされる
