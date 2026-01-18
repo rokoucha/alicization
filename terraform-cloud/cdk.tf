@@ -54,12 +54,8 @@ resource "tfe_notification_configuration" "aws-notification-discord" {
   enabled          = true
   name             = "Discord"
   triggers = [
-    "run:applying",
-    "run:completed",
-    "run:created",
     "run:errored",
     "run:needs_attention",
-    "run:planning"
   ]
   url          = var.DISCORD_NOTIFICATION_WEBHOOK_URL
   workspace_id = tfe_workspace.aws.id
@@ -98,12 +94,8 @@ resource "tfe_notification_configuration" "cloudflare-notification-discord" {
   enabled          = true
   name             = "Discord"
   triggers = [
-    "run:applying",
-    "run:completed",
-    "run:created",
     "run:errored",
     "run:needs_attention",
-    "run:planning"
   ]
   url          = var.DISCORD_NOTIFICATION_WEBHOOK_URL
   workspace_id = tfe_workspace.cloudflare.id
@@ -132,12 +124,8 @@ resource "tfe_notification_configuration" "mackerel-notification-discord" {
   enabled          = true
   name             = "Discord"
   triggers = [
-    "run:applying",
-    "run:completed",
-    "run:created",
     "run:errored",
     "run:needs_attention",
-    "run:planning"
   ]
   url          = var.DISCORD_NOTIFICATION_WEBHOOK_URL
   workspace_id = tfe_workspace.mackerel.id
@@ -182,12 +170,8 @@ resource "tfe_notification_configuration" "terraform-cloud-notification-discord"
   enabled          = true
   name             = "Discord"
   triggers = [
-    "run:applying",
-    "run:completed",
-    "run:created",
     "run:errored",
     "run:needs_attention",
-    "run:planning"
   ]
   url          = var.DISCORD_NOTIFICATION_WEBHOOK_URL
   workspace_id = tfe_workspace.terraform-cloud.id
