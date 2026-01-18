@@ -41,7 +41,7 @@ resource "tfe_workspace" "aws" {
   organization      = "${tfe_organization.organization.name}"
   project_id        = "${tfe_project.alicization.id}"
   queue_all_runs    = false
-  terraform_version = "~> 1.11.0"
+  terraform_version = "~> 1.14.0"
   working_directory = "aws"
   vcs_repo {
     github_app_installation_id = "ghain-xjmjBBumtkKgKZej"
@@ -84,7 +84,7 @@ resource "tfe_workspace" "cloudflare" {
   organization      = "${tfe_organization.organization.name}"
   project_id        = "${tfe_project.alicization.id}"
   queue_all_runs    = false
-  terraform_version = "~> 1.11.0"
+  terraform_version = "~> 1.14.0"
   working_directory = "cloudflare"
   vcs_repo {
     github_app_installation_id = "ghain-xjmjBBumtkKgKZej"
@@ -117,7 +117,7 @@ resource "tfe_workspace" "mackerel" {
   organization      = "${tfe_organization.organization.name}"
   project_id        = "${tfe_project.alicization.id}"
   queue_all_runs    = false
-  terraform_version = "~> 1.11.0"
+  terraform_version = "~> 1.14.0"
   working_directory = "mackerel"
   vcs_repo {
     github_app_installation_id = "ghain-xjmjBBumtkKgKZej"
@@ -160,7 +160,7 @@ resource "tfe_workspace" "terraform-cloud" {
   organization      = "${tfe_organization.organization.name}"
   project_id        = "${tfe_project.alicization.id}"
   queue_all_runs    = false
-  terraform_version = "~> 1.11.0"
+  terraform_version = "~> 1.14.0"
   working_directory = "terraform-cloud"
   vcs_repo {
     github_app_installation_id = "ghain-xjmjBBumtkKgKZej"
