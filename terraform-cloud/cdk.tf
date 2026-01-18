@@ -155,6 +155,12 @@ resource "tfe_variable" "mackerel-MACKEREL_API_KEY" {
   sensitive    = true
   workspace_id = "${tfe_workspace.mackerel.id}"
 }
+resource "tfe_variable" "mackerel-MIRAKURUN_MONITOR_AUTHORIZATION_HEADER" {
+  category     = "terraform"
+  key          = "MIRAKURUN_MONITOR_AUTHORIZATION_HEADER"
+  sensitive    = true
+  workspace_id = "${tfe_workspace.mackerel.id}"
+}
 resource "tfe_workspace" "terraform-cloud" {
   name              = "terraform-cloud"
   organization      = "${tfe_organization.organization.name}"
