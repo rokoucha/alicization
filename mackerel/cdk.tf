@@ -18,6 +18,12 @@ terraform {
 provider "mackerel" {
 }
 
+
+variable "MIRAKURUN_MONITOR_AUTHORIZATION_HEADER" {
+  description = "Mirakurun monitor authorization header"
+  type        = string
+  sensitive   = true
+}
 variable "WATCHDOGS_WEBHOOK_URL" {
   description = "watchdogs webhook url"
   type        = string
@@ -69,6 +75,7 @@ resource "mackerel_role" "ggrel-dtv_host_EDF88B2B" {
 #     follow_redirect = true
 #     headers = {
 #       Cache-Control = "no-cache"
+#       Authorization = "${var.MIRAKURUN_MONITOR_AUTHORIZATION_HEADER}"
 #     }
 #     max_check_attempts     = 3
 #     method                 = "GET"
