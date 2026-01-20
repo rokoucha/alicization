@@ -22,26 +22,26 @@ resource "cloudflare_record" "zones_ggrelnet_dns-caa-issue-le-ggrelnet_EBAC447C"
     value = "letsencrypt.org"
   }
 }
-resource "cloudflare_record" "zones_ggrelnet_dns-cname-auth_7AD06318" {
-  content = "materia.ggrel.net"
-  name    = "auth"
-  proxied = false
-  type    = "CNAME"
-  zone_id = cloudflare_zone.zones_ggrelnet_zone_C68FFF1A.id
+removed {
+  from = cloudflare_record.zones_ggrelnet_dns-cname-auth_7AD06318
+
+  lifecycle {
+    destroy = false
+  }
 }
-resource "cloudflare_record" "zones_ggrelnet_dns-cname-dtv_9B130C4C" {
-  content = "materia.ggrel.net"
-  name    = "dtv"
-  proxied = false
-  type    = "CNAME"
-  zone_id = cloudflare_zone.zones_ggrelnet_zone_C68FFF1A.id
+removed {
+  from = cloudflare_record.zones_ggrelnet_dns-cname-dtv_9B130C4C
+
+  lifecycle {
+    destroy = false
+  }
 }
-resource "cloudflare_record" "zones_ggrelnet_dns-cname-ggrelnet_CF7C4D90" {
-  content = "materia.ggrel.net"
-  name    = "ggrel.net"
-  proxied = false
-  type    = "CNAME"
-  zone_id = cloudflare_zone.zones_ggrelnet_zone_C68FFF1A.id
+removed {
+  from = cloudflare_record.zones_ggrelnet_dns-cname-ggrelnet_CF7C4D90
+
+  lifecycle {
+    destroy = false
+  }
 }
 resource "cloudflare_record" "zones_ggrelnet_dns-cname-macdn_E083E72F" {
   content = "public.r2.dev"
@@ -57,19 +57,19 @@ resource "cloudflare_record" "zones_ggrelnet_dns-cname-materia_289AD27E" {
   type    = "CNAME"
   zone_id = cloudflare_zone.zones_ggrelnet_zone_C68FFF1A.id
 }
-resource "cloudflare_record" "zones_ggrelnet_dns-cname-argocdmateria_19ED91E1" {
-  content = "materia.ggrel.net"
-  name    = "argocd.materia"
-  proxied = false
-  type    = "CNAME"
-  zone_id = cloudflare_zone.zones_ggrelnet_zone_C68FFF1A.id
+removed {
+  from = cloudflare_record.zones_ggrelnet_dns-cname-argocdmateria_19ED91E1
+
+  lifecycle {
+    destroy = false
+  }
 }
-resource "cloudflare_record" "zones_ggrelnet_dns-cname-hubblemateria_91826267" {
-  content = "materia.ggrel.net"
-  name    = "hubble.materia"
-  proxied = false
-  type    = "CNAME"
-  zone_id = cloudflare_zone.zones_ggrelnet_zone_C68FFF1A.id
+removed {
+  from = cloudflare_record.zones_ggrelnet_dns-cname-hubblemateria_91826267
+
+  lifecycle {
+    destroy = false
+  }
 }
 resource "cloudflare_record" "zones_ggrelnet_dns-cname-materia-cluster_7DFFF2B7" {
   content = "lithium.dns.ggrel.net"
@@ -78,19 +78,19 @@ resource "cloudflare_record" "zones_ggrelnet_dns-cname-materia-cluster_7DFFF2B7"
   type    = "CNAME"
   zone_id = cloudflare_zone.zones_ggrelnet_zone_C68FFF1A.id
 }
-resource "cloudflare_record" "zones_ggrelnet_dns-cname-miniflux_C4FF10DA" {
-  content = "materia.ggrel.net"
-  name    = "miniflux"
-  proxied = false
-  type    = "CNAME"
-  zone_id = cloudflare_zone.zones_ggrelnet_zone_C68FFF1A.id
+removed {
+  from = cloudflare_record.zones_ggrelnet_dns-cname-miniflux_C4FF10DA
+
+  lifecycle {
+    destroy = false
+  }
 }
-resource "cloudflare_record" "zones_ggrelnet_dns-cname-monitor_2D4F0486" {
-  content = "materia.ggrel.net"
-  name    = "monitor"
-  proxied = false
-  type    = "CNAME"
-  zone_id = cloudflare_zone.zones_ggrelnet_zone_C68FFF1A.id
+removed {
+  from = cloudflare_record.zones_ggrelnet_dns-cname-monitor_2D4F0486
+
+  lifecycle {
+    destroy = false
+  }
 }
 resource "cloudflare_record" "zones_ggrelnet_dns-cname-sig1_domainkey_E80C5207" {
   content = "sig1.dkim.ggrel.net.at.icloudmailadmin.com"
@@ -99,12 +99,12 @@ resource "cloudflare_record" "zones_ggrelnet_dns-cname-sig1_domainkey_E80C5207" 
   type    = "CNAME"
   zone_id = cloudflare_zone.zones_ggrelnet_zone_C68FFF1A.id
 }
-resource "cloudflare_record" "zones_ggrelnet_dns-cname-ts_10DC04DD" {
-  content = "materia.ggrel.net"
-  name    = "ts"
-  proxied = false
-  type    = "CNAME"
-  zone_id = cloudflare_zone.zones_ggrelnet_zone_C68FFF1A.id
+removed {
+  from = cloudflare_record.zones_ggrelnet_dns-cname-ts_10DC04DD
+
+  lifecycle {
+    destroy = false
+  }
 }
 resource "cloudflare_record" "zones_ggrelnet_dns-mx-10-icloud-1_2A0A19DE" {
   content  = "mx01.mail.icloud.com"

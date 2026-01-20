@@ -2,26 +2,26 @@ resource "cloudflare_zone" "zones_rokouchanet_zone_DF751E70" {
   account_id = cloudflare_account.account.id
   zone       = "rokoucha.net"
 }
-resource "cloudflare_record" "zones_rokouchanet_dns-cname-dot_7B57CE89" {
-  content = "materia.ggrel.net"
-  name    = "dot"
-  proxied = false
-  type    = "CNAME"
-  zone_id = cloudflare_zone.zones_rokouchanet_zone_DF751E70.id
+removed {
+  from = cloudflare_record.zones_rokouchanet_dns-cname-dot_7B57CE89
+
+  lifecycle {
+    destroy = false
+  }
 }
-resource "cloudflare_record" "zones_rokouchanet_dns-cname-ma_7A73B89C" {
-  content = "materia.ggrel.net"
-  name    = "ma"
-  proxied = false
-  type    = "CNAME"
-  zone_id = cloudflare_zone.zones_rokouchanet_zone_DF751E70.id
+removed {
+  from = cloudflare_record.zones_rokouchanet_dns-cname-ma_7A73B89C
+
+  lifecycle {
+    destroy = false
+  }
 }
-resource "cloudflare_record" "zones_rokouchanet_dns-cname-pl_1C94C1AF" {
-  content = "materia.ggrel.net"
-  name    = "pl"
-  proxied = false
-  type    = "CNAME"
-  zone_id = cloudflare_zone.zones_rokouchanet_zone_DF751E70.id
+removed {
+  from = cloudflare_record.zones_rokouchanet_dns-cname-pl_1C94C1AF
+
+  lifecycle {
+    destroy = false
+  }
 }
 resource "cloudflare_record" "zones_rokouchanet_dns-cname-rokouchanet_DF41DF62" {
   content = "maillard.pages.dev"
