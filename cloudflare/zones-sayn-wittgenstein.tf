@@ -2,12 +2,6 @@ resource "cloudflare_zone" "zones_sayn-wittgenstein_zone_DB53E6D0" {
   account_id = cloudflare_account.account.id
   zone       = "sayn-wittgenste.in"
 }
-removed {
-  from = cloudflare_record.zones_sayn-wittgenstein_dns-cname-heinrikeprinzessinzusayn-wittgenstein_6A2E59EA
-  lifecycle {
-    destroy = false
-  }
-}
 resource "cloudflare_record" "zones_sayn-wittgenstein_dns-mx-verification-sayn-wittgenstein_EFC05122" {
   content  = "qopfxxhethpfg6oj5ubrjxup5aayjzhcjd2tu2ejl4myv2xfsl7q.mx-verification.google.com"
   name     = "sayn-wittgenste.in"
