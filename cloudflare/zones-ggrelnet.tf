@@ -22,12 +22,11 @@ resource "cloudflare_record" "zones_ggrelnet_dns-caa-issue-le-ggrelnet_EBAC447C"
     value = "letsencrypt.org"
   }
 }
-resource "cloudflare_record" "zones_ggrelnet_dns-cname-macdn_E083E72F" {
-  content = "public.r2.dev"
-  name    = "ma.cdn"
-  proxied = true
-  type    = "CNAME"
-  zone_id = cloudflare_zone.zones_ggrelnet_zone_C68FFF1A.id
+removed {
+  from = cloudflare_record.zones_ggrelnet_dns-cname-macdn_E083E72F
+  lifecycle {
+    destroy = false
+  }
 }
 resource "cloudflare_record" "zones_ggrelnet_dns-cname-materia_289AD27E" {
   content = "lithium.dns.ggrel.net"
