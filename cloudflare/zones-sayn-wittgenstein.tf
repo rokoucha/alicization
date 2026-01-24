@@ -9,13 +9,6 @@ resource "cloudflare_record" "zones_sayn-wittgenstein_dns-cname-heinrikeprinzess
   type    = "CNAME"
   zone_id = cloudflare_zone.zones_sayn-wittgenstein_zone_DB53E6D0.id
 }
-removed {
-  from = cloudflare_record.zones_sayn-wittgenstein_dns-cname-sayn-wittgenstein_2ECDC464
-
-  lifecycle {
-    destroy = false
-  }
-}
 resource "cloudflare_record" "zones_sayn-wittgenstein_dns-mx-verification-sayn-wittgenstein_EFC05122" {
   content  = "qopfxxhethpfg6oj5ubrjxup5aayjzhcjd2tu2ejl4myv2xfsl7q.mx-verification.google.com"
   name     = "sayn-wittgenste.in"

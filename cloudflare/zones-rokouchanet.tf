@@ -2,27 +2,6 @@ resource "cloudflare_zone" "zones_rokouchanet_zone_DF751E70" {
   account_id = cloudflare_account.account.id
   zone       = "rokoucha.net"
 }
-removed {
-  from = cloudflare_record.zones_rokouchanet_dns-cname-dot_7B57CE89
-
-  lifecycle {
-    destroy = false
-  }
-}
-removed {
-  from = cloudflare_record.zones_rokouchanet_dns-cname-ma_7A73B89C
-
-  lifecycle {
-    destroy = false
-  }
-}
-removed {
-  from = cloudflare_record.zones_rokouchanet_dns-cname-pl_1C94C1AF
-
-  lifecycle {
-    destroy = false
-  }
-}
 resource "cloudflare_record" "zones_rokouchanet_dns-cname-rokouchanet_DF41DF62" {
   content = "maillard.pages.dev"
   name    = "rokoucha.net"
