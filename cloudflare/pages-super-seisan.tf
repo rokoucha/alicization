@@ -3,7 +3,7 @@ resource "cloudflare_pages_project" "pages_super-seisan_FC830EEF" {
   name              = "super-seisan"
   production_branch = "main"
   build_config {
-    build_command   = "pnpm run build"
+    build_command   = "pnpm run generate && pnpm run build"
     destination_dir = "dist"
     root_dir        = "./legacy"
   }
