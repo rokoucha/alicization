@@ -10,9 +10,6 @@ resource "cloudflare_pages_project" "pages_auth-js-cloudflare-pages-functions_au
   deployment_configs {
     production {
       compatibility_date = "2023-12-03"
-      compatibility_flags = [
-
-      ]
       environment_variables = {
         AUTH_GITHUB_ID = "${var.pages_auth-js-cloudflare-pages-functions_AUTH_GITHUB_ID_66A2BFFB}"
         NODE_VERSION   = "20"

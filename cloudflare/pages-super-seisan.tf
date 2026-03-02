@@ -10,11 +10,8 @@ resource "cloudflare_pages_project" "pages_super-seisan_FC830EEF" {
   deployment_configs {
     production {
       compatibility_date = "2025-11-17"
-      environment_variables = {
-
-      }
-      fail_open   = true
-      usage_model = "standard"
+      fail_open          = true
+      usage_model        = "standard"
     }
   }
   source {
