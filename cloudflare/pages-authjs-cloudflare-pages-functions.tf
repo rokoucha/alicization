@@ -11,13 +11,13 @@ resource "cloudflare_pages_project" "pages_auth-js-cloudflare-pages-functions_au
     production {
       compatibility_date = "2023-12-03"
       environment_variables = {
-        AUTH_GITHUB_ID = "${var.pages_auth-js-cloudflare-pages-functions_AUTH_GITHUB_ID_66A2BFFB}"
+        AUTH_GITHUB_ID = var.pages_auth-js-cloudflare-pages-functions_AUTH_GITHUB_ID_66A2BFFB
         NODE_VERSION   = "20"
       }
       fail_open = false
       secrets = {
-        AUTH_GITHUB_SECRET = "${var.pages_auth-js-cloudflare-pages-functions_AUTH_GITHUB_SECRET_C4ED44EC}"
-        AUTH_SECRET        = "${var.pages_auth-js-cloudflare-pages-functions_AUTH_SECRET_616905F8}"
+        AUTH_GITHUB_SECRET = var.pages_auth-js-cloudflare-pages-functions_AUTH_GITHUB_SECRET_C4ED44EC
+        AUTH_SECRET        = var.pages_auth-js-cloudflare-pages-functions_AUTH_SECRET_616905F8
       }
       usage_model = "standard"
     }
