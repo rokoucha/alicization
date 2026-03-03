@@ -18,7 +18,7 @@ resource "cloudflare_pages_project" "pages_scienest_20D3D293" {
       }
       environment_variables = {
         APP_ENV                = "production"
-        AUTH_GITHUB_ID         = "${var.pages_scienest_AUTH_GITHUB_ID_14B14276}"
+        AUTH_GITHUB_ID         = var.pages_scienest_AUTH_GITHUB_ID_14B14276
         AUTH_TRUST_HOST        = "rokoucha.net"
         BASE_URL               = "https://rokoucha.net"
         GITHUB_USER_ID         = "6058487"
@@ -30,8 +30,8 @@ resource "cloudflare_pages_project" "pages_scienest_20D3D293" {
       }
       fail_open = true
       secrets = {
-        AUTH_GITHUB_SECRET = "${var.pages_scienest_AUTH_GITHUB_SECRET_D05B4844}"
-        AUTH_SECRET        = "${var.pages_scienest_AUTH_SECRET_5AB749E8}"
+        AUTH_GITHUB_SECRET = var.pages_scienest_AUTH_GITHUB_SECRET_D05B4844
+        AUTH_SECRET        = var.pages_scienest_AUTH_SECRET_5AB749E8
       }
       usage_model = "standard"
     }

@@ -13,14 +13,14 @@ resource "cloudflare_pages_project" "pages_cloudflare-pages-function-next-js_96D
         "nodejs_compat"
       ]
       environment_variables = {
-        AUTH_GITHUB_ID  = "${var.pages_cloudflare-pages-function-next-js_AUTH_GITHUB_ID_1482998B}"
+        AUTH_GITHUB_ID  = var.pages_cloudflare-pages-function-next-js_AUTH_GITHUB_ID_1482998B
         AUTH_TRUST_HOST = "cloudflare-pages-function-next-js.pages.dev"
         NODE_VERSION    = "20"
       }
       fail_open = true
       secrets = {
-        AUTH_GITHUB_SECRET = "${var.pages_cloudflare-pages-function-next-js_AUTH_GITHUB_SECRET_74848C5F}"
-        AUTH_SECRET        = "${var.pages_cloudflare-pages-function-next-js_AUTH_SECRET_20C3562D}"
+        AUTH_GITHUB_SECRET = var.pages_cloudflare-pages-function-next-js_AUTH_GITHUB_SECRET_74848C5F
+        AUTH_SECRET        = var.pages_cloudflare-pages-function-next-js_AUTH_SECRET_20C3562D
       }
       usage_model = "standard"
     }

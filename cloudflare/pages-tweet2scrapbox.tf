@@ -14,7 +14,7 @@ resource "cloudflare_pages_project" "pages_tweet2scrapbox_6AE43398" {
       }
       fail_open = true
       secrets = {
-        TWITTER_BEARER_TOKEN = "${var.pages_tweet2scrapbox_TWITTER_BEARER_TOKEN_2DED0709}"
+        TWITTER_BEARER_TOKEN = var.pages_tweet2scrapbox_TWITTER_BEARER_TOKEN_2DED0709
       }
       usage_model = "standard"
     }

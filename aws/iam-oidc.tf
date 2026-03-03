@@ -6,7 +6,7 @@ resource "aws_iam_openid_connect_provider" "iam-oidc-provider_tfc-oidc-provider_
     "aws.workload.identity"
   ]
   thumbprint_list = [
-    "${data.tls_certificate.iam-oidc-provider_tfc-certificate_2F8403F3.certificates[0].sha1_fingerprint}"
+    data.tls_certificate.iam-oidc-provider_tfc-certificate_2F8403F3.certificates[0].sha1_fingerprint
   ]
   url = data.tls_certificate.iam-oidc-provider_tfc-certificate_2F8403F3.url
 }
@@ -30,7 +30,7 @@ data "aws_iam_policy_document" "iam-oidc-provider_tfc-iam-oidc-provider-role-pol
     }
     principals {
       identifiers = [
-        "${aws_iam_openid_connect_provider.iam-oidc-provider_tfc-oidc-provider_F99D1059.arn}"
+        aws_iam_openid_connect_provider.iam-oidc-provider_tfc-oidc-provider_F99D1059.arn
       ]
       type = "Federated"
     }

@@ -5,6 +5,6 @@ resource "mackerel_channel" "discord" {
     events = [
       "alert"
     ]
-    url = "${var.WATCHDOGS_WEBHOOK_URL}"
+    url = var.WATCHDOGS_WEBHOOK_URL
   }
 }
