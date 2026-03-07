@@ -1,6 +1,7 @@
 locals {
   github_app_installation_id = "ghain-xjmjBBumtkKgKZej"
   repository_identifier      = "rokoucha/alicization"
+  default_terraform_version  = "~> 1.14.0"
   discord_notification_triggers = [
     "run:errored",
     "run:needs_attention",
@@ -8,8 +9,7 @@ locals {
 
   workspaces = {
     aws = {
-      terraform_version = "~> 1.14.0"
-      working_directory = "aws"
+      terraform_version = local.default_terraform_version
       variables = {
         TFC_AWS_PROVIDER_AUTH = {
           category = "env"
@@ -22,8 +22,7 @@ locals {
       }
     }
     cloudflare = {
-      terraform_version = "~> 1.14.0"
-      working_directory = "cloudflare"
+      terraform_version = local.default_terraform_version
       variables = {
         CLOUDFLARE_API_TOKEN = {
           category  = "env"
@@ -32,8 +31,7 @@ locals {
       }
     }
     mackerel = {
-      terraform_version = "~> 1.14.0"
-      working_directory = "mackerel"
+      terraform_version = local.default_terraform_version
       variables = {
         WATCHDOGS_WEBHOOK_URL = {
           category             = "terraform"
@@ -50,8 +48,7 @@ locals {
       }
     }
     "terraform-cloud" = {
-      terraform_version = "~> 1.14.0"
-      working_directory = "terraform-cloud"
+      terraform_version = local.default_terraform_version
       variables = {
         TFC_ORGANIZATION_EMAIL = {
           category             = "terraform"
@@ -100,7 +97,7 @@ resource "tfe_workspace" "this" {
   project_id        = tfe_project.alicization.id
   queue_all_runs    = false
   terraform_version = each.value.terraform_version
-  working_directory = each.value.working_directory
+  working_directory = each.key
   auto_apply        = true
 
   vcs_repo {
