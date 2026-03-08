@@ -46,23 +46,3 @@ resource "aws_iam_role" "tfc" {
   ]
   name = "alicization-tfc-iam-oidc-provider-role"
 }
-
-moved {
-  from = data.tls_certificate.iam-oidc-provider_tfc-certificate_2F8403F3
-  to   = data.tls_certificate.tfc
-}
-
-moved {
-  from = aws_iam_openid_connect_provider.iam-oidc-provider_tfc-oidc-provider_F99D1059
-  to   = aws_iam_openid_connect_provider.tfc
-}
-
-moved {
-  from = data.aws_iam_policy_document.iam-oidc-provider_tfc-iam-oidc-provider-role-policy-document_B57D60C0
-  to   = data.aws_iam_policy_document.tfc_assume_role
-}
-
-moved {
-  from = aws_iam_role.iam-oidc-provider_tfc-iam-oidc-provider-role_BA45F5FC
-  to   = aws_iam_role.tfc
-}
