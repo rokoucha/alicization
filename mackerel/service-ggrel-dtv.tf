@@ -23,18 +23,3 @@ resource "mackerel_monitor" "ggrel_dtv_mirakurun" {
     url                    = "https://dtv.ggrel.net/mirakurun/"
   }
 }
-
-moved {
-  from = mackerel_service.ggrel-dtv_F2A87E62
-  to   = mackerel_service.ggrel_dtv
-}
-
-moved {
-  from = mackerel_role.ggrel-dtv_host_EDF88B2B
-  to   = mackerel_role.ggrel_dtv_host
-}
-
-moved {
-  from = mackerel_monitor.ggrel-dtv_mirakurun_B09B7D26
-  to   = mackerel_monitor.ggrel_dtv_mirakurun
-}
