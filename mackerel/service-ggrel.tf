@@ -68,28 +68,3 @@ resource "mackerel_monitor" "rokoucha_net" {
     url                    = "https://rokoucha.net"
   }
 }
-
-moved {
-  from = mackerel_service.ggrel_40CEA253
-  to   = mackerel_service.ggrel
-}
-
-moved {
-  from = mackerel_monitor.ggrel_ggrel-net_25A56417
-  to   = mackerel_monitor.ggrel_net
-}
-
-moved {
-  from = mackerel_monitor.ggrel_heinrike-prinzessin-zu-sayn-wittgenste-in_D45C91BB
-  to   = mackerel_monitor.heinrike_prinzessin_zu_sayn_wittgenste_in
-}
-
-moved {
-  from = mackerel_monitor.ggrel_mastodon-rokoucha_78BB964D
-  to   = mackerel_monitor.mastodon_rokoucha
-}
-
-moved {
-  from = mackerel_monitor.ggrel_rokoucha-net_764AE37B
-  to   = mackerel_monitor.rokoucha_net
-}

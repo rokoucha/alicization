@@ -20,23 +20,3 @@ resource "mackerel_monitor" "machines_anomaly_detection" {
     warning_sensitivity = "normal"
   }
 }
-
-moved {
-  from = mackerel_service.machines_1FDC4DD8
-  to   = mackerel_service.machines
-}
-
-moved {
-  from = mackerel_role.machines_physical_5CF0CDF0
-  to   = mackerel_role.machines_physical
-}
-
-moved {
-  from = mackerel_role.machines_virtual_1052FA1B
-  to   = mackerel_role.machines_virtual
-}
-
-moved {
-  from = mackerel_monitor.machines_anomaly-detection_DF4BC1DC
-  to   = mackerel_monitor.machines_anomaly_detection
-}
