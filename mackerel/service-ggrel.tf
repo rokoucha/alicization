@@ -1,7 +1,7 @@
-resource "mackerel_service" "ggrel_40CEA253" {
+resource "mackerel_service" "ggrel" {
   name = "Ggrel"
 }
-resource "mackerel_monitor" "ggrel_ggrel-net_25A56417" {
+resource "mackerel_monitor" "ggrel_net" {
   name = "ggrel.net"
   external {
     certification_expiration_critical = 3
@@ -14,11 +14,11 @@ resource "mackerel_monitor" "ggrel_ggrel-net_25A56417" {
     response_time_critical = 10000
     response_time_duration = 3
     response_time_warning  = 5000
-    service                = mackerel_service.ggrel_40CEA253.name
+    service                = mackerel_service.ggrel.name
     url                    = "https://ggrel.net"
   }
 }
-resource "mackerel_monitor" "ggrel_heinrike-prinzessin-zu-sayn-wittgenste-in_D45C91BB" {
+resource "mackerel_monitor" "heinrike_prinzessin_zu_sayn_wittgenste_in" {
   name = "heinrike.prinzessin.zu.sayn-wittgenste.in"
   external {
     certification_expiration_critical = 3
@@ -31,11 +31,11 @@ resource "mackerel_monitor" "ggrel_heinrike-prinzessin-zu-sayn-wittgenste-in_D45
     response_time_critical = 10000
     response_time_duration = 3
     response_time_warning  = 5000
-    service                = mackerel_service.ggrel_40CEA253.name
+    service                = mackerel_service.ggrel.name
     url                    = "https://heinrike.prinzessin.zu.sayn-wittgenste.in"
   }
 }
-resource "mackerel_monitor" "ggrel_mastodon-rokoucha_78BB964D" {
+resource "mackerel_monitor" "mastodon_rokoucha" {
   name = "Mastodon/Rokoucha"
   external {
     follow_redirect = true
@@ -47,11 +47,11 @@ resource "mackerel_monitor" "ggrel_mastodon-rokoucha_78BB964D" {
     response_time_critical = 10000
     response_time_duration = 3
     response_time_warning  = 5000
-    service                = mackerel_service.ggrel_40CEA253.name
+    service                = mackerel_service.ggrel.name
     url                    = "https://ma.rokoucha.net"
   }
 }
-resource "mackerel_monitor" "ggrel_rokoucha-net_764AE37B" {
+resource "mackerel_monitor" "rokoucha_net" {
   name = "rokoucha.net"
   external {
     certification_expiration_critical = 3
@@ -64,7 +64,32 @@ resource "mackerel_monitor" "ggrel_rokoucha-net_764AE37B" {
     response_time_critical = 10000
     response_time_duration = 3
     response_time_warning  = 7500
-    service                = mackerel_service.ggrel_40CEA253.name
+    service                = mackerel_service.ggrel.name
     url                    = "https://rokoucha.net"
   }
+}
+
+moved {
+  from = mackerel_service.ggrel_40CEA253
+  to   = mackerel_service.ggrel
+}
+
+moved {
+  from = mackerel_monitor.ggrel_ggrel-net_25A56417
+  to   = mackerel_monitor.ggrel_net
+}
+
+moved {
+  from = mackerel_monitor.ggrel_heinrike-prinzessin-zu-sayn-wittgenste-in_D45C91BB
+  to   = mackerel_monitor.heinrike_prinzessin_zu_sayn_wittgenste_in
+}
+
+moved {
+  from = mackerel_monitor.ggrel_mastodon-rokoucha_78BB964D
+  to   = mackerel_monitor.mastodon_rokoucha
+}
+
+moved {
+  from = mackerel_monitor.ggrel_rokoucha-net_764AE37B
+  to   = mackerel_monitor.rokoucha_net
 }
