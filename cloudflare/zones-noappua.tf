@@ -1,4 +1,4 @@
-resource "cloudflare_zone" "zones_noappua_zone_62EBFFE8" {
+resource "cloudflare_zone" "noa_pp_ua" {
   account = {
     id = cloudflare_account.account.id
   }
@@ -6,6 +6,6 @@ resource "cloudflare_zone" "zones_noappua_zone_62EBFFE8" {
 }
 
 import {
-  to = cloudflare_zone.zones_noappua_zone_62EBFFE8
+  to = cloudflare_zone.noa_pp_ua
   id = "927ab1a27118ed30a120752399609a90"
 }

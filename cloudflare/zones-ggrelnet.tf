@@ -1,4 +1,4 @@
-resource "cloudflare_zone" "zones_ggrelnet_zone_C68FFF1A" {
+resource "cloudflare_zone" "ggrel_net" {
   account = {
     id = cloudflare_account.account.id
   }
@@ -6,6 +6,6 @@ resource "cloudflare_zone" "zones_ggrelnet_zone_C68FFF1A" {
 }
 
 import {
-  to = cloudflare_zone.zones_ggrelnet_zone_C68FFF1A
+  to = cloudflare_zone.ggrel_net
   id = "8797b62049f417096e6bba991ebbbc6a"
 }

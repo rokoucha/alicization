@@ -1,4 +1,4 @@
-resource "cloudflare_zone" "zones_rokouchanet_zone_DF751E70" {
+resource "cloudflare_zone" "rokoucha_net" {
   account = {
     id = cloudflare_account.account.id
   }
@@ -6,6 +6,6 @@ resource "cloudflare_zone" "zones_rokouchanet_zone_DF751E70" {
 }
 
 import {
-  to = cloudflare_zone.zones_rokouchanet_zone_DF751E70
+  to = cloudflare_zone.rokoucha_net
   id = "bc6a492f5a6197ebdb5825bb9c3f30f3"
 }

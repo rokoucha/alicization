@@ -1,4 +1,4 @@
-resource "cloudflare_zone" "zones_sayn-wittgenstein_zone_DB53E6D0" {
+resource "cloudflare_zone" "sayn_wittgenstein" {
   account = {
     id = cloudflare_account.account.id
   }
@@ -6,6 +6,6 @@ resource "cloudflare_zone" "zones_sayn-wittgenstein_zone_DB53E6D0" {
 }
 
 import {
-  to = cloudflare_zone.zones_sayn-wittgenstein_zone_DB53E6D0
+  to = cloudflare_zone.sayn_wittgenstein
   id = "3e6532956ee9bac8397fe88e84bfc793"
 }
