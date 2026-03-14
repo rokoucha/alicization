@@ -4,8 +4,3 @@ resource "cloudflare_zone" "ggrel_net" {
   }
   name = "ggrel.net"
 }
-
-import {
-  to = cloudflare_zone.ggrel_net
-  id = "8797b62049f417096e6bba991ebbbc6a"
-}
