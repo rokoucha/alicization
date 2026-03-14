@@ -1,6 +1,8 @@
 resource "cloudflare_zone" "zones_rokouchanet_zone_DF751E70" {
-  account_id = cloudflare_account.account.id
-  name       = "rokoucha.net"
+  account = {
+    id = cloudflare_account.account.id
+  }
+  name = "rokoucha.net"
 }
 
 import {

@@ -1,6 +1,8 @@
 resource "cloudflare_zone" "zones_ggrelnet_zone_C68FFF1A" {
-  account_id = cloudflare_account.account.id
-  name       = "ggrel.net"
+  account = {
+    id = cloudflare_account.account.id
+  }
+  name = "ggrel.net"
 }
 
 import {

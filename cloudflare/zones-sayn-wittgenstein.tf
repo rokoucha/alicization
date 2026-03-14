@@ -1,6 +1,8 @@
 resource "cloudflare_zone" "zones_sayn-wittgenstein_zone_DB53E6D0" {
-  account_id = cloudflare_account.account.id
-  name       = "sayn-wittgenste.in"
+  account = {
+    id = cloudflare_account.account.id
+  }
+  name = "sayn-wittgenste.in"
 }
 
 import {
