@@ -1,5 +1,5 @@
 resource "cloudflare_dns_record" "ggrel_net_caa_issue" {
-  zone_id = local.zone_id["ggrel.net"]
+  zone_id = cloudflare_zone.ggrel_net.id
   name    = "ggrel.net"
   type    = "CAA"
   ttl     = 1
@@ -11,7 +11,7 @@ resource "cloudflare_dns_record" "ggrel_net_caa_issue" {
 }
 
 resource "cloudflare_dns_record" "ggrel_net_caa_issuewild" {
-  zone_id = local.zone_id["ggrel.net"]
+  zone_id = cloudflare_zone.ggrel_net.id
   name    = "ggrel.net"
   type    = "CAA"
   ttl     = 1
@@ -23,7 +23,7 @@ resource "cloudflare_dns_record" "ggrel_net_caa_issuewild" {
 }
 
 resource "cloudflare_dns_record" "ggrel_net_cname_materia_cluster" {
-  zone_id = local.zone_id["ggrel.net"]
+  zone_id = cloudflare_zone.ggrel_net.id
   name    = "materia-cluster.ggrel.net"
   type    = "CNAME"
   content = "lithium.dns.ggrel.net"
@@ -32,7 +32,7 @@ resource "cloudflare_dns_record" "ggrel_net_cname_materia_cluster" {
 }
 
 resource "cloudflare_dns_record" "ggrel_net_cname_materia" {
-  zone_id = local.zone_id["ggrel.net"]
+  zone_id = cloudflare_zone.ggrel_net.id
   name    = "materia.ggrel.net"
   type    = "CNAME"
   content = "lithium.dns.ggrel.net"
@@ -41,7 +41,7 @@ resource "cloudflare_dns_record" "ggrel_net_cname_materia" {
 }
 
 resource "cloudflare_dns_record" "ggrel_net_cname_dkim" {
-  zone_id = local.zone_id["ggrel.net"]
+  zone_id = cloudflare_zone.ggrel_net.id
   name    = "sig1._domainkey.ggrel.net"
   type    = "CNAME"
   content = "sig1.dkim.ggrel.net.at.icloudmailadmin.com"
@@ -50,7 +50,7 @@ resource "cloudflare_dns_record" "ggrel_net_cname_dkim" {
 }
 
 resource "cloudflare_dns_record" "ggrel_net_mx_primary" {
-  zone_id  = local.zone_id["ggrel.net"]
+  zone_id  = cloudflare_zone.ggrel_net.id
   name     = "ggrel.net"
   type     = "MX"
   content  = "mx01.mail.icloud.com"
@@ -59,7 +59,7 @@ resource "cloudflare_dns_record" "ggrel_net_mx_primary" {
 }
 
 resource "cloudflare_dns_record" "ggrel_net_mx_secondary" {
-  zone_id  = local.zone_id["ggrel.net"]
+  zone_id  = cloudflare_zone.ggrel_net.id
   name     = "ggrel.net"
   type     = "MX"
   content  = "mx02.mail.icloud.com"
@@ -68,7 +68,7 @@ resource "cloudflare_dns_record" "ggrel_net_mx_secondary" {
 }
 
 resource "cloudflare_dns_record" "ggrel_net_txt_dmarc" {
-  zone_id = local.zone_id["ggrel.net"]
+  zone_id = cloudflare_zone.ggrel_net.id
   name    = "_dmarc.ggrel.net"
   type    = "TXT"
   content = "v=DMARC1; p=quarantine; adkim=s"
@@ -76,7 +76,7 @@ resource "cloudflare_dns_record" "ggrel_net_txt_dmarc" {
 }
 
 resource "cloudflare_dns_record" "ggrel_net_txt_apple_domain" {
-  zone_id = local.zone_id["ggrel.net"]
+  zone_id = cloudflare_zone.ggrel_net.id
   name    = "ggrel.net"
   type    = "TXT"
   content = "apple-domain=3J9bInEzoF3qYmdl"
@@ -84,7 +84,7 @@ resource "cloudflare_dns_record" "ggrel_net_txt_apple_domain" {
 }
 
 resource "cloudflare_dns_record" "ggrel_net_txt_spf" {
-  zone_id = local.zone_id["ggrel.net"]
+  zone_id = cloudflare_zone.ggrel_net.id
   name    = "ggrel.net"
   type    = "TXT"
   content = "v=spf1 include:icloud.com ~all"
