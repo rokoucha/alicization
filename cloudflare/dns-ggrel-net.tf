@@ -4,7 +4,7 @@ resource "cloudflare_dns_record" "ggrel_net_caa_issue" {
   type    = "CAA"
   ttl     = 1
   data = {
-    flags = "0"
+    flags = 0
     tag   = "issue"
     value = "letsencrypt.org"
   }
@@ -16,7 +16,7 @@ resource "cloudflare_dns_record" "ggrel_net_caa_issuewild" {
   type    = "CAA"
   ttl     = 1
   data = {
-    flags = "0"
+    flags = 0
     tag   = "issuewild"
     value = "letsencrypt.org"
   }
