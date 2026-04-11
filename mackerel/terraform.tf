@@ -1,7 +1,7 @@
 terraform {
   required_providers {
     mackerel = {
-      version = "0.9.0"
+      version = "0.9.1"
       source  = "registry.terraform.io/mackerelio-labs/mackerel"
     }
   }
