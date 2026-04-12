@@ -29,22 +29,18 @@ resource "cloudflare_dns_record" "ggrel_net_caa_issuewild" {
   }
 }
 
-resource "cloudflare_dns_record" "ggrel_net_cname_materia_cluster" {
-  zone_id = cloudflare_zone.ggrel_net.id
-  name    = "materia-cluster.ggrel.net"
-  type    = "CNAME"
-  content = "lithium.dns.ggrel.net"
-  proxied = false
-  ttl     = 1
+removed {
+  from = cloudflare_dns_record.ggrel_net_cname_materia_cluster
+  lifecycle {
+    destroy = false
+  }
 }
 
-resource "cloudflare_dns_record" "ggrel_net_cname_materia" {
-  zone_id = cloudflare_zone.ggrel_net.id
-  name    = "materia.ggrel.net"
-  type    = "CNAME"
-  content = "lithium.dns.ggrel.net"
-  proxied = false
-  ttl     = 1
+removed {
+  from = cloudflare_dns_record.ggrel_net_cname_materia
+  lifecycle {
+    destroy = false
+  }
 }
 
 resource "cloudflare_dns_record" "ggrel_net_cname_dkim" {
