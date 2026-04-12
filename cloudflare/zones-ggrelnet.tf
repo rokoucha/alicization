@@ -29,20 +29,6 @@ resource "cloudflare_dns_record" "ggrel_net_caa_issuewild" {
   }
 }
 
-removed {
-  from = cloudflare_dns_record.ggrel_net_cname_materia_cluster
-  lifecycle {
-    destroy = false
-  }
-}
-
-removed {
-  from = cloudflare_dns_record.ggrel_net_cname_materia
-  lifecycle {
-    destroy = false
-  }
-}
-
 resource "cloudflare_dns_record" "ggrel_net_cname_dkim" {
   zone_id = cloudflare_zone.ggrel_net.id
   name    = "sig1._domainkey.ggrel.net"
