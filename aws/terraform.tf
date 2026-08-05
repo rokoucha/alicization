@@ -1,7 +1,7 @@
 terraform {
   required_providers {
     aws = {
-      version = "6.57.1"
+      version = "6.58.0"
       source  = "aws"
     }
     tls = {
